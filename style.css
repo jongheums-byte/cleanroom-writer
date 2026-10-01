@@ -1,0 +1,757 @@
+/* ==========================================================================
+   CleanRoom Writer V2 | UI Micro-Interaction & Typography Polish
+   Principle: "불순물이 없다는 것은 무언가를 더하는 것이 아니라, 불필요한 것을 제거하는 것이다."
+   Flow: UNSTABLE -> STABILIZING -> VERIFIED -> STILLNESS
+   ========================================================================== */
+
+:root {
+  /* Surface & Base Palette */
+  --bg-black: #060608;
+  --bg-modal: #0b0c10;
+  
+  /* Text Contrast Hierarchy */
+  --text-pure: #ffffff;
+  --text-sub: #9ca0ab;
+  --text-muted: #5e626e;
+  --text-dim: #383a42;
+
+  /* Hairline Borders */
+  --border-line: rgba(255, 255, 255, 0.07);
+  --border-hover: rgba(255, 255, 255, 0.15);
+  --border-modal: rgba(255, 255, 255, 0.12);
+
+  /* Single Controlled Point Hue (Low Saturation Cleanroom Cyan) */
+  --status-dot-color: #00e5ff;
+  --accent-hairline: rgba(0, 229, 255, 0.85);
+
+  /* Unified Typography System Tokens */
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --system-font-size: 0.72rem;
+  --system-letter-spacing: 0.08em;
+  --system-line-height: 1.4;
+  --system-color: var(--text-muted);
+
+  --ease-calibrated: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-black);
+}
+
+body.silence-theme {
+  font-family: var(--font-sans);
+  background-color: var(--bg-black);
+  color: var(--text-pure);
+  min-height: 100vh;
+  line-height: 1.85;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Unified System Label Token
+   ========================================================================== */
+.system-token {
+  font-family: var(--font-mono);
+  font-size: var(--system-font-size);
+  letter-spacing: var(--system-letter-spacing);
+  line-height: var(--system-line-height);
+  color: var(--system-color);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Top Minimal Status Bar
+   ========================================================================== */
+.status-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(6, 6, 8, 0.9);
+  border-bottom: 1px solid var(--border-line);
+  z-index: 100;
+}
+
+.brand-token {
+  font-weight: 700;
+  color: var(--text-pure);
+}
+
+.status-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Micro Status Pulse: Gentle opacity cycle (1.8s), no resize, no heavy glow */
+.status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--status-dot-color);
+  animation: subtlePulse 2s infinite ease-in-out;
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.status-link {
+  font-weight: 600;
+  color: var(--text-sub);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+.status-link:hover {
+  color: var(--text-pure);
+}
+
+/* ==========================================================================
+   Container & Generous Spacing
+   ========================================================================== */
+.silence-container {
+  width: 100%;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-code {
+  display: block;
+  margin-bottom: 2.25rem;
+}
+
+/* ==========================================================================
+   01. The Calibration Sequence (Hero)
+   ========================================================================== */
+.section-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 5rem 2rem;
+  position: relative;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sequence-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-bottom: 4rem;
+}
+
+.seq-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1.5rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.8s var(--ease-calibrated), transform 0.8s var(--ease-calibrated);
+}
+
+.seq-label {
+  color: var(--text-muted);
+}
+
+.seq-val {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-pure);
+  min-width: 2.5ch;
+  text-align: right;
+  letter-spacing: 0.04em;
+}
+
+.hero-brand-block {
+  margin-bottom: 4.5rem;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.9s var(--ease-calibrated), transform 0.9s var(--ease-calibrated);
+}
+
+.hero-brand {
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-pure);
+  margin-bottom: 0.75rem;
+}
+
+.hero-essence {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--text-sub);
+  letter-spacing: -0.01em;
+}
+
+.hero-enter {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.9s var(--ease-calibrated), transform 0.9s var(--ease-calibrated);
+}
+
+.enter-btn {
+  text-decoration: none;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease;
+}
+.enter-btn:hover .system-token {
+  color: var(--text-pure);
+}
+
+.enter-arrow {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+.enter-btn:hover .enter-arrow {
+  color: var(--text-pure);
+}
+
+.seq-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ==========================================================================
+   02. The Controlled Space (Manifesto)
+   ========================================================================== */
+.section-manifesto {
+  padding: 13rem 0;
+  border-top: 1px solid var(--border-line);
+}
+
+.manifesto-quote {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  color: var(--text-sub);
+  margin-bottom: 3.5rem;
+}
+
+.manifesto-quote .text-white {
+  color: var(--text-pure);
+  font-weight: 700;
+}
+
+.manifesto-sub {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 2.1;
+  font-weight: 300;
+  max-width: 720px;
+}
+
+/* ==========================================================================
+   03. The Records (Detection Hover Protocol)
+   ========================================================================== */
+.section-records {
+  padding: 11rem 0 13rem 0;
+  border-top: 1px solid var(--border-line);
+}
+
+.records-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 4rem;
+  color: var(--text-pure);
+}
+
+.records-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Record Row: Detection Interaction
+   "카드가 튀어나오는 효과"가 아닌 "검출되었다는 느낌" */
+.record-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 90px;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+  margin: 0 -1.5rem;
+  border-bottom: 1px solid var(--border-line);
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Left 1px detection vertical accent line */
+.record-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--accent-hairline);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+@media (hover: hover) {
+  .record-row:hover {
+    background-color: rgba(255, 255, 255, 0.015);
+    border-bottom-color: var(--border-hover);
+  }
+
+  .record-row:hover::before {
+    opacity: 1;
+  }
+
+  .record-row:hover .record-id {
+    color: var(--text-pure);
+  }
+
+  .record-row:hover .record-title {
+    color: var(--text-pure);
+  }
+
+  .record-row:hover .record-desc {
+    color: var(--text-sub);
+  }
+
+  .record-row:hover .action-text {
+    color: var(--text-pure);
+  }
+}
+
+.record-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.record-id {
+  font-weight: 600;
+  color: var(--text-sub);
+  transition: color 0.18s ease;
+}
+
+.record-tag {
+  color: var(--text-muted);
+}
+
+.record-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.record-title {
+  color: var(--text-pure);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  transition: color 0.18s ease;
+}
+
+.record-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-weight: 300;
+  transition: color 0.18s ease;
+}
+
+.record-action {
+  text-align: right;
+}
+
+.action-text {
+  color: var(--text-muted);
+  transition: color 0.18s ease;
+}
+
+/* ==========================================================================
+   04. The Operator & Restrained CTAs
+   ========================================================================== */
+.section-operator {
+  padding: 11rem 0 13rem 0;
+  border-top: 1px solid var(--border-line);
+}
+
+.operator-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.operator-name {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-pure);
+  margin-bottom: 0;
+}
+
+.operator-spec-tag {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--border-line);
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+}
+
+.operator-bio {
+  font-size: 1.15rem;
+  color: var(--text-sub);
+  line-height: 2.1;
+  font-weight: 300;
+  max-width: 680px;
+  margin-bottom: 2.5rem;
+}
+
+/* Operator Cleanroom Specification Grid */
+.operator-specs {
+  border-top: 1px solid var(--border-line);
+  border-bottom: 1px solid var(--border-line);
+  padding: 1.5rem 0;
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+.spec-key {
+  color: var(--text-muted);
+}
+
+.spec-val {
+  font-size: 0.94rem;
+  color: var(--text-sub);
+  line-height: 1.7;
+}
+
+/* CTA Hierarchy: [ ENTER BLOG ] (Solid) & [ + FOLLOW ] (Outline) */
+.operator-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cta-primary {
+  background-color: #ffffff;
+  color: #060608;
+  font-family: var(--font-mono);
+  font-size: var(--system-font-size);
+  font-weight: 700;
+  letter-spacing: var(--system-letter-spacing);
+  padding: 0.72rem 1.6rem;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.18s ease;
+}
+.cta-primary:hover {
+  opacity: 0.85;
+}
+
+.cta-secondary {
+  background-color: transparent;
+  color: var(--text-sub);
+  font-family: var(--font-mono);
+  font-size: var(--system-font-size);
+  font-weight: 500;
+  letter-spacing: var(--system-letter-spacing);
+  padding: 0.72rem 1.6rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+.cta-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: var(--text-pure);
+}
+
+/* ==========================================================================
+   05. Bottom Restraint Footer
+   ========================================================================== */
+.silence-footer {
+  padding: 4.5rem 3rem;
+  border-top: 1px solid var(--border-line);
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-tag {
+  color: var(--text-muted);
+}
+
+.footer-copy {
+  color: var(--text-dim);
+}
+
+/* ==========================================================================
+   06. Abstract / QC Report Modal (Cleanroom COA Style)
+   ========================================================================== */
+.qc-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+}
+
+.qc-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Subtle backdrop, no heavy blur */
+.qc-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(4, 5, 8, 0.78);
+}
+
+/* Cleanroom Test Report Sheet */
+.qc-dialog {
+  position: relative;
+  max-width: 620px;
+  width: 100%;
+  background-color: var(--bg-modal);
+  border: 1px solid var(--border-modal);
+  border-radius: 6px;
+  padding: 2.75rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  transform: translateY(6px);
+  transition: transform 0.22s var(--ease-calibrated);
+}
+
+.qc-modal.active .qc-dialog {
+  transform: translateY(0);
+}
+
+.qc-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-line);
+}
+
+.qc-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.modal-doc-type {
+  color: var(--text-sub);
+}
+
+.modal-rec-id {
+  color: var(--text-pure);
+  font-weight: 700;
+}
+
+.qc-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: color 0.18s ease;
+}
+.qc-close-btn:hover {
+  color: var(--text-pure);
+}
+
+.qc-dialog-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.modal-article-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-pure);
+  line-height: 1.4;
+}
+
+.modal-article-abstract {
+  font-size: 0.95rem;
+  color: var(--text-sub);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.qc-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-line);
+  margin: 0.5rem 0;
+}
+
+.qc-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.qc-section-label {
+  color: var(--text-muted);
+}
+
+.qc-section-content {
+  font-size: 0.92rem;
+  color: var(--text-sub);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.qc-dialog-footer {
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.qc-link-btn {
+  font-size: var(--system-font-size);
+  padding: 0.65rem 1.4rem;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 768px) {
+  .status-bar {
+    padding: 0 1.5rem;
+  }
+  .section-hero {
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+  .section-manifesto, .section-records, .section-operator {
+    padding: 6.5rem 0;
+  }
+  .record-row {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    padding: 2.25rem 0.75rem;
+    margin: 0 -0.75rem;
+  }
+  .record-action {
+    text-align: left;
+    margin-top: 0.25rem;
+  }
+  .spec-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+  .qc-dialog {
+    padding: 2rem 1.5rem;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .footer-inner {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* Respect Accessibility Preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .seq-item, .hero-brand-block, .hero-enter {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
