@@ -163,7 +163,7 @@ async function main() {
 
   // Inject into index.html
   let indexContent = fs.readFileSync(INDEX_HTML, 'utf-8');
-  const recordsRegex = /<div class="records-list">[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/;
+  const recordsRegex = /[ \t]*<div class="records-list">[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/;
   if (recordsRegex.test(indexContent)) {
     indexContent = indexContent.replace(recordsRegex, `${recordsHtml}\n      </div>\n    </section>`);
     fs.writeFileSync(INDEX_HTML, indexContent, 'utf-8');

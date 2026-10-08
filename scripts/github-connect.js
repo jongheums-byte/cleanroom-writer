@@ -26,15 +26,16 @@ spawnSync(ghExe, ['auth', 'setup-git'], {
   env: process.env
 });
 
-console.log('\n[STEP 3] Creating repository and pushing all files to GitHub...');
-const repoRes = spawnSync(ghExe, ['repo', 'create', 'cleanroom-writer', '--public', '--source=' + projectDir, '--push'], {
+console.log('\n[STEP 3] Uploading all files to GitHub repository...');
+const gitExe = 'C:\\Users\\선종흠\\AppData\\Local\\Programs\\MinGit\\cmd\\git.exe';
+const pushRes = spawnSync(gitExe, ['push', '-u', 'origin', 'main'], {
   stdio: 'inherit',
   cwd: projectDir,
   env: process.env
 });
 
 console.log('\n========================================================');
-if (repoRes.status === 0 || repoRes.status === null) {
+if (pushRes.status === 0 || pushRes.status === null) {
   console.log('   SUCCESS! CleanRoom Writer is now published on GitHub!');
   console.log('   Repository: https://github.com/jongheums-byte/cleanroom-writer');
 } else {

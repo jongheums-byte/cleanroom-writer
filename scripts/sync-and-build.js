@@ -54,6 +54,22 @@ if (desktopPath) {
   }
 }
 
+// 3. Commit and Push to GitHub repository to trigger live site update
+try {
+  const gitStatus = execSync('git status --porcelain index.html script.js records.json', { cwd: root, encoding: 'utf-8' });
+  if (gitStatus.trim().length > 0) {
+    console.log('\n[GIT] Detected data changes, updating GitHub repository...');
+    execSync('git add index.html script.js records.json', { cwd: root, stdio: 'inherit' });
+    execSync('git commit -m "chore(sync): update top sympathy records"', { cwd: root, stdio: 'inherit' });
+    execSync('git push origin main', { cwd: root, stdio: 'inherit' });
+    console.log('[GIT] Successfully pushed to GitHub main branch!');
+  } else {
+    console.log('\n[GIT] No record changes to commit in repository.');
+  }
+} catch (gitErr) {
+  console.warn('[WARN] Git push skipped or failed:', gitErr.message);
+}
+
 console.log('\n====================================================');
 console.log('   ALL SYNC OPERATIONS COMPLETED WITH ZERO ERROR     ');
 console.log('====================================================');
