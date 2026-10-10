@@ -1,6 +1,6 @@
 {
-  "lastSynced": "2026-10-09T22:25:40.676Z",
-  "totalScanned": 78,
+  "lastSynced": "2026-10-10T21:20:09.657Z",
+  "totalScanned": 79,
   "records": [
     {
       "id": 1,
@@ -44,6 +44,19 @@
     {
       "id": 4,
       "recId": "REC. 04",
+      "logNo": 224426114674,
+      "title": "「진짜 신호를 보기 전에, 아무것도 없는 것을 먼저 본다」",
+      "tag": "AUDIT TRAIL / 공감 8",
+      "desc": "제약 분석화학의 Blank와 조직의 Ghost Peak \"내가 지난 10년 동안 이 바닥에서 굴러먹은 짬밥이 얼만데, 딱 보면 견적 나오는 거지.\" \"그 팀이 올린 보고서는 안 봐도 뻔해. 원래 숫자 부풀리...",
+      "category": "GMP in Your Area",
+      "sympathy": 8,
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224426114674",
+      "addDate": 1790668775657
+    },
+    {
+      "id": 5,
+      "recId": "REC. 05",
       "logNo": 224422977152,
       "title": "「본게임을 뛰기 전에 장비의 자격부터 증명하라」",
       "tag": "AUDIT TRAIL / 공감 8",
@@ -55,8 +68,8 @@
       "addDate": 1790387109722
     },
     {
-      "id": 5,
-      "recId": "REC. 05",
+      "id": 6,
+      "recId": "REC. 06",
       "logNo": 224378347716,
       "title": "「물로 대충 헹구고 새 약을 만든다고요?」 제약회사 세척 밸리데이션으로 보는 조직의 ‘악습 교차오염’",
       "tag": "AUDIT TRAIL / 공감 8",
@@ -66,19 +79,6 @@
       "commentCnt": 0,
       "link": "https://blog.naver.com/humi09/224378347716",
       "addDate": 1786675545889
-    },
-    {
-      "id": 6,
-      "recId": "REC. 06",
-      "logNo": 224426114674,
-      "title": "「진짜 신호를 보기 전에, 아무것도 없는 것을 먼저 본다」",
-      "tag": "AUDIT TRAIL / 공감 7",
-      "desc": "제약 분석화학의 Blank와 조직의 Ghost Peak \"내가 지난 10년 동안 이 바닥에서 굴러먹은 짬밥이 얼만데, 딱 보면 견적 나오는 거지.\" \"그 팀이 올린 보고서는 안 봐도 뻔해. 원래 숫자 부풀리...",
-      "category": "GMP in Your Area",
-      "sympathy": 7,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224426114674",
-      "addDate": 1790668775657
     }
   ]
 }
