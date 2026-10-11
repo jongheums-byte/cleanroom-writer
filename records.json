@@ -1,6 +1,6 @@
 {
-  "lastSynced": "2026-10-10T21:20:09.657Z",
-  "totalScanned": 79,
+  "lastSynced": "2026-10-11T21:39:09.411Z",
+  "totalScanned": 80,
   "records": [
     {
       "id": 1,
@@ -18,6 +18,32 @@
     {
       "id": 2,
       "recId": "REC. 02",
+      "logNo": 224427171988,
+      "title": "「돈을 줬다고 책임까지 넘어가지 않는다」",
+      "tag": "AUDIT TRAIL / 공감 9",
+      "desc": "제약 품질협약(Quality Agreement)과 책임의 거버넌스 \"우리가 전문 업체에 턴키(Turn-key)로 외주시킨 일인데, 왜 우리 회사에 책임을 묻습니까?\" \"용역 계약서에 &#x27;하자 발생 시...",
+      "category": "GMP in Your Area",
+      "sympathy": 9,
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224427171988",
+      "addDate": 1790750869362
+    },
+    {
+      "id": 3,
+      "recId": "REC. 03",
+      "logNo": 224426114674,
+      "title": "「진짜 신호를 보기 전에, 아무것도 없는 것을 먼저 본다」",
+      "tag": "AUDIT TRAIL / 공감 9",
+      "desc": "제약 분석화학의 Blank와 조직의 Ghost Peak \"내가 지난 10년 동안 이 바닥에서 굴러먹은 짬밥이 얼만데, 딱 보면 견적 나오는 거지.\" \"그 팀이 올린 보고서는 안 봐도 뻔해. 원래 숫자 부풀리...",
+      "category": "GMP in Your Area",
+      "sympathy": 9,
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224426114674",
+      "addDate": 1790668775657
+    },
+    {
+      "id": 4,
+      "recId": "REC. 04",
       "logNo": 224417696828,
       "title": "「문서만 넘긴다고 인수인계가 끝나는 것은 아니다」 제약 시험법 이전(AMT) 원칙을 통해 본 효과적인 업무 인수인계와 지식 전달 방안",
       "tag": "AUDIT TRAIL / 공감 9",
@@ -29,34 +55,21 @@
       "addDate": 1789880080472
     },
     {
-      "id": 3,
-      "recId": "REC. 03",
-      "logNo": 224427171988,
-      "title": "「돈을 줬다고 책임까지 넘어가지 않는다」",
-      "tag": "AUDIT TRAIL / 공감 8",
-      "desc": "제약 품질협약(Quality Agreement)과 책임의 거버넌스 \"우리가 전문 업체에 턴키(Turn-key)로 외주시킨 일인데, 왜 우리 회사에 책임을 묻습니까?\" \"용역 계약서에 &#x27;하자 발생 시...",
-      "category": "GMP in Your Area",
-      "sympathy": 8,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224427171988",
-      "addDate": 1790750869362
-    },
-    {
-      "id": 4,
-      "recId": "REC. 04",
-      "logNo": 224426114674,
-      "title": "「진짜 신호를 보기 전에, 아무것도 없는 것을 먼저 본다」",
-      "tag": "AUDIT TRAIL / 공감 8",
-      "desc": "제약 분석화학의 Blank와 조직의 Ghost Peak \"내가 지난 10년 동안 이 바닥에서 굴러먹은 짬밥이 얼만데, 딱 보면 견적 나오는 거지.\" \"그 팀이 올린 보고서는 안 봐도 뻔해. 원래 숫자 부풀리...",
-      "category": "GMP in Your Area",
-      "sympathy": 8,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224426114674",
-      "addDate": 1790668775657
-    },
-    {
       "id": 5,
       "recId": "REC. 05",
+      "logNo": 224428334922,
+      "title": "「시스템이 실패하는 진짜 이유는 코드가 아니다」",
+      "tag": "AUDIT TRAIL / 공감 8",
+      "desc": "제약 LIMS 기준정보(Master Data)와 보이지 않는 복리의 과학 \"수십억 원을 들여서 최신 전산 시스템을 깔아줬는데, 직원들은 왜 아직도 엑셀을 쓰고 있을까요?\" \"도입 초기에는 다들 혁신이라고 박...",
+      "category": "GMP in Your Area",
+      "sympathy": 8,
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224428334922",
+      "addDate": 1790836695640
+    },
+    {
+      "id": 6,
+      "recId": "REC. 06",
       "logNo": 224422977152,
       "title": "「본게임을 뛰기 전에 장비의 자격부터 증명하라」",
       "tag": "AUDIT TRAIL / 공감 8",
@@ -66,19 +79,6 @@
       "commentCnt": 0,
       "link": "https://blog.naver.com/humi09/224422977152",
       "addDate": 1790387109722
-    },
-    {
-      "id": 6,
-      "recId": "REC. 06",
-      "logNo": 224378347716,
-      "title": "「물로 대충 헹구고 새 약을 만든다고요?」 제약회사 세척 밸리데이션으로 보는 조직의 ‘악습 교차오염’",
-      "tag": "AUDIT TRAIL / 공감 8",
-      "desc": "새해가 되거나 조직 개편이 있을 때마다 회사들은 늘 화려한 &#x27;혁신&#x27;을 선언합니다. 새로운 프로젝트를 시작하고, 새로운 리더를 영입하며 \"이제부터 완전히 달라질 것\"이라고 호언장담하죠. 하지...",
-      "category": "GMP in Your Area",
-      "sympathy": 8,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224378347716",
-      "addDate": 1786675545889
     }
   ]
 }
