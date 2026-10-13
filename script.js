@@ -21,9 +21,9 @@ const qcArchive = {
   },
   "2": {
     "recId": "REC. 02",
-    "title": "「돈을 줬다고 책임까지 넘어가지 않는다」",
+    "title": "「돈을 줬다고 ���임까지 넘어가지 않는다」",
     "abstract": "[GMP in Your Area] 공감 데이터 9건 입증 기록",
-    "hypothesis": "“「돈을 줬다고 책임까지 넘어가지 않는다」”",
+    "hypothesis": "“「돈을 줬다고 ���임까지 넘어가지 않는다」”",
     "observation": "제약 품질협약(Quality Agreement)과 책임의 거버넌스 \"우리가 전문 업체에 턴키(Turn-key)로 외주시킨 일인데, 왜 우리 회사에 책임을 묻습니까?\" \"용역 계약서에 &#x27;하자 발생 시... (현업 19년 QC 렌즈로 관측 및 입증)",
     "link": "https://blog.naver.com/humi09/224427171988"
   },
