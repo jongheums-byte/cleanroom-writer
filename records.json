@@ -1,10 +1,23 @@
 {
-  "lastSynced": "2026-10-13T22:25:17.858Z",
-  "totalScanned": 82,
+  "lastSynced": "2026-10-14T21:23:23.718Z",
+  "totalScanned": 83,
   "records": [
     {
       "id": 1,
       "recId": "REC. 01",
+      "logNo": 224438944516,
+      "title": "「문제가 생겼다고 판을 엎을 필요는 없다」",
+      "tag": "AUDIT TRAIL / 공감 10",
+      "desc": "제약 정치세척·정치멸균(CIP·SIP)과 자체 정화의 과학 \"이번 프로젝트에서 품질 문제가 터졌으니, 관련 팀을 전면 해체하고 조직을 원점에서 다시 짭시다.\" \"시스템이 삐걱거리면 사람을 교체하고 판을 새로...",
+      "category": "GMP in Your Area",
+      "sympathy": 10,
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224438944516",
+      "addDate": 1791779008932
+    },
+    {
+      "id": 2,
+      "recId": "REC. 02",
       "logNo": 224417049052,
       "title": "「신호가 없다고 해서 문제가 없는 것은 아니다」제약 배지 성능 시험(Growth Promotion Test)이 알려주는 피드백 감도와 조직의 건강성",
       "tag": "AUDIT TRAIL / 공감 10",
@@ -16,10 +29,23 @@
       "addDate": 1789802937006
     },
     {
-      "id": 2,
-      "recId": "REC. 02",
+      "id": 3,
+      "recId": "REC. 03",
+      "logNo": 224437839858,
+      "title": "「모두가 대세라 환호할 때 멈춰 설 수 있는가」",
+      "tag": "AUDIT TRAIL / 공감 9",
+      "desc": "제약 탈리도마이드 사건과 현대 GMP의 탄생 \"업계 1등 기업도 이미 쓰고 있고, 해외 시장에서도 다들 난리입니다.\" \"경쟁사들은 이미 치고 나가는데, 왜 우리만 데이터 타령하면서 일정을 지체합니까? 일단 ...",
+      "category": "GMP in Your Area",
+      "sympathy": 9,
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224437839858",
+      "addDate": 1791686744929
+    },
+    {
+      "id": 4,
+      "recId": "REC. 04",
       "logNo": 224427171988,
-      "title": "「돈을 줬다고 ���임까지 넘어가지 않는다」",
+      "title": "「돈을 줬다고 책임까지 넘어가지 않는다」",
       "tag": "AUDIT TRAIL / 공감 9",
       "desc": "제약 품질협약(Quality Agreement)과 책임의 거버넌스 \"우리가 전문 업체에 턴키(Turn-key)로 외주시킨 일인데, 왜 우리 회사에 책임을 묻습니까?\" \"용역 계약서에 &#x27;하자 발생 시...",
       "category": "GMP in Your Area",
@@ -29,8 +55,8 @@
       "addDate": 1790750869362
     },
     {
-      "id": 3,
-      "recId": "REC. 03",
+      "id": 5,
+      "recId": "REC. 05",
       "logNo": 224426114674,
       "title": "「진짜 신호를 보기 전에, 아무것도 없는 것을 먼저 본다」",
       "tag": "AUDIT TRAIL / 공감 9",
@@ -42,8 +68,8 @@
       "addDate": 1790668775657
     },
     {
-      "id": 4,
-      "recId": "REC. 04",
+      "id": 6,
+      "recId": "REC. 06",
       "logNo": 224417696828,
       "title": "「문서만 넘긴다고 인수인계가 끝나는 것은 아니다」 제약 시험법 이전(AMT) 원칙을 통해 본 효과적인 업무 인수인계와 지식 전달 방안",
       "tag": "AUDIT TRAIL / 공감 9",
@@ -53,32 +79,6 @@
       "commentCnt": 2,
       "link": "https://blog.naver.com/humi09/224417696828",
       "addDate": 1789880080472
-    },
-    {
-      "id": 5,
-      "recId": "REC. 05",
-      "logNo": 224428334922,
-      "title": "「시스템이 실패하는 진짜 이유는 코드가 아니다」",
-      "tag": "AUDIT TRAIL / 공감 8",
-      "desc": "제약 LIMS 기준정보(Master Data)와 보이지 않는 복리의 과학 \"수십억 원을 들여서 최신 전산 시스템을 깔아줬는데, 직원들은 왜 아직도 엑셀을 쓰고 있을까요?\" \"도입 초기에는 다들 혁신이라고 박...",
-      "category": "GMP in Your Area",
-      "sympathy": 8,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224428334922",
-      "addDate": 1790836695640
-    },
-    {
-      "id": 6,
-      "recId": "REC. 06",
-      "logNo": 224422977152,
-      "title": "「본게임을 뛰기 전에 장비의 자격부터 증명하라」",
-      "tag": "AUDIT TRAIL / 공감 8",
-      "desc": "제약 시스템 적합성 시험(SST)과 시작 전 컨디션의 과학 \"분명 평소 하던 방식대로 최선을 다했는데, 왜 이번 프로젝트 결과는 이렇게 어그러졌을까요?\" \"매뉴얼에 적힌 절차를 하나도 빠뜨리지 않고 똑같이 ...",
-      "category": "GMP in Your Area",
-      "sympathy": 8,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224422977152",
-      "addDate": 1790387109722
     }
   ]
 }
