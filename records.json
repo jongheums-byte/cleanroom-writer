@@ -1,10 +1,23 @@
 {
-  "lastSynced": "2026-10-23T21:10:01.124Z",
-  "totalScanned": 92,
+  "lastSynced": "2026-10-24T20:27:06.882Z",
+  "totalScanned": 93,
   "records": [
     {
       "id": 1,
       "recId": "REC. 01",
+      "logNo": 224451234580,
+      "title": "「까다로운 대상을 다룰 때는 끝까지 밀어붙이지 않는다」",
+      "tag": "AUDIT TRAIL / 공감 10",
+      "desc": "제약 정밀 분주(Reverse Pipetting)와 유체의 과학 마이크로피펫(Micropipette, 마이크로리터 단위의 미량 액체를 정밀하게 옮기는 실험 기구)을 처음 손에 쥐는 신입 연구원들이 시험대 앞...",
+      "category": "GMP in Your Area",
+      "sympathy": 10,
+      "commentCnt": 2,
+      "link": "https://blog.naver.com/humi09/224451234580",
+      "addDate": 1792731064512
+    },
+    {
+      "id": 2,
+      "recId": "REC. 02",
       "logNo": 224438944516,
       "title": "「문제가 생겼다고 판을 엎을 필요는 없다」",
       "tag": "AUDIT TRAIL / 공감 10",
@@ -16,8 +29,8 @@
       "addDate": 1791779008932
     },
     {
-      "id": 2,
-      "recId": "REC. 02",
+      "id": 3,
+      "recId": "REC. 03",
       "logNo": 224417049052,
       "title": "「신호가 없다고 해서 문제가 없는 것은 아니다」제약 배지 성능 시험(Growth Promotion Test)이 알려주는 피드백 감도와 조직의 건강성",
       "tag": "AUDIT TRAIL / 공감 10",
@@ -29,8 +42,8 @@
       "addDate": 1789802937006
     },
     {
-      "id": 3,
-      "recId": "REC. 03",
+      "id": 4,
+      "recId": "REC. 04",
       "logNo": 224440276934,
       "title": "「매일 조금씩 무뎌지는 칼날」",
       "tag": "AUDIT TRAIL / 공감 9",
@@ -42,8 +55,8 @@
       "addDate": 1791871183364
     },
     {
-      "id": 4,
-      "recId": "REC. 04",
+      "id": 5,
+      "recId": "REC. 05",
       "logNo": 224437839858,
       "title": "「모두가 대세라 환호할 때 멈춰 설 수 있는가」",
       "tag": "AUDIT TRAIL / 공감 9",
@@ -55,8 +68,8 @@
       "addDate": 1791686744929
     },
     {
-      "id": 5,
-      "recId": "REC. 05",
+      "id": 6,
+      "recId": "REC. 06",
       "logNo": 224427171988,
       "title": "「돈을 줬다고 책임까지 넘어가지 않는다」",
       "tag": "AUDIT TRAIL / 공감 9",
@@ -66,19 +79,6 @@
       "commentCnt": 0,
       "link": "https://blog.naver.com/humi09/224427171988",
       "addDate": 1790750869362
-    },
-    {
-      "id": 6,
-      "recId": "REC. 06",
-      "logNo": 224426114674,
-      "title": "「진짜 신호를 보기 전에, 아무것도 없는 것을 먼저 본다」",
-      "tag": "AUDIT TRAIL / 공감 9",
-      "desc": "제약 분석화학의 Blank와 조직의 Ghost Peak \"내가 지난 10년 동안 이 바닥에서 굴러먹은 짬밥이 얼만데, 딱 보면 견적 나오는 거지.\" \"그 팀이 올린 보고서는 안 봐도 뻔해. 원래 숫자 부풀리...",
-      "category": "GMP in Your Area",
-      "sympathy": 9,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224426114674",
-      "addDate": 1790668775657
     }
   ]
 }
