@@ -1,757 +1,1135 @@
 /* ==========================================================================
-   CleanRoom Writer V2 | UI Micro-Interaction & Typography Polish
-   Principle: "불순물이 없다는 것은 무언가를 더하는 것이 아니라, 불필요한 것을 제거하는 것이다."
-   Flow: UNSTABLE -> STABILIZING -> VERIFIED -> STILLNESS
+   CleanRoom Writer · VEA Architectural Monochrome Style System
+   Inspired by virtuallyeverafter.xyz (Architect-Led Creative Studio)
+   Concept: Controlled Space / Complete Removal of Impurities
    ========================================================================== */
 
 :root {
-  /* Surface & Base Palette */
-  --bg-black: #060608;
-  --bg-modal: #0b0c10;
+  /* Surface & Base Palette (VEA Exact Specifications) */
+  --bg:         #000000;   /* Pure black on every surface */
+  --bg-raise:   #090909;
+  --bg-subtle:  #111110;
   
-  /* Text Contrast Hierarchy */
-  --text-pure: #ffffff;
-  --text-sub: #9ca0ab;
-  --text-muted: #5e626e;
-  --text-dim: #383a42;
+  /* Text Contrast Hierarchy (Warm Ink & Titanium Steel) */
+  --ink:        #E9E7E2;   /* High contrast primary text */
+  --ink-dim:    #9A9891;   /* Secondary descriptive text */
+  --ink-faint:  #7C7A74;   /* Technical tags, coordinates, labels */
+  --ink-ghost:  #44433E;   /* Whisper elements, subtle rules */
+  --steel:      #C7C6C2;   /* Metallic titanium highlight */
 
-  /* Hairline Borders */
-  --border-line: rgba(255, 255, 255, 0.07);
-  --border-hover: rgba(255, 255, 255, 0.15);
-  --border-modal: rgba(255, 255, 255, 0.12);
+  /* Architectural Hairlines */
+  --line:       rgba(233, 231, 226, 0.12);
+  --line-hard:  rgba(233, 231, 226, 0.26);
+  --line-focus: rgba(233, 231, 226, 0.65);
 
-  /* Single Controlled Point Hue (Low Saturation Cleanroom Cyan) */
-  --status-dot-color: #00e5ff;
-  --accent-hairline: rgba(0, 229, 255, 0.85);
+  /* Single Controlled Point Hue (Cold QC Cyan beacon) */
+  --beacon:     #00E5FF;
+  --beacon-glow: rgba(0, 229, 255, 0.4);
 
-  /* Unified Typography System Tokens */
-  --font-mono: 'JetBrains Mono', monospace;
-  --font-sans: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Strict Unified Monospace & Precision Korean Fallback */
+  --font-mono:  'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+  --font-sans:  'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --system-font-size: 0.72rem;
-  --system-letter-spacing: 0.08em;
-  --system-line-height: 1.4;
-  --system-color: var(--text-muted);
+  /* Architectural Easing & Pacing */
+  --ease:       cubic-bezier(0.77, 0, 0.18, 1);
+  --pad:        clamp(18px, 4vw, 56px);
+  --pad-sm:     clamp(12px, 2.5vw, 24px);
 
-  --ease-calibrated: cubic-bezier(0.16, 1, 0.3, 1);
+  --z-topbar:   800;
+  --z-hud:      700;
+  --z-drawer:   990;
+  --z-overlay:  980;
 }
 
 /* Global Reset */
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-  background-color: var(--bg-black);
-}
-
-body.silence-theme {
-  font-family: var(--font-sans);
-  background-color: var(--bg-black);
-  color: var(--text-pure);
-  min-height: 100vh;
-  line-height: 1.85;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ==========================================================================
-   Unified System Label Token
-   ========================================================================== */
-.system-token {
+  background-color: var(--bg);
+  color: var(--ink);
   font-family: var(--font-mono);
-  font-size: var(--system-font-size);
-  letter-spacing: var(--system-letter-spacing);
-  line-height: var(--system-line-height);
-  color: var(--system-color);
-  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.vea-cleanroom {
+  background-color: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body.drawer-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Spatial Grid Lines (Subtle Framing) */
+.spatial-grid-lines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.grid-line-v {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--line);
+}
+
+.grid-line-v.left {
+  left: var(--pad);
+}
+
+.grid-line-v.right {
+  right: var(--pad);
 }
 
 /* ==========================================================================
-   Top Minimal Status Bar
+   00. Architectural Topbar
    ========================================================================== */
-.status-bar {
+.topbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 52px;
-  padding: 0 3rem;
+  right: 0;
+  z-index: var(--z-topbar);
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(6, 6, 8, 0.9);
-  border-bottom: 1px solid var(--border-line);
-  z-index: 100;
+  padding: 0 var(--pad);
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
 }
 
-.brand-token {
-  font-weight: 700;
-  color: var(--text-pure);
-}
-
-.status-right {
+.bar-left {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 10px;
 }
 
-.status-indicator {
+.system-beacon {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--beacon);
+  box-shadow: 0 0 8px var(--beacon-glow);
+  display: inline-block;
+  animation: pulse-beacon 2.4s infinite ease-in-out;
+}
+
+@keyframes pulse-beacon {
+  0%, 100% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.bar-tag {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+
+.bar-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo-text {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--ink);
+}
+
+.logo-sub {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--ink-ghost);
+}
+
+.bar-right {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 20px;
 }
 
-/* Micro Status Pulse: Gentle opacity cycle (1.8s), no resize, no heavy glow */
-.status-dot {
+.snd-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--ink-dim);
+  transition: all 0.25s var(--ease);
+}
+
+.snd-toggle:hover {
+  border-color: var(--line-hard);
+  color: var(--ink);
+}
+
+.snd-toggle.active {
+  border-color: var(--line-focus);
+  color: var(--beacon);
+  background-color: rgba(0, 229, 255, 0.05);
+}
+
+.snd-dot {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: var(--status-dot-color);
-  animation: subtlePulse 2s infinite ease-in-out;
+  background-color: var(--ink-ghost);
 }
 
-@keyframes subtlePulse {
-  0%, 100% {
-    opacity: 0.45;
-  }
-  50% {
-    opacity: 1;
-  }
+.snd-toggle.active .snd-dot {
+  background-color: var(--beacon);
+  box-shadow: 0 0 6px var(--beacon-glow);
 }
 
-.status-link {
-  font-weight: 600;
-  color: var(--text-sub);
-  text-decoration: none;
-  transition: color 0.18s ease;
+.bar-link {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--ink-dim);
+  transition: color 0.25s var(--ease);
 }
-.status-link:hover {
-  color: var(--text-pure);
+
+.bar-link:hover {
+  color: var(--ink);
 }
 
 /* ==========================================================================
-   Container & Generous Spacing
-   ========================================================================== */
-.silence-container {
-  width: 100%;
-}
-
-.content-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.section-code {
-  display: block;
-  margin-bottom: 2.25rem;
-}
-
-/* ==========================================================================
-   01. The Calibration Sequence (Hero)
+   01. Hero Section & Thesis
    ========================================================================== */
 .section-hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
-  padding: 8rem 2rem 5rem 2rem;
+  padding: 130px var(--pad) 80px;
+  border-bottom: 1px solid var(--line);
   position: relative;
 }
 
-.hero-inner {
+.hero-frame {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-coordinates {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 12px;
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  color: var(--ink-ghost);
+  margin-bottom: 36px;
 }
 
-.sequence-box {
+.coord-divider {
+  opacity: 0.4;
+}
+
+.thesis-eyebrow {
+  display: flex;
+  gap: 14px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  margin-bottom: 24px;
+}
+
+.tag-index {
+  color: var(--beacon);
+}
+
+.tag-desc {
+  color: var(--ink-faint);
+}
+
+.thesis-heading {
+  font-size: clamp(28px, 5.2vw, 68px);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 34px;
+  font-family: var(--font-sans);
+  word-break: keep-all;
+}
+
+.line-reveal {
+  display: block;
+}
+
+.line-reveal.highlight {
+  color: var(--steel);
+  font-weight: 500;
+  border-left: 2px solid var(--beacon);
+  padding-left: 16px;
+  margin-top: 10px;
+}
+
+.thesis-lead {
+  font-size: clamp(14px, 1.3vw, 17px);
+  line-height: 1.75;
+  color: var(--ink-dim);
+  max-width: 820px;
+  margin-bottom: 56px;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  word-break: keep-all;
+}
+
+/* Telemetry & Sensor HUD Module */
+.telemetry-hud {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background-color: var(--line);
+  border: 1px solid var(--line);
+  margin-bottom: 48px;
+}
+
+.telemetry-col {
+  background-color: var(--bg);
+  padding: 24px 28px;
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
-  margin-bottom: 4rem;
+  gap: 8px;
+  transition: background-color 0.3s ease;
 }
 
-.seq-item {
+.telemetry-col:hover {
+  background-color: var(--bg-raise);
+}
+
+.tel-label {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--ink-faint);
+}
+
+.tel-val-wrap {
   display: flex;
   align-items: baseline;
-  justify-content: center;
-  gap: 1.5rem;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.8s var(--ease-calibrated), transform 0.8s var(--ease-calibrated);
+  gap: 8px;
 }
 
-.seq-label {
-  color: var(--text-muted);
+.tel-num {
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.02em;
 }
 
-.seq-val {
-  font-family: var(--font-mono);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-pure);
-  min-width: 2.5ch;
-  text-align: right;
-  letter-spacing: 0.04em;
+.tel-unit {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ink-dim);
 }
 
-.hero-brand-block {
-  margin-bottom: 4.5rem;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.9s var(--ease-calibrated), transform 0.9s var(--ease-calibrated);
+.tel-status {
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  color: var(--beacon);
+  opacity: 0.85;
 }
 
-.hero-brand {
-  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--text-pure);
-  margin-bottom: 0.75rem;
+.hero-cue {
+  display: flex;
+  justify-content: flex-start;
 }
 
-.hero-essence {
-  font-size: 1.3rem;
-  font-weight: 300;
-  color: var(--text-sub);
-  letter-spacing: -0.01em;
-}
-
-.hero-enter {
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.9s var(--ease-calibrated), transform 0.9s var(--ease-calibrated);
-}
-
-.enter-btn {
-  text-decoration: none;
+.scroll-cue-btn {
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  transition: color 0.2s ease;
-}
-.enter-btn:hover .system-token {
-  color: var(--text-pure);
-}
-
-.enter-arrow {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  transition: color 0.2s ease;
-}
-.enter-btn:hover .enter-arrow {
-  color: var(--text-pure);
+  gap: 12px;
+  padding: 12px 0;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--ink-dim);
+  border-bottom: 1px solid var(--line-hard);
+  transition: all 0.3s var(--ease);
 }
 
-.seq-visible {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+.scroll-cue-btn:hover {
+  color: var(--ink);
+  letter-spacing: 0.28em;
+  border-color: var(--ink);
+}
+
+.cue-arrow {
+  transition: transform 0.3s var(--ease);
+}
+
+.scroll-cue-btn:hover .cue-arrow {
+  transform: translateY(4px);
 }
 
 /* ==========================================================================
-   02. The Controlled Space (Manifesto)
+   02. Section Header Common Bar
    ========================================================================== */
-.section-manifesto {
-  padding: 13rem 0;
-  border-top: 1px solid var(--border-line);
+.section-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px var(--pad);
+  border-bottom: 1px solid var(--line);
+  background-color: var(--bg);
 }
 
-.manifesto-quote {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 300;
-  line-height: 1.5;
-  letter-spacing: -0.03em;
-  color: var(--text-sub);
-  margin-bottom: 3.5rem;
+.sh-left, .sh-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.manifesto-quote .text-white {
-  color: var(--text-pure);
-  font-weight: 700;
+.sh-index {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--beacon);
+  letter-spacing: 0.18em;
 }
 
-.manifesto-sub {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  line-height: 2.1;
-  font-weight: 300;
-  max-width: 720px;
+.sh-title {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: var(--ink);
+  text-transform: uppercase;
+}
+
+.sh-spec, .sh-filter {
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
 }
 
 /* ==========================================================================
-   03. The Records (Detection Hover Protocol)
+   03. Dossier Matrix (Selected Records)
    ========================================================================== */
 .section-records {
-  padding: 11rem 0 13rem 0;
-  border-top: 1px solid var(--border-line);
+  border-bottom: 1px solid var(--line);
+  background-color: var(--bg);
 }
 
-.records-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 4rem;
-  color: var(--text-pure);
+.dossier-table {
+  width: 100%;
 }
 
-.records-list {
+.dossier-thead {
+  display: grid;
+  grid-template-columns: 120px 240px 1fr 140px 140px;
+  padding: 16px var(--pad);
+  border-bottom: 1px solid var(--line);
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  color: var(--ink-ghost);
+  text-transform: uppercase;
+}
+
+.dossier-row {
+  display: grid;
+  grid-template-columns: 120px 240px 1fr 140px 140px;
+  align-items: baseline;
+  padding: clamp(24px, 3.5vw, 36px) var(--pad);
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  transition: background-color 0.25s var(--ease), border-color 0.25s ease;
+  position: relative;
+}
+
+.dossier-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--beacon);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.dossier-row:hover {
+  background-color: var(--bg-raise);
+  border-bottom-color: var(--line-hard);
+}
+
+.dossier-row:hover::before {
+  opacity: 1;
+}
+
+.row-num {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--ink-faint);
+  transition: color 0.25s ease;
+}
+
+.dossier-row:hover .row-num {
+  color: var(--beacon);
+}
+
+.col-disc {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 
-/* Record Row: Detection Interaction
-   "카드가 튀어나오는 효과"가 아닌 "검출되었다는 느낌" */
+.disc-tag {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--steel);
+}
+
+.disc-sub {
+  font-size: 11px;
+  color: var(--ink-faint);
+  font-family: var(--font-sans);
+}
+
+.col-title {
+  padding-right: 32px;
+}
+
+.title-text {
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ink);
+  margin-bottom: 6px;
+  font-family: var(--font-sans);
+  transition: color 0.2s ease;
+}
+
+.dossier-row:hover .title-text {
+  color: #FFFFFF;
+}
+
+.title-sub {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--ink-dim);
+  font-family: var(--font-sans);
+  font-weight: 300;
+}
+
+.metric-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--ink-dim);
+  border: 1px solid var(--line);
+}
+
+.inspect-btn {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--ink-dim);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.25s var(--ease);
+}
+
+.dossier-row:hover .inspect-btn {
+  color: var(--beacon);
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   04. Operator Specification
+   ========================================================================== */
+.section-operator {
+  border-bottom: 1px solid var(--line);
+  background-color: var(--bg);
+}
+
+.operator-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  padding: clamp(48px, 6vw, 96px) var(--pad);
+  gap: 48px;
+}
+
+.operator-portrait-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dossier-badge {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+}
+
+.badge-title {
+  color: var(--beacon);
+}
+
+.badge-exp {
+  color: var(--ink-faint);
+  border: 1px solid var(--line);
+  padding: 2px 8px;
+}
+
+.operator-title {
+  font-size: clamp(26px, 3.5vw, 44px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.operator-desc {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--ink-dim);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  word-break: keep-all;
+}
+
+.operator-matrix {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+}
+
+.matrix-cell {
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: var(--bg);
+  transition: background-color 0.25s ease;
+}
+
+.matrix-cell:last-child {
+  border-bottom: none;
+}
+
+.matrix-cell:hover {
+  background-color: var(--bg-raise);
+}
+
+.cell-k {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  color: var(--ink-faint);
+}
+
+.cell-v {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.cell-sub {
+  font-size: 12px;
+  color: var(--ink-dim);
+  font-family: var(--font-sans);
+}
+
+.cell-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.channel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border: 1px solid var(--line);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--ink);
+  transition: all 0.25s var(--ease);
+}
+
+.channel-btn:hover {
+  background-color: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.channel-btn.secondary {
+  border-color: var(--line-hard);
+  color: var(--steel);
+}
+
+/* ==========================================================================
+   05. Site Footer / Architectural Colophon
+   ========================================================================== */
+.site-footer {
+  padding: clamp(40px, 5vw, 70px) var(--pad) 100px;
+  background-color: var(--bg);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.f-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.f-label {
+  font-size: 9.5px;
+  letter-spacing: 0.24em;
+  color: var(--ink-ghost);
+}
+
+.f-val {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ink-dim);
+}
+
+/* ==========================================================================
+   06. Sliding Inspection Drawer (COA Spec Sheet)
+   ========================================================================== */
+.inspection-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-drawer);
+  pointer-events: none;
+  visibility: hidden;
+  transition: visibility 0.4s;
+}
+
+.inspection-drawer.active {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.45s var(--ease);
+}
+
+.inspection-drawer.active .drawer-backdrop {
+  opacity: 1;
+}
+
+.drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(720px, 92vw);
+  background-color: var(--bg);
+  border-left: 1px solid var(--line-hard);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.5s var(--ease);
+  overflow-y: auto;
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.8);
+}
+
+.inspection-drawer.active .drawer-panel {
+  transform: translateX(0);
+}
+
+.drawer-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.dh-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tag-status {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--beacon);
+}
+
+.tag-rec {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--steel);
+  border: 1px solid var(--line);
+  padding: 2px 8px;
+}
+
+.drawer-close-btn {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--ink-dim);
+  transition: color 0.2s ease;
+}
+
+.drawer-close-btn:hover {
+  color: var(--ink);
+}
+
+.drawer-content {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.drawer-banner {
+  border-left: 2px solid var(--beacon);
+  padding-left: 20px;
+}
+
+.banner-label {
+  font-size: 10px;
+  letter-spacing: 0.26em;
+  color: var(--ink-faint);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.drawer-title {
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  margin-bottom: 12px;
+}
+
+.drawer-metric {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--ink-dim);
+}
+
+.drawer-spec-table {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid var(--line);
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--line);
+  font-size: 11px;
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.sr-label {
+  color: var(--ink-faint);
+  letter-spacing: 0.16em;
+}
+
+.sr-val {
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+.drawer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sec-label {
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  color: var(--steel);
+}
+
+.sec-quote {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  padding: 16px 20px;
+  background-color: var(--bg-raise);
+  border-left: 1px solid var(--line-hard);
+  font-style: italic;
+}
+
+.sec-text {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--ink-dim);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  word-break: keep-all;
+}
+
+.drawer-action {
+  padding-top: 10px;
+}
+
+.read-full-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background-color: var(--ink);
+  color: var(--bg);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  transition: all 0.3s var(--ease);
+}
+
+.read-full-link:hover {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   07. Floating Status Bar / HUD
+   ========================================================================== */
+.floating-hud {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 38px;
+  z-index: var(--z-hud);
+  background-color: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--pad);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--ink-faint);
+  pointer-events: none;
+}
+
+.hud-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hud-indicator {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--beacon);
+}
+
+/* ==========================================================================
+   08. Responsive Refinements (Mobile & Tablet)
+   ========================================================================== */
+@media (max-width: 960px) {
+  .telemetry-hud {
+    grid-template-columns: 1fr;
+  }
+
+  .dossier-thead {
+    display: none;
+  }
+
+  .dossier-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .col-num {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .operator-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .bar-tag, .logo-sub, .hud-center, .hud-right {
+    display: none;
+  }
+
+  .bar-right {
+    gap: 12px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spatial-grid-lines {
+    display: none;
+  }
+}
+
+
+/* Compatibility for GitHub Actions automated sync (.record-row) */
 .record-row {
   display: grid;
-  grid-template-columns: 150px 1fr 90px;
+  grid-template-columns: 120px 220px 1fr 140px;
   align-items: baseline;
-  gap: 2rem;
-  padding: 3rem 1.5rem;
-  margin: 0 -1.5rem;
-  border-bottom: 1px solid var(--border-line);
-  position: relative;
+  padding: clamp(24px, 3.5vw, 36px) var(--pad);
+  border-bottom: 1px solid var(--line);
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.25s var(--ease), border-color 0.25s ease;
+  position: relative;
 }
 
-/* Left 1px detection vertical accent line */
 .record-row::before {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
-  width: 1px;
-  background-color: var(--accent-hairline);
+  width: 3px;
+  background-color: var(--beacon);
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.25s ease;
 }
 
-@media (hover: hover) {
-  .record-row:hover {
-    background-color: rgba(255, 255, 255, 0.015);
-    border-bottom-color: var(--border-hover);
-  }
+.record-row:hover {
+  background-color: var(--bg-raise);
+  border-bottom-color: var(--line-hard);
+}
 
-  .record-row:hover::before {
-    opacity: 1;
-  }
-
-  .record-row:hover .record-id {
-    color: var(--text-pure);
-  }
-
-  .record-row:hover .record-title {
-    color: var(--text-pure);
-  }
-
-  .record-row:hover .record-desc {
-    color: var(--text-sub);
-  }
-
-  .record-row:hover .action-text {
-    color: var(--text-pure);
-  }
+.record-row:hover::before {
+  opacity: 1;
 }
 
 .record-meta {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 4px;
+  grid-column: 1 / 3;
 }
 
 .record-id {
-  font-weight: 600;
-  color: var(--text-sub);
-  transition: color 0.18s ease;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--ink-faint);
+  transition: color 0.25s ease;
+}
+
+.record-row:hover .record-id {
+  color: var(--beacon);
 }
 
 .record-tag {
-  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--steel);
 }
 
 .record-main {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  grid-column: 3 / 4;
+  padding-right: 32px;
 }
 
 .record-title {
-  color: var(--text-pure);
-  font-size: 1.35rem;
-  font-weight: 600;
-  line-height: 1.45;
-  letter-spacing: -0.02em;
-  transition: color 0.18s ease;
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ink);
+  margin-bottom: 6px;
+  font-family: var(--font-sans);
+  transition: color 0.2s ease;
+}
+
+.record-row:hover .record-title {
+  color: #FFFFFF;
 }
 
 .record-desc {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.8;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--ink-dim);
+  font-family: var(--font-sans);
   font-weight: 300;
-  transition: color 0.18s ease;
 }
 
 .record-action {
+  grid-column: 4 / 5;
   text-align: right;
 }
 
 .action-text {
-  color: var(--text-muted);
-  transition: color 0.18s ease;
-}
-
-/* ==========================================================================
-   04. The Operator & Restrained CTAs
-   ========================================================================== */
-.section-operator {
-  padding: 11rem 0 13rem 0;
-  border-top: 1px solid var(--border-line);
-}
-
-.operator-header {
-  display: flex;
-  align-items: baseline;
-  gap: 1.5rem;
-  margin-bottom: 1.25rem;
-  flex-wrap: wrap;
-}
-
-.operator-name {
-  font-size: 2.4rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--text-pure);
-  margin-bottom: 0;
-}
-
-.operator-spec-tag {
-  color: var(--text-muted);
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  border: 1px solid var(--border-line);
-  padding: 0.2rem 0.6rem;
-  border-radius: 3px;
-}
-
-.operator-bio {
-  font-size: 1.15rem;
-  color: var(--text-sub);
-  line-height: 2.1;
-  font-weight: 300;
-  max-width: 680px;
-  margin-bottom: 2.5rem;
-}
-
-/* Operator Cleanroom Specification Grid */
-.operator-specs {
-  border-top: 1px solid var(--border-line);
-  border-bottom: 1px solid var(--border-line);
-  padding: 1.5rem 0;
-  margin-bottom: 3.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-
-.spec-row {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  align-items: baseline;
-  gap: 1.5rem;
-}
-
-.spec-key {
-  color: var(--text-muted);
-}
-
-.spec-val {
-  font-size: 0.94rem;
-  color: var(--text-sub);
-  line-height: 1.7;
-}
-
-/* CTA Hierarchy: [ ENTER BLOG ] (Solid) & [ + FOLLOW ] (Outline) */
-.operator-cta-group {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  flex-wrap: wrap;
-}
-
-.cta-primary {
-  background-color: #ffffff;
-  color: #060608;
-  font-family: var(--font-mono);
-  font-size: var(--system-font-size);
-  font-weight: 700;
-  letter-spacing: var(--system-letter-spacing);
-  padding: 0.72rem 1.6rem;
-  border-radius: 4px;
-  border: 1px solid #ffffff;
-  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--ink-dim);
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: opacity 0.18s ease;
-}
-.cta-primary:hover {
-  opacity: 0.85;
+  gap: 4px;
+  transition: all 0.25s var(--ease);
 }
 
-.cta-secondary {
-  background-color: transparent;
-  color: var(--text-sub);
-  font-family: var(--font-mono);
-  font-size: var(--system-font-size);
-  font-weight: 500;
-  letter-spacing: var(--system-letter-spacing);
-  padding: 0.72rem 1.6rem;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: border-color 0.18s ease, color 0.18s ease;
-}
-.cta-secondary:hover {
-  border-color: rgba(255, 255, 255, 0.45);
-  color: var(--text-pure);
-}
-
-/* ==========================================================================
-   05. Bottom Restraint Footer
-   ========================================================================== */
-.silence-footer {
-  padding: 4.5rem 3rem;
-  border-top: 1px solid var(--border-line);
-}
-
-.footer-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-tag {
-  color: var(--text-muted);
-}
-
-.footer-copy {
-  color: var(--text-dim);
-}
-
-/* ==========================================================================
-   06. Abstract / QC Report Modal (Cleanroom COA Style)
-   ========================================================================== */
-.qc-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.22s ease;
-}
-
-.qc-modal.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Subtle backdrop, no heavy blur */
-.qc-backdrop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(4, 5, 8, 0.78);
-}
-
-/* Cleanroom Test Report Sheet */
-.qc-dialog {
-  position: relative;
-  max-width: 620px;
-  width: 100%;
-  background-color: var(--bg-modal);
-  border: 1px solid var(--border-modal);
-  border-radius: 6px;
-  padding: 2.75rem;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-  transform: translateY(6px);
-  transition: transform 0.22s var(--ease-calibrated);
-}
-
-.qc-modal.active .qc-dialog {
-  transform: translateY(0);
-}
-
-.qc-dialog-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--border-line);
-}
-
-.qc-header-meta {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.modal-doc-type {
-  color: var(--text-sub);
-}
-
-.modal-rec-id {
-  color: var(--text-pure);
-  font-weight: 700;
-}
-
-.qc-close-btn {
-  background: transparent;
-  border: none;
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  font-family: var(--font-mono);
-  cursor: pointer;
-  padding: 0.25rem;
-  transition: color 0.18s ease;
-}
-.qc-close-btn:hover {
-  color: var(--text-pure);
-}
-
-.qc-dialog-body {
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
-}
-
-.modal-article-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-pure);
-  line-height: 1.4;
-}
-
-.modal-article-abstract {
-  font-size: 0.95rem;
-  color: var(--text-sub);
-  line-height: 1.8;
-  font-weight: 300;
-}
-
-.qc-divider {
-  width: 100%;
-  height: 1px;
-  background-color: var(--border-line);
-  margin: 0.5rem 0;
-}
-
-.qc-section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-
-.qc-section-label {
-  color: var(--text-muted);
-}
-
-.qc-section-content {
-  font-size: 0.92rem;
-  color: var(--text-sub);
-  line-height: 1.75;
-  font-weight: 300;
-}
-
-.qc-dialog-footer {
-  padding-top: 0.5rem;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.qc-link-btn {
-  font-size: var(--system-font-size);
-  padding: 0.65rem 1.4rem;
-}
-
-/* ==========================================================================
-   Responsive Adaptations
-   ========================================================================== */
-@media (max-width: 768px) {
-  .status-bar {
-    padding: 0 1.5rem;
-  }
-  .section-hero {
-    padding-top: 7rem;
-    padding-bottom: 4rem;
-  }
-  .section-manifesto, .section-records, .section-operator {
-    padding: 6.5rem 0;
-  }
-  .record-row {
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
-    padding: 2.25rem 0.75rem;
-    margin: 0 -0.75rem;
-  }
-  .record-action {
-    text-align: left;
-    margin-top: 0.25rem;
-  }
-  .spec-row {
-    grid-template-columns: 1fr;
-    gap: 0.2rem;
-  }
-  .qc-dialog {
-    padding: 2rem 1.5rem;
-    max-height: 90vh;
-    overflow-y: auto;
-  }
-  .footer-inner {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-}
-
-/* Respect Accessibility Preference */
-@media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  .seq-item, .hero-brand-block, .hero-enter {
-    opacity: 1 !important;
-    transform: none !important;
-  }
+.record-row:hover .action-text {
+  color: var(--beacon);
+  transform: translateX(4px);
 }

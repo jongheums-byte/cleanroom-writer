@@ -3,104 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CleanRoom Writer | 본질만 남깁니다</title>
-  <meta name="description" content="불순물이 없다는 것은 무언가를 더하는 것이 아니라, 불필요한 것을 제거하는 것이다. 제약 GMP의 렌즈로 일과 삶의 본질을 검증하는 CleanRoom Writer.">
+  <title>CleanRoom Writer | Controlled Architectural Archive</title>
+  <meta name="description" content="불순물이 없다는 것은 무언가를 더하는 것이 아니라, 불필요한 것을 제거하는 것이다. 제약 GMP와 19년 QC 렌즈로 일과 삶의 본질을 검증하는 건축적 기록 아카이브.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cleanroom-writer.netlify.app">
-  <meta property="og:title" content="CleanRoom Writer | 본질만 남깁니다">
-  <meta property="og:description" content="불순물이 없다는 것은 무언가를 더하는 것이 아니라, 불필요한 것을 제거하는 것이다.">
+  <meta property="og:title" content="CleanRoom Writer · Controlled Space">
+  <meta property="og:description" content="제약 GMP 19년 QC 렌즈로 일과 삶의 불순물을 걸러낸 순도 99.9%의 검증된 기록.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="https://ssl.pstatic.net/static/blog/icon/favicon.ico">
 
-  <!-- Web Fonts -->
+  <!-- Web Fonts: Strict IBM Plex Mono & Precision Korean Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="silence-theme">
+<body class="vea-cleanroom">
 
-  <!-- Top Minimal Status Bar -->
-  <header class="status-bar">
-    <div class="status-left">
-      <span class="system-token brand-token">CLEANROOM WRITER</span>
+  <!-- Ambient Grain & Spatial Grid Overlay -->
+  <div class="spatial-grid-lines" aria-hidden="true">
+    <div class="grid-line-v left"></div>
+    <div class="grid-line-v right"></div>
+  </div>
+
+  <!-- 00. Architectural Topbar (VEA Fixed Minimal Frame) -->
+  <header class="topbar">
+    <div class="bar-left">
+      <span class="system-beacon" aria-hidden="true"></span>
+      <span class="bar-tag">ISO CLASS 5 · GRADE A CONTROLLED</span>
     </div>
-    <div class="status-right">
-      <div class="system-token status-indicator">
-        <span class="status-dot" aria-hidden="true"></span>
-        <span class="status-text">STATUS: VERIFIED</span>
-      </div>
-      <a href="https://blog.naver.com/humi09" target="_blank" rel="noopener noreferrer" class="system-token status-link">
+
+    <a href="#" class="bar-logo" aria-label="CleanRoom Writer Home">
+      <span class="logo-text">CLEANROOM WRITER</span>
+      <span class="logo-sub">QC DOSSIER · EST. 2026</span>
+    </a>
+
+    <div class="bar-right">
+      <button type="button" class="snd-toggle" id="sndToggle" aria-label="Toggle Sound System">
+        <span class="snd-dot"></span>
+        <span class="snd-label">SOUND: <span id="sndStateText">OFF</span></span>
+      </button>
+      <a href="https://blog.naver.com/humi09" target="_blank" rel="noopener noreferrer" class="bar-link">
         BLOG ↗
       </a>
-      <a href="https://www.youtube.com/@CleanRoomWriter/shorts" target="_blank" rel="noopener noreferrer" class="system-token status-link">
+      <a href="https://www.youtube.com/@CleanRoomWriter/shorts" target="_blank" rel="noopener noreferrer" class="bar-link">
         SHORTS ↗
       </a>
     </div>
   </header>
 
-  <main class="silence-container">
-    
-    <!-- 01. The Calibration Sequence (Hero) -->
+  <main id="mainContent">
+
+    <!-- 01. The Calibration Sequence & Hero Thesis -->
     <section class="section-hero" id="hero">
-      <div class="hero-inner">
+      <div class="hero-frame">
         
-        <div class="sequence-box">
-          <div class="seq-item" id="seq1">
-            <span class="system-token seq-label">PARTICLE SIGNAL</span>
-            <span class="seq-val" id="numParticle">83</span>
+        <div class="hero-coordinates">
+          <span class="coord-item">LAT 37°17'17" N</span>
+          <span class="coord-divider">/</span>
+          <span class="coord-item">LONG 127°03'12" E</span>
+          <span class="coord-divider">/</span>
+          <span class="coord-item">19 YRS QC INSPECTION</span>
+        </div>
+
+        <div class="hero-thesis">
+          <div class="thesis-eyebrow">
+            <span class="tag-index">[ 00 · FIRST PRINCIPLE ]</span>
+            <span class="tag-desc">AESTHETIC OF COMPLETE REMOVAL</span>
           </div>
-          <div class="seq-item" id="seq2">
-            <span class="system-token seq-label">NOISE</span>
-            <span class="seq-val" id="numNoise">41</span>
+
+          <h1 class="thesis-heading">
+            <span class="line-reveal"><span>불순물이 없다는 것은</span></span>
+            <span class="line-reveal"><span>무언가를 더하는 것이 아니라,</span></span>
+            <span class="line-reveal highlight"><span>불필요한 것을 제거하는 것이다.</span></span>
+          </h1>
+
+          <p class="thesis-lead">
+            제약 클린룸에서 여백은 낭비가 아니라 철저히 통제된 공간(Controlled Environment)입니다. 
+            소음과 허세가 넘쳐나는 시대, 데이터와 밸리데이션(Validation)의 원칙으로 
+            삶과 일의 불순물을 걸러낸 순도 99.9%의 기록을 전합니다.
+          </p>
+        </div>
+
+        <!-- Telemetry & Sensor HUD (VEA Technical Module) -->
+        <div class="telemetry-hud">
+          <div class="telemetry-col">
+            <span class="tel-label">ATMOSPHERIC PARTICLE</span>
+            <div class="tel-val-wrap">
+              <span class="tel-num" id="hudParticle">0.00</span>
+              <span class="tel-unit">pcs/m³</span>
+            </div>
+            <span class="tel-status">GRADE A VERIFIED</span>
           </div>
-          <div class="seq-item" id="seq3">
-            <span class="system-token seq-label">UNNECESSARY</span>
-            <span class="seq-val" id="numUnnecessary">27</span>
+
+          <div class="telemetry-col">
+            <span class="tel-label">AUDIT NOISE RATIO</span>
+            <div class="tel-val-wrap">
+              <span class="tel-num" id="hudNoise">0.00</span>
+              <span class="tel-unit">dB</span>
+            </div>
+            <span class="tel-status">ZERO CONTAMINATION</span>
+          </div>
+
+          <div class="telemetry-col">
+            <span class="tel-label">RECORD INTEGRITY</span>
+            <div class="tel-val-wrap">
+              <span class="tel-num" id="hudIntegrity">99.98</span>
+              <span class="tel-unit">%</span>
+            </div>
+            <span class="tel-status">ALCOA+ DATA INTEGRITY</span>
           </div>
         </div>
 
-        <div class="hero-brand-block" id="seq4">
-          <h1 class="hero-brand">CLEANROOM WRITER</h1>
-          <p class="hero-essence">본질만 남깁니다.</p>
-        </div>
-
-        <div class="hero-enter" id="seq5">
-          <a href="#manifesto" class="enter-btn">
-            <span class="system-token">ENTER</span>
-            <span class="enter-arrow" aria-hidden="true">↓</span>
+        <div class="hero-cue">
+          <a href="#records" class="scroll-cue-btn">
+            <span class="cue-label">PROCEED TO ARCHIVE</span>
+            <span class="cue-arrow">↓</span>
           </a>
         </div>
 
       </div>
     </section>
 
-    <!-- 02. The Controlled Space (Manifesto) -->
-    <section class="section-manifesto" id="manifesto">
-      <div class="content-wrapper">
-        <div class="system-token section-code">[ CONTROLLED SPACE ]</div>
-        <blockquote class="manifesto-quote">
-          “불순물이 없다는 것은<br>
-          무언가를 더하는 것이 아니라,<br>
-          <span class="text-white">불필요한 것을 제거하는 것이다.</span>”
-        </blockquote>
-        <p class="manifesto-sub">
-          제약 클린룸에서 여백은 낭비가 아니라 철저히 통제된 공간입니다.<br>
-          수많은 소음과 포장지가 넘쳐나는 시대, 데이터와 밸리데이션(Validation)의 원칙으로<br>
-          삶과 일의 불순물을 걸러낸 순도 99.9%의 기록을 전합니다.
-        </p>
-      </div>
-    </section>
-
-    <!-- 03. The Records (Selected Essences) -->
+    <!-- 02. The Records Matrix (Architectural Dossier Index) -->
     <section class="section-records" id="records">
-      <div class="content-wrapper">
-        <div class="system-token section-code">[ RECORDS / 06 SELECTED ]</div>
-        <h2 class="records-title">검증된 기록</h2>
+      <div class="section-header-bar">
+        <div class="sh-left">
+          <span class="sh-index">01</span>
+          <span class="sh-title">SELECTED ARCHIVE / 06 RECORDS</span>
+        </div>
+        <div class="sh-right">
+          <span class="sh-spec">FORMAT: QC AUDIT TRAIL</span>
+          <span class="sh-filter">STATUS: ALL PASS</span>
+        </div>
+      </div>
+
+      <!-- Dossier Table Container (Maintains GitHub Actions Sync Regex Compatibility) -->
+      <div class="dossier-table">
+        <div class="dossier-thead" aria-hidden="true">
+          <div class="col-num">ID</div>
+          <div class="col-disc">DISCIPLINE</div>
+          <div class="col-title">HYPOTHESIS & TITLE</div>
+          <div class="col-action">INSPECT</div>
+        </div>
 
         <div class="records-list">
           <!-- REC. 01 -->
@@ -111,10 +159,10 @@
             </div>
             <div class="record-main">
               <h3 class="record-title">「까다로운 대상을 다룰 때는 끝까지 밀어붙이지 않는다」</h3>
-              <p class="record-desc">제약 정밀 분주(Reverse Pipetting)와 유체의 과학 마이크로피펫(Micropipette, 마이크로리터 단위의 미량 액체를 정밀하게 옮기는 실험 기구)을 처음 손에 쥐는 신입 연구원들이 시험대 앞...</p>
+              <p class="record-desc">제약 정밀 분주(Reverse Pipetting)와 유체의 과학 마이크로피펫(Micropipette, 마이크로리터 단위의 미량 액체를 정밀하게 옮기는 실험 기구)을 처음 손에 쥐는 신입 연구원들이 시험대 앞... (현업 19년 QC 렌즈로 관측 및 입증)</p>
             </div>
             <div class="record-action">
-              <span class="system-token action-text">REPORT ↗</span>
+              <span class="system-token action-text">COA SPEC ↗</span>
             </div>
           </article>
 
@@ -126,10 +174,10 @@
             </div>
             <div class="record-main">
               <h3 class="record-title">「문제가 생겼다고 판을 엎을 필요는 없다」</h3>
-              <p class="record-desc">제약 정치세척·정치멸균(CIP·SIP)과 자체 정화의 과학 "이번 프로젝트에서 품질 문제가 터졌으니, 관련 팀을 전면 해체하고 조직을 원점에서 다시 짭시다." "시스템이 삐걱거리면 사람을 교체하고 판을 새로...</p>
+              <p class="record-desc">제약 정치세척·정치멸균(CIP·SIP)과 자체 정화의 과학 "이번 프로젝트에서 품질 문제가 터졌으니, 관련 팀을 전면 해체하고 조직을 원점에서 다시 짭시다." "시스템이 삐걱거리면 사람을 교체하고 판을 새로... (현업 19년 QC 렌즈로 관측 및 입증)</p>
             </div>
             <div class="record-action">
-              <span class="system-token action-text">REPORT ↗</span>
+              <span class="system-token action-text">COA SPEC ↗</span>
             </div>
           </article>
 
@@ -141,10 +189,10 @@
             </div>
             <div class="record-main">
               <h3 class="record-title">「신호가 없다고 해서 문제가 없는 것은 아니다」제약 배지 성능 시험(Growth Promotion Test)이 알려주는 피드백 감도와 조직의 건강성</h3>
-              <p class="record-desc">"요즘 팀원들이 별다른 이견이나 불만을 제기하지 않는 걸 보니, 프로젝트가 안정적으로 잘 굴러가고 있나 봅니다." "문제점이 보고되지 않았으니 이번 기획은 특별히 보완할 점 없이 계획대로 추진하면 되겠죠?"...</p>
+              <p class="record-desc">"요즘 팀원들이 별다른 이견이나 불만을 제기하지 않는 걸 보니, 프로젝트가 안정적으로 잘 굴러가고 있나 봅니다." "문제점이 보고되지 않았으니 이번 기획은 특별히 보완할 점 없이 계획대로 추진하면 되겠죠?"... (현업 19년 QC 렌즈로 관측 및 입증)</p>
             </div>
             <div class="record-action">
-              <span class="system-token action-text">REPORT ↗</span>
+              <span class="system-token action-text">COA SPEC ↗</span>
             </div>
           </article>
 
@@ -156,10 +204,10 @@
             </div>
             <div class="record-main">
               <h3 class="record-title">「매일 조금씩 무뎌지는 칼날」</h3>
-              <p class="record-desc">제약 HPLC 컬럼 열화와 이론단수의 과학 "내가 이 일만 10년째인데, 굳이 새 툴을 배우거나 공부할 필요가 있습니까?" "대충 봐도 견적 나옵니다. 늘 하던 대로 처리하면 큰 문제없어요." 연차가 쌓이고...</p>
+              <p class="record-desc">제약 HPLC 컬럼 열화와 이론단수의 과학 "내가 이 일만 10년째인데, 굳이 새 툴을 배우거나 공부할 필요가 있습니까?" "대충 봐도 견적 나옵니다. 늘 하던 대로 처리하면 큰 문제없어요." 연차가 쌓이고... (현업 19년 QC 렌즈로 관측 및 입증)</p>
             </div>
             <div class="record-action">
-              <span class="system-token action-text">REPORT ↗</span>
+              <span class="system-token action-text">COA SPEC ↗</span>
             </div>
           </article>
 
@@ -171,10 +219,10 @@
             </div>
             <div class="record-main">
               <h3 class="record-title">「모두가 대세라 환호할 때 멈춰 설 수 있는가」</h3>
-              <p class="record-desc">제약 탈리도마이드 사건과 현대 GMP의 탄생 "업계 1등 기업도 이미 쓰고 있고, 해외 시장에서도 다들 난리입니다." "경쟁사들은 이미 치고 나가는데, 왜 우리만 데이터 타령하면서 일정을 지체합니까? 일단 ...</p>
+              <p class="record-desc">제약 탈리도마이드 사건과 현대 GMP의 탄생 "업계 1등 기업도 이미 쓰고 있고, 해외 시장에서도 다들 난리입니다." "경쟁사들은 이미 치고 나가는데, 왜 우리만 데이터 타령하면서 일정을 지체합니까? 일단 ... (현업 19년 QC 렌즈로 관측 및 입증)</p>
             </div>
             <div class="record-action">
-              <span class="system-token action-text">REPORT ↗</span>
+              <span class="system-token action-text">COA SPEC ↗</span>
             </div>
           </article>
 
@@ -186,110 +234,181 @@
             </div>
             <div class="record-main">
               <h3 class="record-title">「돈을 줬다고 책임까지 넘어가지 않는다」</h3>
-              <p class="record-desc">제약 품질협약(Quality Agreement)과 책임의 거버넌스 "우리가 전문 업체에 턴키(Turn-key)로 외주시킨 일인데, 왜 우리 회사에 책임을 묻습니까?" "용역 계약서에 &#x27;하자 발생 시...</p>
+              <p class="record-desc">제약 품질협약(Quality Agreement)과 책임의 거버넌스 "우리가 전문 업체에 턴키(Turn-key)로 외주시킨 일인데, 왜 우리 회사에 책임을 묻습니까?" "용역 계약서에 &#x27;하자 발생 시... (현업 19년 QC 렌즈로 관측 및 입증)</p>
             </div>
             <div class="record-action">
-              <span class="system-token action-text">REPORT ↗</span>
+              <span class="system-token action-text">COA SPEC ↗</span>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- 04. The Operator (About & Channel) -->
+    <!-- 03. The Operator Specification (About & Dossier) -->
     <section class="section-operator" id="operator">
-      <div class="content-wrapper">
-        <div class="system-token section-code">[ OPERATOR SPECIFICATION ]</div>
-        <div class="operator-header">
-          <h2 class="operator-name">CleanRoom Writer</h2>
-          <span class="system-token operator-spec-tag">19 YRS QC</span>
+      <div class="section-header-bar">
+        <div class="sh-left">
+          <span class="sh-index">02</span>
+          <span class="sh-title">OPERATOR SPECIFICATION</span>
         </div>
-        <p class="operator-bio">
-          제약·바이오 QC 현업 19년의 렌즈로 일, 조직, AI, 삶의 불순물을 걸러냅니다.<br>
-          GMP는 엄격하게, 데이터는 냉정하게, 통찰은 순도 99.9%.<br>
-          근거 없는 확신과 타협의 소음을 덜어내고, 오직 입증 가능한 본질만을 기록합니다.
-        </p>
+        <div class="sh-right">
+          <span class="sh-spec">ROLE: GMP AUDITOR & ESSAYIST</span>
+        </div>
+      </div>
 
-        <div class="operator-specs">
-          <div class="spec-row">
-            <span class="system-token spec-key">FIELD EXP</span>
-            <span class="spec-val">제약·바이오 품질관리(QC) 현업 19년</span>
+      <div class="operator-layout">
+        <div class="operator-portrait-meta">
+          <div class="dossier-badge">
+            <span class="badge-title">PRINCIPAL OPERATOR</span>
+            <span class="badge-exp">19 YEARS IN QC / QA</span>
           </div>
-          <div class="spec-row">
-            <span class="system-token spec-key">CORE DOMAIN</span>
-            <span class="spec-val">기기·이화학 분석 • 시험법 밸리데이션 • 분석 데이터 완전성(Data Integrity)</span>
-          </div>
-          <div class="spec-row">
-            <span class="system-token spec-key">WRITING TOPICS</span>
-            <span class="spec-val">GMP 원칙 기반 조직 문화 • 생성형 AI 바이브코딩 • 프로의 책임</span>
-          </div>
+          <h2 class="operator-title">CleanRoom Writer</h2>
+          <p class="operator-desc">
+            제약·바이오 품질관리(QC) 19년 실무의 렌즈로 일, 조직, AI, 삶의 불순물을 걸러냅니다. 
+            GMP 규격은 엄격하게, 분석 데이터는 냉정하게, 사유의 순도는 99.9%. 
+            근거 없는 확신과 편의주의적 타협을 덜어내고 오직 입증 가능한 본질만을 정밀하게 기록합니다.
+          </p>
         </div>
 
-        <div class="operator-cta-group">
-          <a href="https://blog.naver.com/humi09" target="_blank" rel="noopener" class="cta-primary">
-            <span>ENTER BLOG</span>
-            <span class="cta-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a href="https://www.youtube.com/@CleanRoomWriter/shorts" target="_blank" rel="noopener" class="cta-secondary">
-            <span>SHORTS</span>
-            <span class="cta-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a href="https://m.blog.naver.com/BuddyAddForm.naver?blogId=humi09" target="_blank" rel="noopener" class="cta-secondary">
-            <span>+ FOLLOW</span>
-          </a>
+        <div class="operator-matrix">
+          <div class="matrix-cell">
+            <span class="cell-k">CORE TENET</span>
+            <span class="cell-v">Data Integrity (ALCOA+)</span>
+            <span class="cell-sub">Attributable, Legible, Contemporaneous, Original, Accurate</span>
+          </div>
+
+          <div class="matrix-cell">
+            <span class="cell-k">ANALYTICAL RIGOR</span>
+            <span class="cell-v">HPLC · GC · Dissolution · Physicochemical</span>
+            <span class="cell-sub">의약품 기준 및 시험방법, 시험법 밸리데이션(Method Validation)</span>
+          </div>
+
+          <div class="matrix-cell">
+            <span class="cell-k">DIGITAL & AI PERSPECTIVE</span>
+            <span class="cell-v">Vibe Coding · AI Augmentation</span>
+            <span class="cell-sub">도구의 환상에 휘둘리지 않고 본질을 장악하는 주체적 제어권</span>
+          </div>
+
+          <div class="matrix-cell">
+            <span class="cell-k">PUBLICATION CHANNELS</span>
+            <div class="cell-channels">
+              <a href="https://blog.naver.com/humi09" target="_blank" rel="noopener noreferrer" class="channel-btn">
+                <span>NAVER BLOG (공식 기록실)</span>
+                <span>↗</span>
+              </a>
+              <a href="https://www.youtube.com/@CleanRoomWriter/shorts" target="_blank" rel="noopener noreferrer" class="channel-btn">
+                <span>YOUTUBE SHORTS (시각적 통찰)</span>
+                <span>↗</span>
+              </a>
+              <a href="https://m.blog.naver.com/BuddyAddForm.naver?blogId=humi09" target="_blank" rel="noopener noreferrer" class="channel-btn secondary">
+                <span>+ ADD NEIGHBOR / FOLLOW</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 05. Bottom Restraint Footer -->
-    <footer class="silence-footer">
-      <div class="footer-inner">
-        <span class="system-token footer-tag">AIR PURITY 99.9% • ZERO CONTAMINATION</span>
-        <span class="system-token footer-copy">© 2026 CLEANROOM WRITER. ALL RIGHTS RESERVED.</span>
+    <!-- 04. Architectural Colophon & Footer -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="f-col">
+          <span class="f-label">LOCATION</span>
+          <span class="f-val">SEOUL / PANGYO BIO VALLEY</span>
+        </div>
+        <div class="f-col">
+          <span class="f-label">AIR PURITY STANDARD</span>
+          <span class="f-val">ISO 14644-1 CLASS 5 / 99.98% RESTRAINT</span>
+        </div>
+        <div class="f-col">
+          <span class="f-label">FRAMEWORK</span>
+          <span class="f-val">VEA V7 ARCHITECTURAL MONOCHROME</span>
+        </div>
+        <div class="f-col">
+          <span class="f-label">COPYRIGHT</span>
+          <span class="f-val">© 2026 CLEANROOM WRITER. ALL VERIFIED.</span>
+        </div>
       </div>
     </footer>
 
   </main>
 
-  <!-- 06. Abstract / QC Report Modal -->
-  <div id="qcModal" class="qc-modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="qc-backdrop" id="qcBackdrop"></div>
-    <div class="qc-dialog">
-      <div class="qc-dialog-header">
-        <div class="qc-header-meta">
-          <span class="system-token modal-doc-type">COA / QC REPORT</span>
-          <span class="system-token modal-rec-id" id="modalRecId">REC. 01</span>
+  <!-- 05. Sliding Inspection Dossier (Side-Drawer Analytical Sheet) -->
+  <aside id="inspectionDrawer" class="inspection-drawer" aria-hidden="true" role="dialog" aria-label="COA Record Inspection">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div class="dh-meta">
+          <span class="tag-status">QC VALIDATION REPORT · COA</span>
+          <span class="tag-rec" id="drawerRecId">REC. 01</span>
         </div>
-        <button class="qc-close-btn" id="qcCloseBtn" aria-label="닫기">✕</button>
+        <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="닫기">
+          [ ESC / CLOSE ✕ ]
+        </button>
       </div>
 
-      <div class="qc-dialog-body">
-        <h3 class="modal-article-title" id="modalTitle">기록 제목</h3>
-        <p class="modal-article-abstract" id="modalAbstract">짧은 개요가 여기에 표시됩니다.</p>
-
-        <div class="qc-divider"></div>
-
-        <div class="qc-section">
-          <span class="system-token qc-section-label">[ 핵심 가설 / HYPOTHESIS ]</span>
-          <p class="qc-section-content" id="modalHypothesis">가설 내용</p>
+      <div class="drawer-content">
+        <div class="drawer-banner">
+          <span class="banner-label">CERTIFICATE OF ANALYSIS</span>
+          <h2 class="drawer-title" id="drawerTitle">기록 제목이 로드됩니다</h2>
+          <span class="drawer-metric" id="drawerMetric">AUDIT TRAIL / 공감 10건 입증</span>
         </div>
 
-        <div class="qc-section">
-          <span class="system-token qc-section-label">[ 검증 및 관찰 / OBSERVATION ]</span>
-          <p class="qc-section-content" id="modalObservation">검증 및 관찰 내용</p>
+        <div class="drawer-spec-table">
+          <div class="spec-row">
+            <span class="sr-label">METHODOLOGY</span>
+            <span class="sr-val" id="drawerMethod">제약 정밀 분주 유체의 과학</span>
+          </div>
+          <div class="spec-row">
+            <span class="sr-label">ANALYSIS DATE</span>
+            <span class="sr-val">2026. 10. ACTIVE</span>
+          </div>
+          <div class="spec-row">
+            <span class="sr-label">PURITY INDEX</span>
+            <span class="sr-val">99.9% ESSENCE RETAINED</span>
+          </div>
+        </div>
+
+        <div class="drawer-section">
+          <span class="sec-label">[ 01 · 핵심 가설 / HYPOTHESIS ]</span>
+          <blockquote class="sec-quote" id="drawerHypothesis">
+            “가설 데이터가 출력됩니다.”
+          </blockquote>
+        </div>
+
+        <div class="drawer-section">
+          <span class="sec-label">[ 02 · 검증 및 관찰 기록 / OBSERVATION ]</span>
+          <p class="sec-text" id="drawerObservation">
+            관찰 및 검증 기록 내용이 출력됩니다.
+          </p>
+        </div>
+
+        <div class="drawer-action">
+          <a href="#" id="drawerExternalLink" target="_blank" rel="noopener noreferrer" class="read-full-link">
+            <span>READ FULL ANALYSIS ON BLOG</span>
+            <span class="rf-arrow">↗</span>
+          </a>
         </div>
       </div>
+    </div>
+  </aside>
 
-      <div class="qc-dialog-footer">
-        <a href="#" id="modalExternalLink" target="_blank" rel="noopener" class="cta-primary qc-link-btn">
-          <span>READ FULL ARTICLE</span>
-          <span class="cta-arrow" aria-hidden="true">↗</span>
-        </a>
-      </div>
+  <!-- 06. Floating Status Bar / HUD -->
+  <div class="floating-hud">
+    <div class="hud-item hud-left">
+      <span class="hud-indicator"></span>
+      <span class="hud-txt">STABILITY: ZERO-NOISE</span>
+    </div>
+    <div class="hud-item hud-center">
+      <span class="hud-txt">IBM PLEX MONO · UNIFIED SCALE</span>
+    </div>
+    <div class="hud-item hud-right">
+      <span class="hud-txt">MODE: ARCHITECTURAL FLAT</span>
     </div>
   </div>
 
+  <script src="sound.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
