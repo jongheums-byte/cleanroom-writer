@@ -1,16 +1,16 @@
 {
-  "lastSynced": "2026-10-30T22:03:08.290Z",
-  "totalScanned": 102,
+  "lastSynced": "2026-10-31T21:11:53.449Z",
+  "totalScanned": 103,
   "records": [
     {
       "id": 1,
       "recId": "REC. 01",
       "logNo": 224451234580,
       "title": "「까다로운 대상을 다룰 때는 끝까지 밀어붙이지 않는다」",
-      "tag": "AUDIT TRAIL / 공감 10",
+      "tag": "AUDIT TRAIL / 공감 11",
       "desc": "제약 정밀 분주(Reverse Pipetting)와 유체의 과학 마이크로피펫(Micropipette, 마이크로리터 단위의 미량 액체를 정밀하게 옮기는 실험 기구)을 처음 손에 쥐는 신입 연구원들이 시험대 앞...",
       "category": "GMP in Your Area",
-      "sympathy": 10,
+      "sympathy": 11,
       "commentCnt": 2,
       "link": "https://blog.naver.com/humi09/224451234580",
       "addDate": 1792731064512
@@ -44,6 +44,32 @@
     {
       "id": 4,
       "recId": "REC. 04",
+      "logNo": 224452975894,
+      "title": "「빛이 너무 강하면 본질이 분해된다」",
+      "tag": "AUDIT TRAIL / 공감 9",
+      "desc": "의약품 광안정성 시험(ICH Q1B)과 차광의 과학 약국 진열대나 제약회사의 시약장을 열어보면, 짙은 갈색을 띤 유리병(Amber bottle)들이 줄지어 서 있는 모습을 쉽게 볼 수 있습니다. 일상에서 마...",
+      "category": "GMP in Your Area",
+      "sympathy": 9,
+      "commentCnt": 2,
+      "link": "https://blog.naver.com/humi09/224452975894",
+      "addDate": 1792898734627
+    },
+    {
+      "id": 5,
+      "recId": "REC. 05",
+      "logNo": 224450087224,
+      "title": "「나이라는 유효기간에 갇히지 않는 법」",
+      "tag": "AUDIT TRAIL / 공감 9",
+      "desc": "제약 유효기간(Expiry Date)과 재시험일자(Retest Date)의 과학 제약공장의 거대한 온습도 자동 제어 원료 창고(Warehouse). 공조기가 24시간 일정한 바람을 순환시키는 서늘한 공간에는...",
+      "category": "GMP in Your Area",
+      "sympathy": 9,
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224450087224",
+      "addDate": 1792645038803
+    },
+    {
+      "id": 6,
+      "recId": "REC. 06",
       "logNo": 224440276934,
       "title": "「매일 조금씩 무뎌지는 칼날」",
       "tag": "AUDIT TRAIL / 공감 9",
@@ -53,32 +79,6 @@
       "commentCnt": 2,
       "link": "https://blog.naver.com/humi09/224440276934",
       "addDate": 1791871183364
-    },
-    {
-      "id": 5,
-      "recId": "REC. 05",
-      "logNo": 224437839858,
-      "title": "「모두가 대세라 환호할 때 멈춰 설 수 있는가」",
-      "tag": "AUDIT TRAIL / 공감 9",
-      "desc": "제약 탈리도마이드 사건과 현대 GMP의 탄생 \"업계 1등 기업도 이미 쓰고 있고, 해외 시장에서도 다들 난리입니다.\" \"경쟁사들은 이미 치고 나가는데, 왜 우리만 데이터 타령하면서 일정을 지체합니까? 일단 ...",
-      "category": "GMP in Your Area",
-      "sympathy": 9,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224437839858",
-      "addDate": 1791686744929
-    },
-    {
-      "id": 6,
-      "recId": "REC. 06",
-      "logNo": 224427171988,
-      "title": "「돈을 줬다고 책임까지 넘어가지 않는다」",
-      "tag": "AUDIT TRAIL / 공감 9",
-      "desc": "제약 품질협약(Quality Agreement)과 책임의 거버넌스 \"우리가 전문 업체에 턴키(Turn-key)로 외주시킨 일인데, 왜 우리 회사에 책임을 묻습니까?\" \"용역 계약서에 &#x27;하자 발생 시...",
-      "category": "GMP in Your Area",
-      "sympathy": 9,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224427171988",
-      "addDate": 1790750869362
     }
   ]
 }
