@@ -32,9 +32,9 @@ const qcArchive = {
   },
   "4": {
     "recId": "REC. 04",
-    "title": "「빛이 너무 강하면 본질이 분해된다」",
+    "title": "「빛이 너무 강하�� 본질�� 분해된다」",
     "abstract": "[GMP in Your Area] 공감 데이터 9건 입증 기록",
-    "hypothesis": "“「빛이 너무 강하면 본질이 분해된다」”",
+    "hypothesis": "“「빛이 너무 강하�� 본질�� 분해된다」”",
     "observation": "의약품 광안정성 시험(ICH Q1B)과 차광의 과학 약국 진열대나 제약회사의 시약장을 열어보면, 짙은 갈색을 띤 유리병(Amber bottle)들이 줄지어 서 있는 모습을 쉽게 볼 수 있습니다. 일상에서 마... (현업 19년 QC 렌즈로 관측 및 입증)",
     "link": "https://blog.naver.com/humi09/224452975894"
   },
