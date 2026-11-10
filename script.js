@@ -16,43 +16,43 @@ const qcArchive = {
   },
   "2": {
     "recId": "REC. 02",
+    "title": "AI 브리핑.특별기고\"데이터센터 안에 천재 100만 명이 살아도, 실험실의 시계는 건너뛸 수 없다\"",
+    "abstract": "[CleanRoom AI] 공감 데이터 10건 입증 기록",
+    "hypothesis": "“AI 브리핑.특별기고\"데이터센터 안에 천재 100만 명이 살아도, 실험실의 시계는 건너뛸 수 없다\"”",
+    "observation": "앤트로픽 CEO 다리오 아모데이의 〈Machines of Loving Grace〉를 품질과 검증(QC/QA)의 눈으로 읽다 직전 13편(MCP 개념과 아키텍처 해부)을 통해, 우리는 AI에게 업무 매뉴얼(S... (현업 19년 QC 렌즈로 관측 및 입증)",
+    "link": "https://blog.naver.com/humi09/224470309237"
+  },
+  "3": {
+    "recId": "REC. 03",
+    "title": "AI 브리핑.13 —\"스킬(Skill)이 업무 매뉴얼이라면, MCP는 무엇인가?\"",
+    "abstract": "[CleanRoom AI] 공감 데이터 10건 입증 기록",
+    "hypothesis": "“AI 브리핑.13 —\"스킬(Skill)이 업무 매뉴얼이라면, MCP는 무엇인가?\"”",
+    "observation": "비개발자도 5분 만에 이해하는 AI 시대의 &#x27;USB-C 규격&#x27;과 3단 아키텍처 지난 10편의 시리즈를 통해 우리는 AI에게 일하는 절차와 규칙을 가르치는 &#x27;스킬(SKILL.md)&... (현업 19년 QC 렌즈로 관측 및 입증)",
+    "link": "https://blog.naver.com/humi09/224470237168"
+  },
+  "4": {
+    "recId": "REC. 04",
     "title": "「문제가 생겼다고 판을 엎을 필요는 없다」",
     "abstract": "[GMP in Your Area] 공감 데이터 10건 입증 기록",
     "hypothesis": "“「문제가 생겼다고 판을 엎을 필요는 없다」”",
     "observation": "제약 정치세척·정치멸균(CIP·SIP)과 자체 정화의 과학 \"이번 프로젝트에서 품질 문제가 터졌으니, 관련 팀을 전면 해체하고 조직을 원점에서 다시 짭시다.\" \"시스템이 삐걱거리면 사람을 교체하고 판을 새로... (현업 19년 QC 렌즈로 관측 및 입증)",
     "link": "https://blog.naver.com/humi09/224438944516"
   },
-  "3": {
-    "recId": "REC. 03",
+  "5": {
+    "recId": "REC. 05",
     "title": "「신호가 없다고 해서 문제가 없는 것은 아니다」제약 배지 성능 시험(Growth Promotion Test)이 알려주는 피드백 감도와 조직의 건강성",
     "abstract": "[GMP in Your Area] 공감 데이터 10건 입증 기록",
     "hypothesis": "“「신호가 없다고 해서 문제가 없는 것은 아니다」제약 배지 성능 시험(Growth Promotion Test)이 알려주는 피드백 감도와 조직의 건강성”",
     "observation": "\"요즘 팀원들이 별다른 이견이나 불만을 제기하지 않는 걸 보니, 프로젝트가 안정적으로 잘 굴러가고 있나 봅니다.\" \"문제점이 보고되지 않았으니 이번 기획은 특별히 보완할 점 없이 계획대로 추진하면 되겠죠?\"... (현업 19년 QC 렌즈로 관측 및 입증)",
     "link": "https://blog.naver.com/humi09/224417049052"
   },
-  "4": {
-    "recId": "REC. 04",
-    "title": "「빛이 너무 강하�� 본질�� 분해된다」",
-    "abstract": "[GMP in Your Area] 공감 데이터 9건 입증 기록",
-    "hypothesis": "“「빛이 너무 강하�� 본질�� 분해된다」”",
-    "observation": "의약품 광안정성 시험(ICH Q1B)과 차광의 과학 약국 진열대나 제약회사의 시약장을 열어보면, 짙은 갈색을 띤 유리병(Amber bottle)들이 줄지어 서 있는 모습을 쉽게 볼 수 있습니다. 일상에서 마... (현업 19년 QC 렌즈로 관측 및 입증)",
-    "link": "https://blog.naver.com/humi09/224452975894"
-  },
-  "5": {
-    "recId": "REC. 05",
-    "title": "「나이라는 유효기간에 갇히지 않는 법」",
-    "abstract": "[GMP in Your Area] 공감 데이터 9건 입증 기록",
-    "hypothesis": "“「나이라는 유효기간에 갇히지 않는 법」”",
-    "observation": "제약 유효기간(Expiry Date)과 재시험일자(Retest Date)의 과학 제약공장의 거대한 온습도 자동 제어 원료 창고(Warehouse). 공조기가 24시간 일정한 바람을 순환시키는 서늘한 공간에는... (현업 19년 QC 렌즈로 관측 및 입증)",
-    "link": "https://blog.naver.com/humi09/224450087224"
-  },
   "6": {
     "recId": "REC. 06",
-    "title": "「매일 조금씩 무뎌지는 칼날」",
-    "abstract": "[GMP in Your Area] 공감 데이터 9건 입증 기록",
-    "hypothesis": "“「매일 조금씩 무뎌지는 칼날」”",
-    "observation": "제약 HPLC 컬럼 열화와 이론단수의 과학 \"내가 이 일만 10년째인데, 굳이 새 툴을 배우거나 공부할 필요가 있습니까?\" \"대충 봐도 견적 나옵니다. 늘 하던 대로 처리하면 큰 문제없어요.\" 연차가 쌓이고... (현업 19년 QC 렌즈로 관측 및 입증)",
-    "link": "https://blog.naver.com/humi09/224440276934"
+    "title": "AI 브리핑 (쉬어가는 이야기) —\"GPT와 Claude는 왜 다른 길을 걷게 되었을까?",
+    "abstract": "[CleanRoom AI] 공감 데이터 9건 입증 기록",
+    "hypothesis": "“AI 브리핑 (쉬어가는 이야기) —\"GPT와 Claude는 왜 다른 길을 걷게 되었을까?”",
+    "observation": "지향점은 같지만, AI의 미래를 구현하는 방식은 달랐다 지난 몇 편의 글을 통해 우리는 업무 매뉴얼로서의 스킬(Skill), 시스템 연결 규격인 MCP, 그리고 앤트로픽 CEO 다리오 아모데이의 에세이까지 ... (현업 19년 QC 렌즈로 관측 및 입증)",
+    "link": "https://blog.naver.com/humi09/224471551763"
   }
 };
 

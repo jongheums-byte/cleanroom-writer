@@ -1,6 +1,6 @@
 {
-  "lastSynced": "2026-11-10T01:18:31.421Z",
-  "totalScanned": 123,
+  "lastSynced": "2026-11-10T22:58:13.238Z",
+  "totalScanned": 126,
   "records": [
     {
       "id": 1,
@@ -18,6 +18,32 @@
     {
       "id": 2,
       "recId": "REC. 02",
+      "logNo": 224470309237,
+      "title": "AI 브리핑.특별기고\"데이터센터 안에 천재 100만 명이 살아도, 실험실의 시계는 건너뛸 수 없다\"",
+      "tag": "AUDIT TRAIL / 공감 10",
+      "desc": "앤트로픽 CEO 다리오 아모데이의 〈Machines of Loving Grace〉를 품질과 검증(QC/QA)의 눈으로 읽다 직전 13편(MCP 개념과 아키텍처 해부)을 통해, 우리는 AI에게 업무 매뉴얼(S...",
+      "category": "CleanRoom AI",
+      "sympathy": 10,
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224470309237",
+      "addDate": 1794202428167
+    },
+    {
+      "id": 3,
+      "recId": "REC. 03",
+      "logNo": 224470237168,
+      "title": "AI 브리핑.13 —\"스킬(Skill)이 업무 매뉴얼이라면, MCP는 무엇인가?\"",
+      "tag": "AUDIT TRAIL / 공감 10",
+      "desc": "비개발자도 5분 만에 이해하는 AI 시대의 &#x27;USB-C 규격&#x27;과 3단 아키텍처 지난 10편의 시리즈를 통해 우리는 AI에게 일하는 절차와 규칙을 가르치는 &#x27;스킬(SKILL.md)&...",
+      "category": "CleanRoom AI",
+      "sympathy": 10,
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224470237168",
+      "addDate": 1794198990272
+    },
+    {
+      "id": 4,
+      "recId": "REC. 04",
       "logNo": 224438944516,
       "title": "「문제가 생겼다고 판을 엎을 필요는 없다」",
       "tag": "AUDIT TRAIL / 공감 10",
@@ -29,8 +55,8 @@
       "addDate": 1791779008932
     },
     {
-      "id": 3,
-      "recId": "REC. 03",
+      "id": 5,
+      "recId": "REC. 05",
       "logNo": 224417049052,
       "title": "「신호가 없다고 해서 문제가 없는 것은 아니다」제약 배지 성능 시험(Growth Promotion Test)이 알려주는 피드백 감도와 조직의 건강성",
       "tag": "AUDIT TRAIL / 공감 10",
@@ -42,43 +68,17 @@
       "addDate": 1789802937006
     },
     {
-      "id": 4,
-      "recId": "REC. 04",
-      "logNo": 224452975894,
-      "title": "「빛이 너무 강하�� 본질�� 분해된다」",
-      "tag": "AUDIT TRAIL / 공감 9",
-      "desc": "의약품 광안정성 시험(ICH Q1B)과 차광의 과학 약국 진열대나 제약회사의 시약장을 열어보면, 짙은 갈색을 띤 유리병(Amber bottle)들이 줄지어 서 있는 모습을 쉽게 볼 수 있습니다. 일상에서 마...",
-      "category": "GMP in Your Area",
-      "sympathy": 9,
-      "commentCnt": 2,
-      "link": "https://blog.naver.com/humi09/224452975894",
-      "addDate": 1792898734627
-    },
-    {
-      "id": 5,
-      "recId": "REC. 05",
-      "logNo": 224450087224,
-      "title": "「나이라는 유효기간에 갇히지 않는 법」",
-      "tag": "AUDIT TRAIL / 공감 9",
-      "desc": "제약 유효기간(Expiry Date)과 재시험일자(Retest Date)의 과학 제약공장의 거대한 온습도 자동 제어 원료 창고(Warehouse). 공조기가 24시간 일정한 바람을 순환시키는 서늘한 공간에는...",
-      "category": "GMP in Your Area",
-      "sympathy": 9,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224450087224",
-      "addDate": 1792645038803
-    },
-    {
       "id": 6,
       "recId": "REC. 06",
-      "logNo": 224440276934,
-      "title": "「매일 조금씩 무뎌지는 칼날」",
+      "logNo": 224471551763,
+      "title": "AI 브리핑 (쉬어가는 이야기) —\"GPT와 Claude는 왜 다른 길을 걷게 되었을까?",
       "tag": "AUDIT TRAIL / 공감 9",
-      "desc": "제약 HPLC 컬럼 열화와 이론단수의 과학 \"내가 이 일만 10년째인데, 굳이 새 툴을 배우거나 공부할 필요가 있습니까?\" \"대충 봐도 견적 나옵니다. 늘 하던 대로 처리하면 큰 문제없어요.\" 연차가 쌓이고...",
-      "category": "GMP in Your Area",
+      "desc": "지향점은 같지만, AI의 미래를 구현하는 방식은 달랐다 지난 몇 편의 글을 통해 우리는 업무 매뉴얼로서의 스킬(Skill), 시스템 연결 규격인 MCP, 그리고 앤트로픽 CEO 다리오 아모데이의 에세이까지 ...",
+      "category": "CleanRoom AI",
       "sympathy": 9,
-      "commentCnt": 2,
-      "link": "https://blog.naver.com/humi09/224440276934",
-      "addDate": 1791871183364
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224471551763",
+      "addDate": 1794284351375
     }
   ]
 }
