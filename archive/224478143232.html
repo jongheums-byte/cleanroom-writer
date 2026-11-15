@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 실전 09. 오픈소스 SEO 엔진(Claude-seo)으로 내 블로그 해부하기 | CleanRoom Writer Archive</title>
+  <meta name="description" content="AI에게 내 블로그 주소를 던져주고 &quot;SEO 관점에서 분석해 줘&quot;라고 물으면 어떤 답이 돌아올까요? 대부분 그럴듯한 칭찬과 함께 &quot;키워드를 잘 넣고 소제목을 나누세요&quot; 같은 교과서적인 조언을 돌려줍니다. A...">
+  <link rel="canonical" href="https://jongheums-byte.github.io/cleanroom-writer/archive/224478143232.html">
+  <link rel="alternate" type="text/plain" title="LLM Context" href="../llms.txt">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jongheums-byte.github.io/cleanroom-writer/archive/224478143232.html">
+  <meta property="og:title" content="AI 실전 09. 오픈소스 SEO 엔진(Claude-seo)으로 내 블로그 해부하기">
+  <meta property="og:description" content="AI에게 내 블로그 주소를 던져주고 &quot;SEO 관점에서 분석해 줘&quot;라고 물으면 어떤 답이 돌아올까요? 대부분 그럴듯한 칭찬과 함께 &quot;키워드를 잘 넣고 소제목을 나누세요&quot; 같은 교과서적인 조언을 돌려줍니다. A...">
+  <meta property="article:published_time" content="2026-11-15">
+  <meta property="article:section" content="CleanRoom AI">
+
+  <!-- Schema.org Structured Data (GEO) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "AI 실전 09. 오픈소스 SEO 엔진(Claude-seo)으로 내 블로그 해부하기",
+  "description": "AI에게 내 블로그 주소를 던져주고 \"SEO 관점에서 분석해 줘\"라고 물으면 어떤 답이 돌아올까요? 대부분 그럴듯한 칭찬과 함께 \"키워드를 잘 넣고 소제목을 나누세요\" 같은 교과서적인 조언을 돌려줍니다. A...",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "inLanguage": "ko-KR",
+  "articleSection": "CleanRoom AI",
+  "url": "https://jongheums-byte.github.io/cleanroom-writer/archive/224478143232.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jongheums-byte.github.io/cleanroom-writer/archive/224478143232.html"
+  },
+  "isBasedOn": "https://blog.naver.com/humi09/224478143232",
+  "author": {
+    "@type": "Person",
+    "name": "CleanRoom Writer",
+    "url": "https://jongheums-byte.github.io/cleanroom-writer",
+    "jobTitle": "Pharmaceutical & Bio QC Specialist (19 Years Experience)"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CleanRoom Writer",
+    "url": "https://jongheums-byte.github.io/cleanroom-writer"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="https://ssl.pstatic.net/static/blog/icon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="silence-theme">
+  <header class="status-bar">
+    <div class="status-left">
+      <a href="../index.html" class="system-token brand-token" style="text-decoration:none;">CLEANROOM WRITER</a>
+    </div>
+    <div class="status-right">
+      <a href="index.html" class="system-token status-link">← ARCHIVE</a>
+      <a href="https://blog.naver.com/humi09/224478143232" target="_blank" rel="noopener noreferrer" class="system-token status-link">NAVER ORIGINAL ↗</a>
+    </div>
+  </header>
+
+  <main class="archive-article-container">
+    <article class="archive-article" itemscope itemtype="https://schema.org/TechArticle">
+      <header class="article-header">
+        <div class="article-meta-bar">
+          <span class="system-token record-tag">CleanRoom AI</span>
+          <span class="system-token record-id">DATE: 2026-11-15</span>
+          <span class="system-token record-id">SYMPATHY: 2</span>
+        </div>
+        <h1 class="article-title" itemprop="headline">AI 실전 09. 오픈소스 SEO 엔진(Claude-seo)으로 내 블로그 해부하기</h1>
+        <p class="article-lead" itemprop="description">AI에게 내 블로그 주소를 던져주고 &quot;SEO 관점에서 분석해 줘&quot;라고 물으면 어떤 답이 돌아올까요? 대부분 그럴듯한 칭찬과 함께 &quot;키워드를 잘 넣고 소제목을 나누세요&quot; 같은 교과서적인 조언을 돌려줍니다. A...</p>
+      </header>
+
+      <div class="article-body" itemprop="articleBody">
+      <div class="table-wrap"><table><thead><tr><th>CLEANROOM WRITER AI 실전 09 챗봇에게 &quot;내 블로그 어때?&quot; 묻는 대신, 오픈소스 SEO 엔진(claude-seo)으로 직접 해부해 보았다 실측 데이터 기반 SEO·GEO 정밀 감사(Audit): 콘텐츠 품질 86점, AI 티 0점, 그리고 크롤러가 찾아낸 4가지 구조적 빈틈 CLEANROOM AI TECH · SEO &amp; GEO DIAGNOSTIC AUDIT</th></tr></thead></table></div>
+      <p>AI에게 내 블로그 주소를 던져주고 &quot;SEO 관점에서 분석해 줘&quot;라고 물으면 어떤 답이 돌아올까요?</p>
+      <p>대부분 그럴듯한 칭찬과 함께 &quot;키워드를 잘 넣고 소제목을 나누세요&quot; 같은 교과서적인 조언을 돌려줍니다. AI가 실제 크롤러처럼 HTML 돔(DOM)과 메타 태그, robots.txt를 정밀하게 뜯어보고 점수를 매긴 것이 아니기 때문입니다.</p>
+      <p>제약·바이오 품질관리(QC)에서 육안으로 &quot;깨끗해 보입니다&quot;라고 말하지 않고 시험 장비를 돌려 수치를 뽑듯, 내 블로그의 검색 경쟁력도 검증된 진단 엔진의 실측 데이터로 확인해 볼 필요가 있습니다.</p>
+      <p>이번 [AI 실전 09] 편에서는 깃허브에 공개된 오픈소스 SEO 감사 도구인 AgriciDaniel/claude-seo를 내 컴퓨터에 직접 설치하고, CleanRoom Writer 블로그(blog.naver.com/humi09)를 실제로 스캔해 본 결과를 그대로 공개합니다.</p>
+      <hr class="article-divider">
+      <h2>1. 오픈소스 SEO 엔진 claude-seo 설치와 실제 진단 방식</h2>
+      <p>claude-seo는 기술적 SEO, 콘텐츠 품질(E-E-A-T), 구조화 데이터(Schema), AI 검색 노출(GEO)까지 점검할 수 있도록 26개의 세부 스킬과 파이썬 기반 진단 스크립트(fetch_page.py, parse_html.py, content_quality.py, page_checks.py)로 구성된 오픈소스 도구입니다.</p>
+      <p>이번 실습에서는 PC에 저장소를 내려받은 뒤 uv 가상환경으로 68개의 필수 분석 라이브러리를 설치하고, 내 블로그의 실제 크롤링 경로인 모바일 페이지(m.blog.naver.com/humi09)와 최신 글(AI 실전 03, AI 브리핑.21)을 직접 호출해 원시 HTML과 품질 지표를 추출했습니다.</p>
+      <hr class="article-divider">
+      <h2>2. 실측 결과 ①: 콘텐츠 품질 점수 86점, &#39;AI 티&#39;는 0점</h2>
+      <p>먼저 content_quality.py로 대표 글(AI 실전 03)의 텍스트 밀도와 문체를 측정해 보았습니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>• 종합 콘텐츠 품질(overall_quality): 86 / 100점 (flags: []) • 군더더기 표현(filler_score): 0점 • AI 상투어 패턴(ai_pattern_score): 0점 • 제목-본문 키워드 일치도(title_relevance): 0.91 (기준치 0.30 대비 매우 높음)</th></tr></thead></table></div>
+      <p>눈여겨볼 부분은 ai_pattern_score가 0으로 나왔다는 점입니다. 그동안 [2단계 검수 게이트]를 통해 과장된 수식어와 뻔한 AI 문투를 계속 걷어낸 것이 실제 정량 지표로도 확인된 셈입니다.</p>
+      <hr class="article-divider">
+      <h2>3. 실측 결과 ②: 47개 기술 점검에서 드러난 4가지 개선 포인트</h2>
+      <p>하지만 parse_html.py와 page_checks.py(47개 항목 검사)를 돌리자, 사람 눈으로는 보이지 않던 구조적 빈틈 4가지가 선명하게 드러났습니다.</p>
+      <p>제목 길이 초과 (title-too-long · 84자): AI 브리핑.21의 &lt;title&gt; 태그 길이가 : 네이버 블로그 접미사 포함 84자로 측정되었습니다. 검색 결과 권장 기준(60자 이하)을 넘어섰기 때문에, 뒤쪽에 배치한 핵심 영문 키워드(Context Engineering)가 검색 화면에서 잘릴 수 있습니다. 핵심 키워드는 앞쪽 40자 이내에 두는 편이 유리합니다.</p>
+      <p>대표 이미지 미설정 (og:image 기본 아이콘 폴백): 이미지를 아직 넣지 않은 AI 브리핑.21의 og:image를 확인해 보니, 네이버 기본 아이콘(og_270x270.png)이 잡혀 있었습니다. 글의 성격을 보여줄 대표 이미지 1장이 빠져 있으면 검색이나 SNS 공유 시 클릭률(CTR) 손해로 이어집니다.</p>
+      <p>본문 이미지 alt 속성 공백 (&quot;alt&quot;: &quot;&quot;): AI 실전 03 본문에 들어간 캡처 이미지 2장 모두 대체 텍스트(alt)가 비어 있었습니다. 스마트에디터에서 이미지 설명을 입력해 두어야 이미지 검색 노출과 접근성 점수를 함께 챙길 수 있습니다.</p>
+      <p>외부 HTML 복붙 시 &lt;h3&gt; 소제목 태그 유실: 분명 서식 복사기에서는 &lt;h3&gt; 태그로 소제목을 작성했는데, 네이버 스마트에디터에 붙여넣은 뒤 크롤러로 다시 읽어보니 h3: []로 잡혔습니다. 에디터가 붙여넣기 과정에서 &lt;h3&gt;을 일반 스타일 문단으로 변환했기 때문입니다. 중요한 소제목은 에디터 내부의 제목/인용구 서식을 한 번 더 입혀주는 것이 안전합니다.</p>
+      <hr class="article-divider">
+      <h2>4. 실측 결과 ③: 네이버 블로그의 구조적 한계 (robots.txt와 AI 검색)</h2>
+      <p>마지막으로 blog.naver.com/robots.txt와 PC 기본 페이지(blog.naver.com/humi09)를 확인하면서 흥미로운 구조적 사실도 짚어낼 수 있었습니다.</p>
+      <p>PC 기본 주소(blog.naver.com/humi09)는 &lt;meta name&amp;#x3D;&quot;robots&quot; content&amp;#x3D;&quot;noindex,follow&quot;/&gt;와 &lt;iframe&gt; 구조로 되어 있어, 실제 외부 검색엔진은 모바일 주소(m.blog.naver.com)와 RSS(rss.blog.naver.com/humi09.xml)를 통해 글을 읽어갑니다.</p>
+      <p>또한 robots.txt에서 네이버가 GPTBot, OAI-SearchBot, PerplexityBot, Google-Extended, ClaudeBot 등 외부 AI 검색 크롤러의 접근을 전면 차단(Disallow: /)하고 있습니다.</p>
+      <p>즉, 네이버 내부 검색 유입은 문제없지만 글로벌 AI 검색(GEO) 인용까지 노리는 글이라면 네이버 블로그 외에 별도의 정적 웹페이지(AI 실전 02에서 다룬 개인 아카이브 등)에 핵심 글을 미러링해 두는 전략이 필요하다는 결론이 나옵니다.</p>
+      <hr class="article-divider">
+      <h2>맺음말</h2>
+      <p>&quot;감으로 잘 쓴 것 같다&quot;고 넘기는 것과, 실제 진단 엔진이 뱉어내는 수치(86점, 84자, alt 공백, h3 유실)를 눈으로 확인하는 것은 완전히 다릅니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>AI 실전 09 · TAKEAWAY AI에게 막연하게 &quot;평가해 줘&quot;라고 묻는 대신, 실제 SEO 감사 도구를 연결해 크롤러가 내 글을 어떻게 읽고 있는지 수치로 점검해 보세요. 감으로 고치던 글쓰기가, 데이터로 개선하는 운영으로 바뀝니다.</th></tr></thead></table></div>
+      </div>
+
+      <footer class="article-footer">
+        <div class="article-source-box">
+          <span class="system-token">SOURCE VERIFICATION / AUDIT TRAIL</span>
+          <p>이 문서는 네이버 블로그 <strong>CleanRoom Writer</strong>의 원문을 AI 검색(GEO) 및 정적 웹 아카이브용으로 규격화한 미러링 문서입니다.</p>
+          <div class="article-footer-actions">
+            <a href="https://blog.naver.com/humi09/224478143232" target="_blank" rel="noopener noreferrer" class="cta-primary">
+              <span>네이버 블로그 원문 보기</span>
+              <span class="cta-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="index.html" class="cta-secondary">
+              <span>전체 아카이브 목록</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="silence-footer">
+    <div class="footer-inner">
+      <span class="system-token footer-tag">AIR PURITY 99.9% • GEO ARCHIVE MIRROR</span>
+      <span class="system-token footer-copy">© 2026 CLEANROOM WRITER. ALL RIGHTS RESERVED.</span>
+    </div>
+  </footer>
+</body>
+</html>
