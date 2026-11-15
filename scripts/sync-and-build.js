@@ -5,16 +5,18 @@ const { execSync } = require('child_process');
 
 const root = path.resolve(__dirname, '..');
 const syncScript = path.join(root, 'scripts', 'sync-records.js');
+const archiveScript = path.join(root, 'scripts', 'sync-archive.js');
 
 console.log('====================================================');
 console.log('   CLEANROOM WRITER | AUTOMATED SYNC PROTOCOL       ');
 console.log('====================================================\n');
 
-// 1. Run sync
+// 1. Run sync (Records + GEO Static Archive)
 try {
   execSync(`node "${syncScript}"`, { stdio: 'inherit', cwd: root });
+  execSync(`node "${archiveScript}"`, { stdio: 'inherit', cwd: root });
 } catch (e) {
-  console.error('[FAILED] Could not complete sync-records:', e.message);
+  console.error('[FAILED] Could not complete sync:', e.message);
   process.exit(1);
 }
 
@@ -56,11 +58,11 @@ if (desktopPath) {
 
 // 3. Commit and Push to GitHub repository to trigger live site update
 try {
-  const gitStatus = execSync('git status --porcelain index.html script.js records.json', { cwd: root, encoding: 'utf-8' });
+  const gitStatus = execSync('git status --porcelain index.html script.js records.json archive llms.txt sitemap.xml', { cwd: root, encoding: 'utf-8' });
   if (gitStatus.trim().length > 0) {
     console.log('\n[GIT] Detected data changes, updating GitHub repository...');
-    execSync('git add index.html script.js records.json', { cwd: root, stdio: 'inherit' });
-    execSync('git commit -m "chore(sync): update top sympathy records"', { cwd: root, stdio: 'inherit' });
+    execSync('git add index.html script.js records.json archive/ llms.txt sitemap.xml', { cwd: root, stdio: 'inherit' });
+    execSync('git commit -m "chore(sync): update top sympathy records & GEO archive"', { cwd: root, stdio: 'inherit' });
     execSync('git push origin main', { cwd: root, stdio: 'inherit' });
     console.log('[GIT] Successfully pushed to GitHub main branch!');
   } else {

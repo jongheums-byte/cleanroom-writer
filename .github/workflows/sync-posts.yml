@@ -14,6 +14,10 @@ on:
       - 'index.html'
       - 'script.js'
       - 'records.json'
+      - 'archive/**'
+      - 'llms.txt'
+      - 'sitemap.xml'
+      - 'robots.txt'
 
 permissions:
   contents: write
@@ -30,17 +34,19 @@ jobs:
         with:
           node-version: 22
 
-      - name: Run Sync Protocol
-        run: node scripts/sync-records.js
+      - name: Run Sync Protocol (Records & GEO Archive)
+        run: |
+          node scripts/sync-records.js
+          node scripts/sync-archive.js
 
       - name: Commit and Push if updated
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html script.js records.json
+          git add index.html script.js records.json archive/ llms.txt sitemap.xml
           if git diff --staged --quiet; then
             echo "No changes in records."
           else
-            git commit -m "chore(sync): update top sympathy records"
+            git commit -m "chore(sync): update top sympathy records & GEO archive"
             git push
           fi

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 브리핑.21 — &quot;프롬프트는 길어졌는데, 왜 결과물은 제자리일까?&quot; : 컨텍스트 엔지니어링(Context Engineering) | CleanRoom Writer Archive</title>
+  <meta name="description" content="AI를 어느 정도 쓰다 보면 누구나 한 번쯤 비슷한 벽에 부딪힙니다. 처음에는 한두 줄짜리 질문으로 시작하지만, 원하는 결과가 나오지 않을수록 프롬프트가 점점 길어집니다. 배경 설명을 덧붙이고, 예외 조건을...">
+  <link rel="canonical" href="https://cleanroom-writer.netlify.app/archive/224477169650.html">
+  <link rel="alternate" type="text/plain" title="LLM Context" href="../llms.txt">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cleanroom-writer.netlify.app/archive/224477169650.html">
+  <meta property="og:title" content="AI 브리핑.21 — &quot;프롬프트는 길어졌는데, 왜 결과물은 제자리일까?&quot; : 컨텍스트 엔지니어링(Context Engineering)">
+  <meta property="og:description" content="AI를 어느 정도 쓰다 보면 누구나 한 번쯤 비슷한 벽에 부딪힙니다. 처음에는 한두 줄짜리 질문으로 시작하지만, 원하는 결과가 나오지 않을수록 프롬프트가 점점 길어집니다. 배경 설명을 덧붙이고, 예외 조건을...">
+  <meta property="article:published_time" content="2026-11-14">
+  <meta property="article:section" content="CleanRoom AI">
+
+  <!-- Schema.org Structured Data (GEO) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "AI 브리핑.21 — \"프롬프트는 길어졌는데, 왜 결과물은 제자리일까?\" : 컨텍스트 엔지니어링(Context Engineering)",
+  "description": "AI를 어느 정도 쓰다 보면 누구나 한 번쯤 비슷한 벽에 부딪힙니다. 처음에는 한두 줄짜리 질문으로 시작하지만, 원하는 결과가 나오지 않을수록 프롬프트가 점점 길어집니다. 배경 설명을 덧붙이고, 예외 조건을...",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "inLanguage": "ko-KR",
+  "articleSection": "CleanRoom AI",
+  "url": "https://cleanroom-writer.netlify.app/archive/224477169650.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://cleanroom-writer.netlify.app/archive/224477169650.html"
+  },
+  "isBasedOn": "https://blog.naver.com/humi09/224477169650",
+  "author": {
+    "@type": "Person",
+    "name": "CleanRoom Writer",
+    "url": "https://cleanroom-writer.netlify.app",
+    "jobTitle": "Pharmaceutical & Bio QC Specialist (19 Years Experience)"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CleanRoom Writer",
+    "url": "https://cleanroom-writer.netlify.app"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="https://ssl.pstatic.net/static/blog/icon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="silence-theme">
+  <header class="status-bar">
+    <div class="status-left">
+      <a href="../index.html" class="system-token brand-token" style="text-decoration:none;">CLEANROOM WRITER</a>
+    </div>
+    <div class="status-right">
+      <a href="index.html" class="system-token status-link">← ARCHIVE</a>
+      <a href="https://blog.naver.com/humi09/224477169650" target="_blank" rel="noopener noreferrer" class="system-token status-link">NAVER ORIGINAL ↗</a>
+    </div>
+  </header>
+
+  <main class="archive-article-container">
+    <article class="archive-article" itemscope itemtype="https://schema.org/TechArticle">
+      <header class="article-header">
+        <div class="article-meta-bar">
+          <span class="system-token record-tag">CleanRoom AI</span>
+          <span class="system-token record-id">DATE: 2026-11-14</span>
+          <span class="system-token record-id">SYMPATHY: 2</span>
+        </div>
+        <h1 class="article-title" itemprop="headline">AI 브리핑.21 — &quot;프롬프트는 길어졌는데, 왜 결과물은 제자리일까?&quot; : 컨텍스트 엔지니어링(Context Engineering)</h1>
+        <p class="article-lead" itemprop="description">AI를 어느 정도 쓰다 보면 누구나 한 번쯤 비슷한 벽에 부딪힙니다. 처음에는 한두 줄짜리 질문으로 시작하지만, 원하는 결과가 나오지 않을수록 프롬프트가 점점 길어집니다. 배경 설명을 덧붙이고, 예외 조건을...</p>
+      </header>
+
+      <div class="article-body" itemprop="articleBody">
+      <div class="table-wrap"><table><thead><tr><th>CLEANROOM WRITER AI 브리핑.21 &quot;프롬프트는 길어졌는데, 왜 결과물은 제자리일까?&quot; : 컨텍스트 엔지니어링(Context Engineering) 질문의 말투를 다듬는 단계를 넘어, 클린룸의 &#39;라인 클리어런스&#39;처럼 AI의 작업대 위를 설계하는 법 CLEANROOM AI BRIEFING · CONTEXT ENGINEERING &amp; LINE CLEARANCE</th></tr></thead></table></div>
+      <p>AI를 어느 정도 쓰다 보면 누구나 한 번쯤 비슷한 벽에 부딪힙니다.</p>
+      <p>처음에는 한두 줄짜리 질문으로 시작하지만, 원하는 결과가 나오지 않을수록 프롬프트가 점점 길어집니다. 배경 설명을 덧붙이고, 예외 조건을 열거하고, 과거에 잘 나왔던 예시까지 통째로 붙여넣습니다.</p>
+      <p>그런데 이상한 일이 벌어집니다. 분명히 더 친절하고 자세하게 설명했는데, AI가 앞부분에 적어둔 핵심 조건을 슬쩍 빼먹거나 엉뚱한 방향의 답을 내놓는 빈도가 오히려 늘어납니다.</p>
+      <p>이 지점에서 최근 AI 엔지니어링 분야가 주목하는 개념이 바로 프롬프트 엔지니어링(Prompt Engineering)에서 컨텍스트 엔지니어링(Context Engineering)으로의 전환입니다.</p>
+      <hr class="article-divider">
+      <h2>1. 프롬프트(Prompt)와 컨텍스트(Context)는 무엇이 다른가?</h2>
+      <p>두 개념은 비슷해 보이지만 다루는 층위가 다릅니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>• 프롬프트 엔지니어링은 &quot;이번 턴에 AI에게 말을 어떻게 걸 것인가&quot;에 집중합니다. 역할 부여(&quot;너는 ~전문가야&quot;), 어조 지정, 출력 형식 예시처럼 질문의 표현 방식을 다듬는 기술입니다. • 컨텍스트 엔지니어링은 &quot;AI가 판단을 내리는 순간, 그 작업 공간(Context Window) 안에 무엇을 넣고 무엇을 뺄 것인가&quot;를 설계하는 일입니다. 시스템 규칙, 참고 문서, 직전 대화 내역, 외부 도구 호출 결과까지 포함해 모델이 바라보는 전체 정보의 밀도와 구조를 관리합니다.</th></tr></thead></table></div>
+      <p>쉽게 말해, 프롬프트가 &#39;지시하는 말투&#39;라면 컨텍스트는 &#39;작업자가 일하는 책상 위의 상태&#39;에 가깝습니다.</p>
+      <hr class="article-divider">
+      <h2>2. 클린룸의 &#39;라인 클리어런스&#39;로 보는 컨텍스트 설계</h2>
+      <p>제약·바이오 제조나 품질관리(QC) 현장에서는 새로운 배치(Batch)의 작업을 시작하기 전에 반드시 라인 클리어런스(Line Clearance)를 수행합니다. 이전 작업에서 쓰던 라벨, 빈 용기, 다른 품목의 서류가 작업대 위에 한 장이라도 남아 있으면 혼입이나 오작업이 발생할 수 있기 때문입니다.</p>
+      <p>작업대 위에는 100페이지짜리 공장 전체 규정집을 펼쳐두지 않습니다. 대신 지금 수행해야 할 공정에 필요한 제조지시 및 기록서(Batch Record)와 검증된 원료만 정확한 순서로 배치합니다.</p>
+      <p>AI의 컨텍스트 창(Context Window)도 똑같은 물리적 한계를 가집니다.</p>
+      <p>모델이 한 번에 읽을 수 있는 용량이 아무리 커졌다고 해도, 그 안에 당장 필요 없는 과거 대화, 중복된 지침, 길기만 한 참고 자료가 뒤섞여 있으면 모델의 주의력(Attention)은 분산됩니다. 중요한 제약 조건이 수천 줄의 배경 텍스트 사이에 파묻혀 신호 대 잡음비(Signal-to-Noise Ratio)가 떨어지는 것입니다.</p>
+      <p>결국 AI에게 긴 프롬프트를 한 번에 쏟아붓는 것은, 라인 클리어런스 없이 이전 작업 서류가 쌓인 책상 위에 새 작업지시서를 올려두는 것과 같습니다.</p>
+      <hr class="article-divider">
+      <h2>3. 실무에서 컨텍스트를 설계하는 3가지 기준</h2>
+      <p>그렇다면 컨텍스트 엔지니어링은 일상적인 AI 활용에서 어떻게 적용할 수 있을까요? 거창한 코드가 없어도 다음 세 가지 기준만으로 결과물의 일관성이 크게 달라집니다.</p>
+      <p>상시 규칙과 일회성 지시의 분리: 매번 채팅창에 &quot;과장 표현 쓰지 마, 표로 정리해, 3줄 요약 먼저 보여줘&quot;를 길게 적는 대신, 고정된 원칙은 별도의 지침 파일이나 프로젝트 설정으로 분리하고, 대화창에는 이번 작업의 목표와 입력 데이터만 남깁니다. ([AI 실전 05]에서 다룬 게이트 규칙 분리가 바로 이 원리입니다.)</p>
+      <p>&#39;전부 넣기&#39; 대신 &#39;필요한 범위만 자르기&#39;: 50페이지짜리 문서를 매 질문마다 통째로 붙이기보다, 목차나 해당 조항만 먼저 추려서 넣으면 모델이 핵심 조건을 놓칠 확률이 크게 줄어듭니다. [AI 브리핑 17]에서 살펴본 것처럼 스킬과 도구 역시 꼭 필요한 것만 남겨야 판단이 흐려지지 않습니다.</p>
+      <p>주제가 바뀌면 새 작업대(새 대화) 열기: 하나의 긴 채팅창에서 A 보고서를 쓰다가, B 코드를 고치고, 다시 C 메일을 작성하면 앞선 맥락의 잔여물이 뒤쪽 답변에 간섭을 일으킵니다. 작업이 달라질 때 새 대화를 여는 것 자체가 가장 손쉬운 라인 클리어런스입니다.</p>
+      <hr class="article-divider">
+      <h2>4. 비유의 한계: 책상과 다른 점</h2>
+      <p>물리적 클린룸의 작업대는 한 번 비워두면 사람이 새 물건을 올려놓기 전까지 그대로 유지됩니다. 반면 AI의 컨텍스트 창은 대화가 오갈 때마다 AI의 이전 답변과 도구 실행 결과가 자동으로 계속 쌓이는 동적 공간입니다.</p>
+      <p>따라서 처음에 아무리 깔끔하게 시작했더라도, 수정 요청을 대여섯 번 주고받다 보면 어느새 작업대 위가 다시 어지러워집니다. 중요한 작업일수록 중간중간 합의된 결론만 요약해 새 대화로 맥락을 이관(Hand-off)하는 습관이 필요한 이유입니다.</p>
+      <hr class="article-divider">
+      <h2>맺음말</h2>
+      <p>AI의 성능이 부족해 보일 때, 우리는 종종 &quot;질문을 더 길고 정교하게 써야 하나?&quot;라고 고민합니다.</p>
+      <p>하지만 많은 경우 문제는 질문의 문장력이 아니라, AI가 지금 보고 있는 책상 위가 너무 어지럽다는 데 있습니다.</p>
+      <p>다음번에 AI가 자꾸 핵심 조건을 빼먹는다면, 문장을 한 줄 더 덧붙이기 전에 지금 대화창에서 덜어낼 수 있는 불필요한 맥락이 무엇인지 먼저 점검해 보시기 바랍니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>💡 함께 읽어보시면 좋은 글 사람의 작업 환경에서도 열어둔 브라우저 탭 50개를 비우는 것이 집중의 시작이듯, AI에게도 새로운 작업을 시작하기 전 &#39;라인 클리어런스&#39;가 필요합니다. 이 원리를 일상과 업무 습관으로 풀어낸 이전 글도 함께 참고해 보세요. 👉 「열어둔 탭 50개가 당신을 망친다」제약회사 라인 클리어런스(Line Clearance)로 본 시작의 기술</th></tr></thead></table></div>
+      <div class="table-wrap"><table><thead><tr><th>AI 브리핑 21 · TAKEAWAY 프롬프트 엔지니어링이 &#39;말을 잘 거는 법&#39;이라면, 컨텍스트 엔지니어링은 AI의 작업대 위를 비우고 꼭 필요한 정보만 배치하는 &#39;라인 클리어런스&#39;입니다. 설명을 한 줄 더 붙이기 전에, 지금 대화창에서 덜어내야 할 맥락부터 비워보세요.</th></tr></thead></table></div>
+      </div>
+
+      <footer class="article-footer">
+        <div class="article-source-box">
+          <span class="system-token">SOURCE VERIFICATION / AUDIT TRAIL</span>
+          <p>이 문서는 네이버 블로그 <strong>CleanRoom Writer</strong>의 원문을 AI 검색(GEO) 및 정적 웹 아카이브용으로 규격화한 미러링 문서입니다.</p>
+          <div class="article-footer-actions">
+            <a href="https://blog.naver.com/humi09/224477169650" target="_blank" rel="noopener noreferrer" class="cta-primary">
+              <span>네이버 블로그 원문 보기</span>
+              <span class="cta-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="index.html" class="cta-secondary">
+              <span>전체 아카이브 목록</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="silence-footer">
+    <div class="footer-inner">
+      <span class="system-token footer-tag">AIR PURITY 99.9% • GEO ARCHIVE MIRROR</span>
+      <span class="system-token footer-copy">© 2026 CLEANROOM WRITER. ALL RIGHTS RESERVED.</span>
+    </div>
+  </footer>
+</body>
+</html>

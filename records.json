@@ -1,10 +1,36 @@
 {
-  "lastSynced": "2026-11-14T22:07:20.067Z",
+  "lastSynced": "2026-11-15T01:46:28.144Z",
   "totalScanned": 140,
   "records": [
     {
       "id": 1,
       "recId": "REC. 01",
+      "logNo": 224470309237,
+      "title": "AI 브리핑.특별기고\"데이터센터 안에 천재 100만 명이 살아도, 실험실의 시계는 건너뛸 수 없다\"",
+      "tag": "AUDIT TRAIL / 공감 11",
+      "desc": "앤트로픽 CEO 다리오 아모데이의 〈Machines of Loving Grace〉를 품질과 검증(QC/QA)의 눈으로 읽다 직전 13편(MCP 개념과 아키텍처 해부)을 통해, 우리는 AI에게 업무 매뉴얼(S...",
+      "category": "CleanRoom AI",
+      "sympathy": 11,
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224470309237",
+      "addDate": 1794202428167
+    },
+    {
+      "id": 2,
+      "recId": "REC. 02",
+      "logNo": 224470237168,
+      "title": "AI 브리핑.13 —\"스킬(Skill)이 업무 매뉴얼이라면, MCP는 무엇인가?\"",
+      "tag": "AUDIT TRAIL / 공감 11",
+      "desc": "비개발자도 5분 만에 이해하는 AI 시대의 'USB-C 규격'과 3단 아키텍처 지난 10편의 시리즈를 통해 우리는 AI에게 일하는 절차와 규칙을 가르치는 '스킬(SKILL.md)'을 완벽히 내 것으로 만들었...",
+      "category": "CleanRoom AI",
+      "sympathy": 11,
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224470237168",
+      "addDate": 1794198990272
+    },
+    {
+      "id": 3,
+      "recId": "REC. 03",
       "logNo": 224451234580,
       "title": "「까다로운 대상을 다룰 때는 끝까지 밀어붙이지 않는다」",
       "tag": "AUDIT TRAIL / 공감 11",
@@ -16,34 +42,21 @@
       "addDate": 1792731064512
     },
     {
-      "id": 2,
-      "recId": "REC. 02",
-      "logNo": 224470309237,
-      "title": "AI 브리핑.특별기고\"데이터센터 안에 천재 100만 명이 살아도, 실험실의 시계는 건너뛸 수 없다\"",
-      "tag": "AUDIT TRAIL / 공감 10",
-      "desc": "앤트로픽 CEO 다리오 아모데이의 〈Machines of Loving Grace〉를 품질과 검증(QC/QA)의 눈으로 읽다 직전 13편(MCP 개념과 아키텍처 해부)을 통해, 우리는 AI에게 업무 매뉴얼(S...",
-      "category": "CleanRoom AI",
-      "sympathy": 10,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224470309237",
-      "addDate": 1794202428167
-    },
-    {
-      "id": 3,
-      "recId": "REC. 03",
-      "logNo": 224470237168,
-      "title": "AI 브리핑.13 —\"스킬(Skill)이 업무 매뉴얼이라면, MCP는 무엇인가?\"",
-      "tag": "AUDIT TRAIL / 공감 10",
-      "desc": "비개발자도 5분 만에 이해하는 AI 시대의 &#x27;USB-C 규격&#x27;과 3단 아키텍처 지난 10편의 시리즈를 통해 우리는 AI에게 일하는 절차와 규칙을 가르치는 &#x27;스킬(SKILL.md)&...",
-      "category": "CleanRoom AI",
-      "sympathy": 10,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224470237168",
-      "addDate": 1794198990272
-    },
-    {
       "id": 4,
       "recId": "REC. 04",
+      "logNo": 224471551763,
+      "title": "AI 브리핑 (쉬어가는 이야기) —\"GPT와 Claude는 왜 다른 길을 걷게 되었을까?",
+      "tag": "AUDIT TRAIL / 공감 10",
+      "desc": "지향점은 같지만, AI의 미래를 구현하는 방식은 달랐다 지난 몇 편의 글을 통해 우리는 업무 매뉴얼로서의 스킬(Skill), 시스템 연결 규격인 MCP, 그리고 앤트로픽 CEO 다리오 아모데이의 에세이까지 ...",
+      "category": "CleanRoom AI",
+      "sympathy": 10,
+      "commentCnt": 0,
+      "link": "https://blog.naver.com/humi09/224471551763",
+      "addDate": 1794284351375
+    },
+    {
+      "id": 5,
+      "recId": "REC. 05",
       "logNo": 224438944516,
       "title": "「문제가 생겼다고 판을 엎을 필요는 없다」",
       "tag": "AUDIT TRAIL / 공감 10",
@@ -55,8 +68,8 @@
       "addDate": 1791779008932
     },
     {
-      "id": 5,
-      "recId": "REC. 05",
+      "id": 6,
+      "recId": "REC. 06",
       "logNo": 224417049052,
       "title": "「신호가 없다고 해서 문제가 없는 것은 아니다」제약 배지 성능 시험(Growth Promotion Test)이 알려주는 피드백 감도와 조직의 건강성",
       "tag": "AUDIT TRAIL / 공감 10",
@@ -66,19 +79,6 @@
       "commentCnt": 0,
       "link": "https://blog.naver.com/humi09/224417049052",
       "addDate": 1789802937006
-    },
-    {
-      "id": 6,
-      "recId": "REC. 06",
-      "logNo": 224471551763,
-      "title": "AI 브리핑 (쉬어가는 이야기) —\"GPT와 Claude는 왜 다른 길을 걷게 되었을까?",
-      "tag": "AUDIT TRAIL / 공감 9",
-      "desc": "지향점은 같지만, AI의 미래를 구현하는 방식은 달랐다 지난 몇 편의 글을 통해 우리는 업무 매뉴얼로서의 스킬(Skill), 시스템 연결 규격인 MCP, 그리고 앤트로픽 CEO 다리오 아모데이의 에세이까지 ...",
-      "category": "CleanRoom AI",
-      "sympathy": 9,
-      "commentCnt": 0,
-      "link": "https://blog.naver.com/humi09/224471551763",
-      "addDate": 1794284351375
     }
   ]
 }

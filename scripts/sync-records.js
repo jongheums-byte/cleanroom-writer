@@ -14,6 +14,7 @@ const fs = require('fs');
 const path = require('path');
 
 const BLOG_ID = 'humi09';
+const SITE_URL = 'https://cleanroom-writer.netlify.app';
 const ROOT_DIR = path.resolve(__dirname, '..');
 const INDEX_HTML = path.join(ROOT_DIR, 'index.html');
 const SCRIPT_JS = path.join(ROOT_DIR, 'script.js');
@@ -24,10 +25,13 @@ function decodeHtml(html) {
   return html
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
+    .replace(/&#x27;/gi, "'")
+    .replace(/&apos;/g, "'")
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&amp;/g, '&')
     .replace(/&nbsp;/g, ' ')
+    .replace(/\u00a0/g, ' ')
     .trim();
 }
 
@@ -59,7 +63,7 @@ function fetchPage(page) {
 
 async function fetchAllPosts() {
   let all = [];
-  for (let page = 1; page <= 6; page++) {
+  for (let page = 1; page <= 50; page++) {
     const items = await fetchPage(page);
     if (!items || items.length === 0) break;
     all.push(...items);
@@ -183,7 +187,8 @@ async function main() {
       abstract: `[${r.category}] 공감 데이터 ${r.sympathy}건 입증 기록`,
       hypothesis: `“${r.title}”`,
       observation: `${r.desc} (현업 19년 QC 렌즈로 관측 및 입증)`,
-      link: r.link
+      link: r.link,
+      archiveUrl: `archive/${r.logNo}.html`
     };
   });
 
@@ -200,4 +205,16 @@ async function main() {
   console.log('\n[SUCCESS] CleanRoom sync completed successfully.');
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  BLOG_ID,
+  SITE_URL,
+  ROOT_DIR,
+  decodeHtml,
+  fetchAllPosts,
+  cleanExcerpt,
+  cleanTitle
+};

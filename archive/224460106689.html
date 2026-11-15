@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 실전 02. 마우스 드래그 대신 코드로 웹을 짓다 — AI와 함께 공식 아카이브(Netlify) 구축하기 | CleanRoom Writer Archive</title>
+  <meta name="description" content="안녕하세요, CleanRoom Writer입니다. 지난 [AI 실전 01. 마우스 편집 대신 코드로 영상을 찍어내다 — HyperFrames로 MP4 만들어 유튜브 업로드하기] 글에서는 타임라인 위에서 마우...">
+  <link rel="canonical" href="https://cleanroom-writer.netlify.app/archive/224460106689.html">
+  <link rel="alternate" type="text/plain" title="LLM Context" href="../llms.txt">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cleanroom-writer.netlify.app/archive/224460106689.html">
+  <meta property="og:title" content="AI 실전 02. 마우스 드래그 대신 코드로 웹을 짓다 — AI와 함께 공식 아카이브(Netlify) 구축하기">
+  <meta property="og:description" content="안녕하세요, CleanRoom Writer입니다. 지난 [AI 실전 01. 마우스 편집 대신 코드로 영상을 찍어내다 — HyperFrames로 MP4 만들어 유튜브 업로드하기] 글에서는 타임라인 위에서 마우...">
+  <meta property="article:published_time" content="2026-10-31">
+  <meta property="article:section" content="CleanRoom AI">
+
+  <!-- Schema.org Structured Data (GEO) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "AI 실전 02. 마우스 드래그 대신 코드로 웹을 짓다 — AI와 함께 공식 아카이브(Netlify) 구축하기",
+  "description": "안녕하세요, CleanRoom Writer입니다. 지난 [AI 실전 01. 마우스 편집 대신 코드로 영상을 찍어내다 — HyperFrames로 MP4 만들어 유튜브 업로드하기] 글에서는 타임라인 위에서 마우...",
+  "datePublished": "2026-10-31",
+  "dateModified": "2026-10-31",
+  "inLanguage": "ko-KR",
+  "articleSection": "CleanRoom AI",
+  "url": "https://cleanroom-writer.netlify.app/archive/224460106689.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://cleanroom-writer.netlify.app/archive/224460106689.html"
+  },
+  "isBasedOn": "https://blog.naver.com/humi09/224460106689",
+  "author": {
+    "@type": "Person",
+    "name": "CleanRoom Writer",
+    "url": "https://cleanroom-writer.netlify.app",
+    "jobTitle": "Pharmaceutical & Bio QC Specialist (19 Years Experience)"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CleanRoom Writer",
+    "url": "https://cleanroom-writer.netlify.app"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="https://ssl.pstatic.net/static/blog/icon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="silence-theme">
+  <header class="status-bar">
+    <div class="status-left">
+      <a href="../index.html" class="system-token brand-token" style="text-decoration:none;">CLEANROOM WRITER</a>
+    </div>
+    <div class="status-right">
+      <a href="index.html" class="system-token status-link">← ARCHIVE</a>
+      <a href="https://blog.naver.com/humi09/224460106689" target="_blank" rel="noopener noreferrer" class="system-token status-link">NAVER ORIGINAL ↗</a>
+    </div>
+  </header>
+
+  <main class="archive-article-container">
+    <article class="archive-article" itemscope itemtype="https://schema.org/TechArticle">
+      <header class="article-header">
+        <div class="article-meta-bar">
+          <span class="system-token record-tag">CleanRoom AI</span>
+          <span class="system-token record-id">DATE: 2026-10-31</span>
+          <span class="system-token record-id">SYMPATHY: 9</span>
+        </div>
+        <h1 class="article-title" itemprop="headline">AI 실전 02. 마우스 드래그 대신 코드로 웹을 짓다 — AI와 함께 공식 아카이브(Netlify) 구축하기</h1>
+        <p class="article-lead" itemprop="description">안녕하세요, CleanRoom Writer입니다. 지난 [AI 실전 01. 마우스 편집 대신 코드로 영상을 찍어내다 — HyperFrames로 MP4 만들어 유튜브 업로드하기] 글에서는 타임라인 위에서 마우...</p>
+      </header>
+
+      <div class="article-body" itemprop="articleBody">
+      <div class="table-wrap"><table><thead><tr><th>CLEANROOM WRITER AI 실전 02 마우스 드래그 대신 코드로 웹을 짓다 — AI와 함께 공식 아카이브(Netlify) 구축하기 마우스 드래그 빌더 대신 컴포넌트 규격화와 배포 자동화(CI/CD)로 완성하는 웹 빌딩 공정 CLEANROOM AI TECH · HANDS-ON EDITION</th></tr></thead></table></div>
+      <p>안녕하세요, CleanRoom Writer입니다.</p>
+      <p>지난 [AI 실전 01. 마우스 편집 대신 코드로 영상을 찍어내다 — HyperFrames로 MP4 만들어 유튜브 업로드하기] 글에서는 타임라인 위에서 마우스를 드래그하는 대신, HTML 코드로 영상을 규격화하고 자동 품질 검사(Check)를 거쳐 렌더링하는 공정을 다루었습니다.</p>
+      <p>영상을 코드로 찍어낼 수 있다면, 그 콘텐츠와 글이 모이는 &#39;무대&#39; 역시 같은 방식으로 지을 수 있지 않을까요? 이번 실전 2탄에서는 마우스 드래그 방식의 노코드(No-code) 웹 빌더 대신, AI 에이전트와 코드를 결합해 이 블로그의 공식 아카이브(cleanroom-writer.netlify.app)를 설계하고 배포한 과정을 공유합니다.</p>
+      <hr class="article-divider">
+      <h2>1. Why Code? — 마우스 빌더의 편리함과 통제권의 부재</h2>
+      <p>홈페이지를 만들 때 흔히 Wix나 아임웹 같은 노코드 툴을 먼저 떠올립니다. 마우스로 요소를 끌어다 놓으면 당장 보기 좋은 화면이 만들어지니 진입 장벽이 낮습니다. 하지만 글과 카테고리가 늘어나고 구조를 세밀하게 다듬어야 하는 시점이 오면, 마우스 기반의 수작업은 곧 한계를 드러냅니다.</p>
+      <p>특정 버튼의 여백이나 폰트 크기를 일괄 변경하려 해도 페이지마다 마우스로 클릭해 수정해야 하고, 데스크톱과 모바일을 오가는 반응형 화면에서 레이아웃이 미묘하게 틀어져도 원인을 명확히 추적하기 어렵습니다.</p>
+      <p>품질 관리 관점에서 보면, 수작업에 의존하는 환경은 &#39;재현성(Reproducibility)&#39;과 &#39;변경 통제(Change Control)&#39;에 취약합니다. 눈대중과 손감각으로 맞춘 화면은 똑같이 복제하기 어렵고, 한 곳을 고쳤을 때 다른 곳에 미치는 영향을 통제하기 힘들기 때문입니다. 반면 웹사이트의 구조와 디자인을 재사용 가능한 공통 컴포넌트(조립식 모듈)와 스타일 규칙으로 정의해 두면, 기준이 되는 컴포넌트만 수정해도 이를 참조하는 전체 페이지에 변경 사항이 일관되게 반영됩니다. 제가 마우스 빌더 대신 코드(React, Tailwind CSS) 기반의 웹 구축을 선택한 이유입니다.</p>
+      <hr class="article-divider">
+      <h2>2. URS(사용자 요구사항 명세서) 정의 — AI에게 설계 기준 건네기</h2>
+      <p>코드를 택했다고 해서 모든 명령어를 직접 타이핑할 필요는 없습니다. AI 시대의 웹 빌딩에서 제작자의 핵심 역할은 코딩 자체보다 &#39;사용자 요구사항 명세서(URS, User Requirement Specification)&#39;와 설계 기준을 명확히 정의하는 데 있습니다.</p>
+      <p>새로운 설비나 시스템을 도입할 때 목적과 요구 규격을 먼저 문서로 규정하듯, AI에게 다음과 같은 구조적 기준을 프롬프트로 전달했습니다.</p>
+      <p>정보 구조(Architecture): gmp in your Area, Lab Talk, CleanRoom AI, 블라블라 등 블로그의 핵심 카테고리별로 글을 직관적으로 분류하고 탐색할 수 있을 것.</p>
+      <p>시각적 규격(Design System): 가독성을 해치는 불필요한 장식을 배제하고, 정돈된 타이포그래피와 절제된 컬러 톤앤매너를 일관되게 유지할 것.</p>
+      <p>환경 호환성(Responsiveness): 데스크톱 모니터부터 모바일 화면까지 어떤 해상도에서도 레이아웃이 무너지지 않고 동일한 사용자 경험을 제공할 것.</p>
+      <p>물론 AI는 확률적으로 코드를 생성하기 때문에 처음부터 완벽한 결과물을 내놓지는 않습니다. 하지만 요구사항이 구체적일수록 AI가 만들어내는 컴포넌트 코드의 초기 편차는 크게 줄어들고, 우리가 의도한 설계 규격에 훨씬 빠르게 수렴합니다. 모호한 지시는 흔들리는 결과물을 낳지만, 명확한 규격서는 시행착오의 폭을 좁혀줍니다.</p>
+      <hr class="article-divider">
+      <h2>3. 공정 및 검증(Build &amp; Verification) — 로컬 환경에서의 디버깅</h2>
+      <p>AI가 작성한 코드를 바탕으로 내 컴퓨터 안에만 열리는 임시 시험실인 로컬 개발 서버(Vite)를 띄워 실제 화면을 확인하는 단계입니다. 제약 현장의 설비 검증에 비유하자면, 사전에 승인된 프로토콜에 따라 공식 적격성 평가(OQ)를 수행하기에 앞서 설비가 의도대로 작동하는지 확인하고 잡아나가는 시운전(Commissioning) 및 개발 단계의 기능 점검과 맞닿아 있습니다.</p>
+      <p>처음 생성된 화면은 대체로 의도한 골격을 갖추고 있지만, 세부적인 부분에서는 기대했던 설계 기준과의 불일치(Discrepancy)나 화면 결함(Defect)이 발견됩니다. 모바일 화면에서 메뉴 간격이 지나치게 좁아지거나, 카드 안에 들어가는 제목 길이에 따라 상자 높이가 들쭉날쭉해지는 현상 등입니다.</p>
+      <p>마우스 빌더였다면 눈대중으로 상자를 늘리고 줄이며 임시방편으로 덮었겠지만, 코드 환경에서는 접근 방식이 다릅니다(현상 확인 → 결함 원인 코드 추적 → 스타일 규칙 수정 → 재확인). 원인이 되는 스타일 속성(CSS 클래스)을 찾아 수치를 ���정하거나 레이아웃 정렬 규칙(Flex/Grid)을 재정의합니다. 결함을 발견하고, 코드로 원인을 교정한 뒤, 브라우저에서 즉시 결과를 재확인하는 사이클을 반복하며 웹사이트의 완성도를 기준치까지 끌어올립니다.</p>
+      <hr class="article-divider">
+      <h2>4. 출하 승인(Release &amp; Deploy) — Netlify를 통한 배포 자동화</h2>
+      <p>내 컴퓨터(로컬 환경)에서 기능 점검을 마친 코드는 이제 외부 독자들이 접속할 수 있는 실제 웹 환경으로 내보내야 합니다. 이 배포(Deploy) 공정에는 클라우드 배포 플랫폼인 Netlify를 활용했습니다.</p>
+      <p>과거에는 완성된 파일들��� 전송 프로그램(FTP)을 통해 서버에 일일이 수동으로 옮기곤 했지만, 이제는 코드 저장소를 Netlify에 연결하는 것만으로 자동화된 배포 파이프라인이 완성됩니다.</p>
+      <p>코드를 수정하고 배포를 실행하면, 시스템이 코드를 실제 웹사이트 형태로 조립(Build)하면서 구문 오류나 누락된 파일 참조가 없는지 먼저 검사합니다. 물론 빌드에 성공했다는 사실 자체가 모든 버튼이나 화면 기능의 완벽한 작동을 보증하는 것은 아니기에 앞서 로컬 환경에서의 충분한 기능 검증이 선행되어야 합니다. 다만 코드에 구조적 결함이 있을 때 빌드를 즉시 중단시켜 불량 화면이 외부로 노출되는 것을 차단해 주므로, 최소한의 기술적 요건을 통과한 결과물만 실제 도메인(cleanroom-writer.netlify.app)에 반영하는 자동화된 &#39;출하(Release) 게이트&#39; 역할을 수행합니다.</p>
+      <hr class="article-divider">
+      <h2>마치며: 통제 가능한 시스템을 짓는다는 것</h2>
+      <p>AI와 코드의 결합은 제작자를 단순 반복 노동에서 해방시켜 줍니다. 마우스로 픽셀을 맞추는 시간에 콘텐츠의 구조를 고민하고, 시스템의 일관성을 점검하는 본질적인 일에 집중할 수 있게 됩니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>AI 실전 02 당장 눈앞의 편리함 때문에 수작업에 의존하다가 규모가 커졌을 때 통제권을 잃어버리는 일은 웹사이트 구축에만 국한되지 않습니다. 기성 플랫폼의 틀에 나를 맞추는 대신, 명확한 요구사항(URS)을 세우고 결함을 투명하게 교정하며 내가 정의한 규격대로 작동하는 구조를 짓는 일. 지금 우리가 다루는 업무와 기록들은 얼마나 재현 가능하고 통제 가능한 시스템 위에 놓여 있을까요?</th></tr></thead></table></div>
+      <hr class="article-divider">
+      </div>
+
+      <footer class="article-footer">
+        <div class="article-source-box">
+          <span class="system-token">SOURCE VERIFICATION / AUDIT TRAIL</span>
+          <p>이 문서는 네이버 블로그 <strong>CleanRoom Writer</strong>의 원문을 AI 검색(GEO) 및 정적 웹 아카이브용으로 규격화한 미러링 문서입니다.</p>
+          <div class="article-footer-actions">
+            <a href="https://blog.naver.com/humi09/224460106689" target="_blank" rel="noopener noreferrer" class="cta-primary">
+              <span>네이버 블로그 원문 보기</span>
+              <span class="cta-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="index.html" class="cta-secondary">
+              <span>전체 아카이브 목록</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="silence-footer">
+    <div class="footer-inner">
+      <span class="system-token footer-tag">AIR PURITY 99.9% • GEO ARCHIVE MIRROR</span>
+      <span class="system-token footer-copy">© 2026 CLEANROOM WRITER. ALL RIGHTS RESERVED.</span>
+    </div>
+  </footer>
+</body>
+</html>

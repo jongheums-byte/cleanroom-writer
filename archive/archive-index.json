@@ -1,0 +1,447 @@
+{
+  "lastSynced": "2026-11-15T01:46:29.386Z",
+  "count": 63,
+  "posts": [
+    {
+      "logNo": 224477169650,
+      "title": "AI 브리핑.21 — \"프롬프트는 길어졌는데, 왜 결과물은 제자리일까?\" : 컨텍스트 엔지니어링(Context Engineering)",
+      "category": "CleanRoom AI",
+      "sympathy": 2,
+      "date": "2026-11-14"
+    },
+    {
+      "logNo": 224477147354,
+      "title": "AI 실전 08. 흩어진 항공·숙소·투어 검색을 지도 한 장에 — k-skill로 나만의 여행 웹페이지 만들기",
+      "category": "CleanRoom AI",
+      "sympathy": 3,
+      "date": "2026-11-14"
+    },
+    {
+      "logNo": 224476133221,
+      "title": "AI 실전 07. 무거운 에이전트 대신 단일 목적 웹 도구 하나를 직접 만들다",
+      "category": "CleanRoom AI",
+      "sympathy": 5,
+      "date": "2026-11-13"
+    },
+    {
+      "logNo": 224476108318,
+      "title": "AI 실전 06. 구글 드라이브 속 블로그 초안 자동 정리기",
+      "category": "CleanRoom AI",
+      "sympathy": 4,
+      "date": "2026-11-13"
+    },
+    {
+      "logNo": 224476082142,
+      "title": "AI 실전 05.  환각(OOS)을 막는 나만의 공학적 하네스 구축기",
+      "category": "CleanRoom AI",
+      "sympathy": 4,
+      "date": "2026-11-13"
+    },
+    {
+      "logNo": 224475683375,
+      "title": "[CleanRoom AI] 특별 기고 — Gemini 4 Hydrogen, 가벼운 작업자에서 '신중한 에이전트'로의 진화\"",
+      "category": "CleanRoom AI",
+      "sympathy": 6,
+      "date": "2026-11-13"
+    },
+    {
+      "logNo": 224475648641,
+      "title": "AI 브리핑.20 - '우연한 대답'에서 '설계된 신뢰(Design Space)'로 나아가는 공학적 접근",
+      "category": "CleanRoom AI",
+      "sympathy": 6,
+      "date": "2026-11-13"
+    },
+    {
+      "logNo": 224475643227,
+      "title": "AI 브리핑.19 - \"환각(Hallucination)은 단순 버그가 아니라 OOS(규격이탈)이다\"",
+      "category": "CleanRoom AI",
+      "sympathy": 7,
+      "date": "2026-11-13"
+    },
+    {
+      "logNo": 224475636080,
+      "title": "AI 브리핑.18 - AI 에이전트 시대의 데이터 무결성",
+      "category": "CleanRoom AI",
+      "sympathy": 7,
+      "date": "2026-11-13"
+    },
+    {
+      "logNo": 224474264917,
+      "title": "AI 브리핑17 — 스킬도 과유불급이다",
+      "category": "CleanRoom AI",
+      "sympathy": 6,
+      "date": "2026-11-12"
+    },
+    {
+      "logNo": 224474102864,
+      "title": "AI 브리핑.16-\"단순한 프롬프트를 넘어, 에이전트에게 '공학적 하네스(Harness)'를 채우다\"",
+      "category": "CleanRoom AI",
+      "sympathy": 8,
+      "date": "2026-11-12"
+    },
+    {
+      "logNo": 224474091649,
+      "title": "AI 브리핑.15-\"같은 질문이라도, 왜 세 도구의 '해결 방식'과 '결'은 다를까?\"",
+      "category": "CleanRoom AI",
+      "sympathy": 6,
+      "date": "2026-11-12"
+    },
+    {
+      "logNo": 224473152108,
+      "title": "「몽타주를 넘어 범인의 지문을 쫓다」",
+      "category": "GMP in Your Area",
+      "sympathy": 7,
+      "date": "2026-11-11"
+    },
+    {
+      "logNo": 224472841227,
+      "title": "[AI 브리핑.특별 기고]—\"우리는 왜 빈 입력창 앞에서 멈칫거리는가\"",
+      "category": "CleanRoom AI",
+      "sympathy": 5,
+      "date": "2026-11-11"
+    },
+    {
+      "logNo": 224471792648,
+      "title": "AI 브리핑.14 (실전 가이드) —\"무엇을 지시해야 할지 막막할 때\"",
+      "category": "CleanRoom AI",
+      "sympathy": 8,
+      "date": "2026-11-10"
+    },
+    {
+      "logNo": 224471673203,
+      "title": "[Lab Talk 03] 화학식도 무게도 똑같은데 다른 물질이라고?",
+      "category": "LabTalk",
+      "sympathy": 9,
+      "date": "2026-11-10"
+    },
+    {
+      "logNo": 224471551763,
+      "title": "AI 브리핑 (쉬어가는 이야기) —\"GPT와 Claude는 왜 다른 길을 걷게 되었을까?",
+      "category": "CleanRoom AI",
+      "sympathy": 10,
+      "date": "2026-11-10"
+    },
+    {
+      "logNo": 224470309237,
+      "title": "AI 브리핑.특별기고\"데이터센터 안에 천재 100만 명이 살아도, 실험실의 시계는 건너뛸 수 없다\"",
+      "category": "CleanRoom AI",
+      "sympathy": 11,
+      "date": "2026-11-09"
+    },
+    {
+      "logNo": 224470237168,
+      "title": "AI 브리핑.13 —\"스킬(Skill)이 업무 매뉴얼이라면, MCP는 무엇인가?\"",
+      "category": "CleanRoom AI",
+      "sympathy": 11,
+      "date": "2026-11-09"
+    },
+    {
+      "logNo": 224469312731,
+      "title": "AI 실전 04. \"좀 더 깔끔하게 해줘\"라는 말 대신 도면을 건네다.",
+      "category": "CleanRoom AI",
+      "sympathy": 8,
+      "date": "2026-11-08"
+    },
+    {
+      "logNo": 224469202232,
+      "title": "AI 실전 03. 매번 검색하는 생활 정보를 한 화면에 !!",
+      "category": "CleanRoom AI",
+      "sympathy": 6,
+      "date": "2026-11-08"
+    },
+    {
+      "logNo": 224469088276,
+      "title": "AI 브리핑.12 — \"AI의 무비판적 긍정은 어떻게 검증을 방해하는가\"",
+      "category": "CleanRoom AI",
+      "sympathy": 5,
+      "date": "2026-11-08"
+    },
+    {
+      "logNo": 224469040342,
+      "title": "AI 브리핑.11 — \"AI에게도 업무 지침이 필요하다\"",
+      "category": "CleanRoom AI",
+      "sympathy": 5,
+      "date": "2026-11-08"
+    },
+    {
+      "logNo": 224467755899,
+      "title": "AI 브리핑.10 (시리즈 완결편) —\"남의 스킬을 빌려 쓰던 시대는 끝났다\"",
+      "category": "CleanRoom AI",
+      "sympathy": 5,
+      "date": "2026-11-06"
+    },
+    {
+      "logNo": 224467644432,
+      "title": "[CleanRoom AI] 특별 기획 —\"MD가 의사(Doctor)인가요?\"",
+      "category": "CleanRoom AI",
+      "sympathy": 6,
+      "date": "2026-11-06"
+    },
+    {
+      "logNo": 224467618401,
+      "title": "AI 브리핑.09 —\"AI가 놓친 것을 내 규칙으로 막는다\"",
+      "category": "CleanRoom AI",
+      "sympathy": 6,
+      "date": "2026-11-06"
+    },
+    {
+      "logNo": 224467517331,
+      "title": "AI 브리핑.08 —GitHub AI Skill 실전 검증",
+      "category": "CleanRoom AI",
+      "sympathy": 6,
+      "date": "2026-11-06"
+    },
+    {
+      "logNo": 224466105570,
+      "title": "AI 브리핑.07 —\"수만 개 중에 대체 뭘 받아야 하죠?\"",
+      "category": "CleanRoom AI",
+      "sympathy": 6,
+      "date": "2026-11-05"
+    },
+    {
+      "logNo": 224466055058,
+      "title": "AI 브리핑.06 —\"그거 유료 툴 전용 아닌가요?\"",
+      "category": "CleanRoom AI",
+      "sympathy": 6,
+      "date": "2026-11-05"
+    },
+    {
+      "logNo": 224465887450,
+      "title": "[CleanRoom AI] \"대체 깃허브가 뭔가요?\"",
+      "category": "CleanRoom AI",
+      "sympathy": 7,
+      "date": "2026-11-05"
+    },
+    {
+      "logNo": 224465798299,
+      "title": "AI 브리핑.05 —AI가 '기억'하고 '자기검토'하기 시작했다",
+      "category": "CleanRoom AI",
+      "sympathy": 5,
+      "date": "2026-11-05"
+    },
+    {
+      "logNo": 224464804323,
+      "title": "AI 브리핑.04 —AI Skill은 어떻게 작동하는가?",
+      "category": "CleanRoom AI",
+      "sympathy": 6,
+      "date": "2026-11-04"
+    },
+    {
+      "logNo": 224464799723,
+      "title": "AI 브리핑.03 —질문에 답하는 AI에서,직접 일을 끝내는 AI로: 에이전트(Agent)의 등장",
+      "category": "CleanRoom AI",
+      "sympathy": 6,
+      "date": "2026-11-04"
+    },
+    {
+      "logNo": 224463689815,
+      "title": "AI 브리핑.02 —AI를 도입하면 생산성이 높아질까?",
+      "category": "CleanRoom AI",
+      "sympathy": 3,
+      "date": "2026-11-03"
+    },
+    {
+      "logNo": 224463340312,
+      "title": "[LAB TALK 02] 고무마개도 시험합니다 –바늘만 잘 들어가면 되는 것 아��까?",
+      "category": "LabTalk",
+      "sympathy": 3,
+      "date": "2026-11-03"
+    },
+    {
+      "logNo": 224460106689,
+      "title": "AI 실전 02. 마우스 드래그 대신 코드로 웹을 짓다 — AI와 함께 공식 아카이브(Netlify) 구축하기",
+      "category": "CleanRoom AI",
+      "sympathy": 9,
+      "date": "2026-10-31"
+    },
+    {
+      "logNo": 224459412111,
+      "title": "[Lab Talk 01] 유리용기도 시험을 합니다. 멀쩡한 바이알을 빻고 끓이는 이유는 무엇일까?",
+      "category": "LabTalk",
+      "sympathy": 5,
+      "date": "2026-10-30"
+    },
+    {
+      "logNo": 224458184433,
+      "title": "마우스 편집 대신 코드로 영상을 찍어내다 — HyperFrames로 MP4 만들어 유튜브 업로드하기",
+      "category": "CleanRoom AI",
+      "sympathy": 5,
+      "date": "2026-10-29"
+    },
+    {
+      "logNo": 224457016986,
+      "title": "[AI Skill은 GMP SOP가 될 수 있을까? - 깃허브 트렌딩 TOP 10]",
+      "category": "CleanRoom AI",
+      "sympathy": 4,
+      "date": "2026-10-28"
+    },
+    {
+      "logNo": 224455566192,
+      "title": "「완성과 인정의 시차」",
+      "category": "GMP in Your Area",
+      "sympathy": 7,
+      "date": "2026-10-27"
+    },
+    {
+      "logNo": 224454329032,
+      "title": "「같은 그물을 두 번 치는 것은 방어가 아니다」",
+      "category": "GMP in Your Area",
+      "sympathy": 8,
+      "date": "2026-10-26"
+    },
+    {
+      "logNo": 224452975894,
+      "title": "「빛이 너무 강하면 본질이 분해된다」",
+      "category": "GMP in Your Area",
+      "sympathy": 9,
+      "date": "2026-10-25"
+    },
+    {
+      "logNo": 224452068148,
+      "title": "「평소에는 물처럼 흐르고, 위기에서는 그물처럼 엮인다」",
+      "category": "GMP in Your Area",
+      "sympathy": 8,
+      "date": "2026-10-24"
+    },
+    {
+      "logNo": 224451234580,
+      "title": "「까다로운 대상을 다룰 때는 끝까지 밀어붙이지 않는다」",
+      "category": "GMP in Your Area",
+      "sympathy": 11,
+      "date": "2026-10-23"
+    },
+    {
+      "logNo": 224450087224,
+      "title": "「나이라는 유효기간에 갇히지 않는 법」",
+      "category": "GMP in Your Area",
+      "sympathy": 9,
+      "date": "2026-10-22"
+    },
+    {
+      "logNo": 224448899693,
+      "title": "「원칙이 현실과 멀어질 때 현장은 편법을 발명한다」",
+      "category": "GMP in Your Area",
+      "sympathy": 8,
+      "date": "2026-10-21"
+    },
+    {
+      "logNo": 224447703406,
+      "title": "��밖으로 새어나가지 않게 중심을 잡는 힘」",
+      "category": "GMP in Your Area",
+      "sympathy": 8,
+      "date": "2026-10-20"
+    },
+    {
+      "logNo": 224446918743,
+      "title": "「말하지 말고, 기록으로 보여주십시오」",
+      "category": "GMP in Your Area",
+      "sympathy": 7,
+      "date": "2026-10-19"
+    },
+    {
+      "logNo": 224441354546,
+      "title": "「주연 배우 1명으로는 드라마가 되지 않는다」",
+      "category": "GMP in Your Area",
+      "sympathy": 8,
+      "date": "2026-10-14"
+    },
+    {
+      "logNo": 224440276934,
+      "title": "「매일 조금씩 무뎌지는 칼날」",
+      "category": "GMP in Your Area",
+      "sympathy": 9,
+      "date": "2026-10-13"
+    },
+    {
+      "logNo": 224438944516,
+      "title": "「문제가 생겼다고 판을 엎을 필요는 없다」",
+      "category": "GMP in Your Area",
+      "sympathy": 10,
+      "date": "2026-10-12"
+    },
+    {
+      "logNo": 224437839858,
+      "title": "「모두가 대세라 환호할 때 멈춰 설 수 있는가」",
+      "category": "GMP in Your Area",
+      "sympathy": 9,
+      "date": "2026-10-11"
+    },
+    {
+      "logNo": 224437295336,
+      "title": "「각자 100점인데 왜 프로젝트는 무너졌을까」",
+      "category": "GMP in Your Area",
+      "sympathy": 7,
+      "date": "2026-10-10"
+    },
+    {
+      "logNo": 224434109905,
+      "title": "「대책을 세운 것과 문제가 해결된 것은 다르다」",
+      "category": "GMP in Your Area",
+      "sympathy": 7,
+      "date": "2026-10-07"
+    },
+    {
+      "logNo": 224428334922,
+      "title": "「시스템이 실패하는 진짜 이유는 코드가 아니다」",
+      "category": "GMP in Your Area",
+      "sympathy": 8,
+      "date": "2026-10-01"
+    },
+    {
+      "logNo": 224427171988,
+      "title": "「돈을 줬다고 책임까지 넘어가지 않는다」",
+      "category": "GMP in Your Area",
+      "sympathy": 9,
+      "date": "2026-09-30"
+    },
+    {
+      "logNo": 224426114674,
+      "title": "「진짜 신호를 보기 전에, 아무것도 없는 것을 먼저 본다」",
+      "category": "GMP in Your Area",
+      "sympathy": 9,
+      "date": "2026-09-29"
+    },
+    {
+      "logNo": 224423219719,
+      "title": "「라벨을 믿지 마라, 뚜껑을 열어 본질을 보라」",
+      "category": "GMP in Your Area",
+      "sympathy": 7,
+      "date": "2026-09-26"
+    },
+    {
+      "logNo": 224422977152,
+      "title": "「본게임을 뛰기 전에 장비의 자격부터 증명하라」",
+      "category": "GMP in Your Area",
+      "sympathy": 8,
+      "date": "2026-09-26"
+    },
+    {
+      "logNo": 224420944643,
+      "title": "「평온할 때의 완전함은 진짜가 아니다」제약 멸균 필터 완전성 시험(Bubble Point Test)과 PUPSIT이 알려주는 임계점의 과학",
+      "category": "GMP in Your Area",
+      "sympathy": 7,
+      "date": "2026-09-23"
+    },
+    {
+      "logNo": 224417696828,
+      "title": "「문서만 넘긴다고 인수인계가 끝나는 것은 아니다」 제약 시험법 이전(AMT) 원칙을 통해 본 효과적인 업무 인수인계와 지식 전달 방안",
+      "category": "GMP in Your Area",
+      "sympathy": 9,
+      "date": "2026-09-20"
+    },
+    {
+      "logNo": 224417049052,
+      "title": "「신호가 없다고 해서 문제가 없는 것은 아니다」제약 배지 성능 시험(Growth Promotion Test)이 알려주는 피드백 감도와 조직의 건강성",
+      "category": "GMP in Your Area",
+      "sympathy": 10,
+      "date": "2026-09-19"
+    },
+    {
+      "logNo": 224378347716,
+      "title": "「물로 대충 헹구고 새 약을 만든다고요?」 제약회사 세척 밸리데이션으로 보는 조직의 ‘악습 교차오염’",
+      "category": "GMP in Your Area",
+      "sympathy": 8,
+      "date": "2026-08-14"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 브리핑.19 - &quot;환각(Hallucination)은 단순 버그가 아니라 OOS(규격이탈)이다&quot; | CleanRoom Writer Archive</title>
+  <meta name="description" content="AI 에이전트의 일탈 조사(Deviation)와 CAPA(시정·예방조치) 설계법 직전 18편에서 우리는 AI 에이전트가 수행한 모든 과정이 왜 ALCOA+ 원칙에 따라 투명하게 기록되어야 하는지 살펴보았습니...">
+  <link rel="canonical" href="https://cleanroom-writer.netlify.app/archive/224475643227.html">
+  <link rel="alternate" type="text/plain" title="LLM Context" href="../llms.txt">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cleanroom-writer.netlify.app/archive/224475643227.html">
+  <meta property="og:title" content="AI 브리핑.19 - &quot;환각(Hallucination)은 단순 버그가 아니라 OOS(규격이탈)이다&quot;">
+  <meta property="og:description" content="AI 에이전트의 일탈 조사(Deviation)와 CAPA(시정·예방조치) 설계법 직전 18편에서 우리는 AI 에이전트가 수행한 모든 과정이 왜 ALCOA+ 원칙에 따라 투명하게 기록되어야 하는지 살펴보았습니...">
+  <meta property="article:published_time" content="2026-11-13">
+  <meta property="article:section" content="CleanRoom AI">
+
+  <!-- Schema.org Structured Data (GEO) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "AI 브리핑.19 - \"환각(Hallucination)은 단순 버그가 아니라 OOS(규격이탈)이다\"",
+  "description": "AI 에이전트의 일탈 조사(Deviation)와 CAPA(시정·예방조치) 설계법 직전 18편에서 우리는 AI 에이전트가 수행한 모든 과정이 왜 ALCOA+ 원칙에 따라 투명하게 기록되어야 하는지 살펴보았습니...",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "inLanguage": "ko-KR",
+  "articleSection": "CleanRoom AI",
+  "url": "https://cleanroom-writer.netlify.app/archive/224475643227.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://cleanroom-writer.netlify.app/archive/224475643227.html"
+  },
+  "isBasedOn": "https://blog.naver.com/humi09/224475643227",
+  "author": {
+    "@type": "Person",
+    "name": "CleanRoom Writer",
+    "url": "https://cleanroom-writer.netlify.app",
+    "jobTitle": "Pharmaceutical & Bio QC Specialist (19 Years Experience)"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CleanRoom Writer",
+    "url": "https://cleanroom-writer.netlify.app"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="https://ssl.pstatic.net/static/blog/icon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="silence-theme">
+  <header class="status-bar">
+    <div class="status-left">
+      <a href="../index.html" class="system-token brand-token" style="text-decoration:none;">CLEANROOM WRITER</a>
+    </div>
+    <div class="status-right">
+      <a href="index.html" class="system-token status-link">← ARCHIVE</a>
+      <a href="https://blog.naver.com/humi09/224475643227" target="_blank" rel="noopener noreferrer" class="system-token status-link">NAVER ORIGINAL ↗</a>
+    </div>
+  </header>
+
+  <main class="archive-article-container">
+    <article class="archive-article" itemscope itemtype="https://schema.org/TechArticle">
+      <header class="article-header">
+        <div class="article-meta-bar">
+          <span class="system-token record-tag">CleanRoom AI</span>
+          <span class="system-token record-id">DATE: 2026-11-13</span>
+          <span class="system-token record-id">SYMPATHY: 7</span>
+        </div>
+        <h1 class="article-title" itemprop="headline">AI 브리핑.19 - &quot;환각(Hallucination)은 단순 버그가 아니라 OOS(규격이탈)이다&quot;</h1>
+        <p class="article-lead" itemprop="description">AI 에이전트의 일탈 조사(Deviation)와 CAPA(시정·예방조치) 설계법 직전 18편에서 우리는 AI 에이전트가 수행한 모든 과정이 왜 ALCOA+ 원칙에 따라 투명하게 기록되어야 하는지 살펴보았습니...</p>
+      </header>
+
+      <div class="article-body" itemprop="articleBody">
+      <div class="table-wrap"><table><thead><tr><th>CLEANROOM AI · CLEANROOM INSIGHT AI BRIEFING.19 (CleanRoom 인사이트) &quot;환각(Hallucination)은 단순 버그가 아니라 OOS(규격이탈)이다: AI 에이전트의 일탈 조사(Deviation)와 CAPA 설계법&quot; OOS &amp; CAPA 50% · AI ERROR ENGINEERING 50% Treating AI hallucinations not as random quirks to ignore, but as Out-of-Specification (OOS) deviations requiring structured Root Cause Analysis and Corrective/Preventive Actions (CAPA).</th></tr></thead></table></div>
+      <h2>AI 에이전트의 일탈 조사(Deviation)와 CAPA(시정·예방조치) 설계법</h2>
+      <div class="table-wrap"><table><thead><tr><th>“문제가 발생했을 때 &#39;이번엔 운이 나빴다&#39;며 재실행 버튼을 누르는 것은 개선이 아니다. 시스템을 진화시키는 것은 오류를 덮는 손길이 아니라, 오류가 통과할 수밖에 없었던 경로를 해부하는 조사 절차다.”</th></tr></thead></table></div>
+      <p>직전 18편에서 우리는 AI 에이전트가 수행한 모든 과정이 왜 ALCOA+ 원칙에 따라 투명하게 기록되어야 하는지 살펴보았습니다.</p>
+      <p>그렇다면 기록이 투명하게 남기 시작한 다음, 실제로 에이전트가 존재하지 않는 규정을 지어내거나(할루시네이션), 잘못된 데이터를 계산하거나, 지시한 서식을 망가뜨리는 오류를 냈을 때는 어떻게 해야 할까요?</p>
+      <p>대부분의 현업에서는 아주 단순한 방식으로 반응합니다. 모델의 &#39;다시 생성(Regenerate)&#39; 버튼을 누르거나, &quot;다음부터는 절대 틀리지 마&quot;라는 감정적인 문장을 프롬프트 끝에 한 줄 덧붙이고 넘어갑니다. 운 좋게 두 번째 답변이 그럴듯하면 그 일을 잊어버립니다.</p>
+      <p>하지만 며칠 뒤, 다른 동료가 비슷한 업무를 시켰을 때 에이전트는 똑같은 방식으로 오류를 재현합니다. 왜 그럴까요? 오류를 &#39;시스템의 구조적 결함(Deviation)&#39;이 아니라 &#39;확률적 운이 나빴던 일회성 버그&#39;로 취급하고 덮어버렸기 때문입니다.</p>
+      <p>제약·바이오 품질관리에서 이러한 상황—정해진 기준이나 기대치를 벗어난 결과가 나왔을 때—을 다루는 정교한 프로토콜이 바로 OOS(Out of Specification, 규격이탈) 조사와 CAPA(Corrective and Preventive Action, 시정 및 예방조치)입니다.</p>
+      <hr class="article-divider">
+      <h2>1. 왜 &#39;재생성(Regenerate)&#39;은 위험한 습관인가?</h2>
+      <p>제약 시험실에서 완제품이나 원료의 함량을 측정했는데 기준치(예: 95.0%~105.0%)를 벗어난 91.2%가 나왔다고 가정해 봅시다. 이때 시험자가 아무런 조사 없이 &quot;기계가 잠깐 이상했겠지&quot;라며 시료를 다시 측정해 98.5%가 나오자 첫 번째 결과를 버린다면 어떻게 될까요?</p>
+      <p>미국 FDA는 이를 OOS 가이드라인을 통해 가장 엄격하게 금지합니다.</p>
+      <p>오류가 난 원인: 시료 준비가 잘못되었는지, 장비가 고장 났는지, 아니면 실제 제조 공정에 문제가 있는지  규명하지 않은 채 반복 측정으로 합격 결과만 골라내는 행위는 품질 실패를 은폐하는 가장 확실한 지름길이기 때문입니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>• AI 운용의 함정: &quot;재생성 버튼을 3번 눌러서 그중 제일 잘 나온 답을 쓴다&quot;는 것은 문제의 원인을 가리는 임시방편일 뿐입니다. • 구조적 위험: 근본 원인이 해결되지 않은 상태에서는, 다음번 자동화 파이프라인이나 바쁜 실무자가 검증을 놓치는 순간 똑같은 오류가 그대로 최종 산출물로 유출됩니다.</th></tr></thead></table></div>
+      <p>따라서 에이전트의 할루시네이션이나 규격 미달 출력은 단순한 해프닝이 아니라, 즉각 조사 절차에 착수해야 하는 OOS(규격이탈) 이벤트로 정의해야 합니다.</p>
+      <hr class="article-divider">
+      <h2>2. AI 에이전트를 위한 2단계 OOS 조사 프로토콜</h2>
+      <p>제약 GMP의 OOS 조사는 무작정 공장을 세우지 않고 1단계(Phase I: 실험실 내 1차 조사)와 2단계(Phase II: 시스템 전반 조사)로 단계를 나누어 체계적으로 원인을 좁혀갑니다. 이를 AI 에이전트 환경에 그대로 적용할 수 있습니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>🔍 1단계 조사 (Phase I): &quot;입력과 실행 환경에 명백한 오류가 있었는가?&quot; 시험실 1단계 조사가 &quot;시약 유효기간이 지났는가, 계산 수식을 잘못 넣었는가, 장비 전원이 흔들렸는가&quot;를 먼저 확인하는 것처럼, AI 1단계 조사에서는 모델을 탓하기 전에 입력과 도구 환경을 먼저 점검합니다. • 컨텍스트 오염 여부: 이전 대화 내용이 너무 길어져(Context Overload) 앞선 지침이 망각되었거나, 서로 상충하는 스킬/문서가 동시에 주입되지 않았는가? • 도구(Tool/MCP) 반환값 이상: 에이전트가 참조한 사내 DB나 웹 검색 API가 빈 값이나 에러 메시지, 혹은 오래된 문서를 반환하지 않았는가? • 프롬프트 모호성: 사용자가 요구하는 출력 기준(수락 기준)이 애초에 해석의 여지가 많도록 모호하게 작성되지 않았는가?</th></tr></thead></table></div>
+      <div class="table-wrap"><table><thead><tr><th>🔬 2단계 조사 (Phase II): &quot;시스템 설계와 모델 자체의 구조적 결함인가?&quot; 1단계에서 명백한 입력 오류나 도구 장애가 발견되지 않았다면, 조사는 시스템 설계 전반(Phase II)으로 확대됩니다. 여기서는 품질공학의 대표적 근본 원인 분석(RCA, Root Cause Analysis) 기법인 5 Whys(다섯 번 왜라고 묻기)를 활용합니다. [예시 증상] 에이전트가 사내 출장비 규정을 잘못 계산해 보고서를 작성했다. • Why 1: 왜 잘못 계산했는가? → 2024년 구버전 규정 문서를 인용했다. • Why 2: 왜 구버전 문서를 인용했는가? → RAG 검색 결과 상단에 구버전 파일이 먼저 노출되었다. • Why 3: 왜 구버전 파일이 검색되었는가? → 지식 저장소(Vector DB)에 폐기 문서 필터링과 최신 버전 태그(Metadata)가 없었다. • Why 4: 왜 버전 관리가 안 되었는가? → 문서 업로드 시 &#39;유효 문서 승인(Release)&#39; 절차 없이 폴더의 모든 PDF를 일괄 색인했기 때문이다.</th></tr></thead></table></div>
+      <p>보시는 것처럼 표면적으로는 &quot;AI가 규정을 헷갈리는 할루시네이션을 일으켰다&quot;로 보였던 문제가, 5 Whys를 거치자 &#39;지식 저장소의 문서 생명주기(Document Lifecycle) 관리 부재&#39;라는 명확한 시스템 결함으로 드러납니다.</p>
+      <hr class="article-divider">
+      <h2>3. 시정조치(CA)와 예방조치(PA): 땜질과 시스템 개선의 결정적 차이</h2>
+      <p>원인이 규명되었다면 이제 CAPA(시정 및 예방조치)를 수립할 차례입니다. 많은 조직이 &#39;시정조치&#39;와 &#39;예방조치&#39;를 혼동하지만, GMP에서는 두 개념의 차이를 분명히 구분합니다.</p>
+      <p>* 아래 표는 실무 적용 이해를 돕기 위해 전형적인 업무 시나리오를 바탕으로 재구성한 AI CAPA 구조 예시입니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>구분</th><th>개념 정의</th><th>AI 에이전트 실무 적용 예시 (땜질 vs 구조 개선)</th></tr></thead><tbody><tr><td>즉각 조치 (Containment)</td><td>오류가 외부로 퍼지는 것을 당장 막는  응급 처치</td><td>잘못 작성된 보고서 발송 보류, 해당 에이전트 자동화 파이프라인 일시  중단</td></tr><tr><td>시정조치 (CA) Corrective Action</td><td>이미 발생한 특정 문제의 직접적 원인을 제거해 재발을 막는 조치</td><td>구버전 규정 문서를 RAG DB에서 즉시 삭제하고, 해당 보고서를 최신  규정 기준으로 재작성</td></tr><tr><td>예방조치 (PA) Preventive Action</td><td>아직 발생하지 않은 유사 문제나 다른  영역의 잠재적 원인까지 제거하는 조치</td><td>모든 지식 저장소 문서에 effective_date와 status: approved 메타데이터를 필수 검증하는 파이프라인 규칙 추가, 다른 부서 에이전트에도 동일 필터 일괄 적용</td></tr><tr><td>유효성 평가 (Effectiveness Check)</td><td>조치 이후 실제로 같은 문제가 재발하지 않는지 사후 검증하는 절차</td><td>의도적으로 구버전/신버전 문서를 섞어 질의하는 회귀 테스트(Regression Test) 세트 10건을 실행해 100% 신버전만 인용하는지 확인</td></tr></tbody></table></div>
+      <p>단순히 &quot;틀린 답을 고쳤다(시정조치)&quot;에서 멈추면, 다음 주에 인사 규정이나 보안 규정이 개정될 때 똑같은 사고가 반복됩니다. 지식 입력 게이트와 검증 규칙 자체를 고치는 것(예방조치), 그리고 그 효과가 유지되는지 테스트 세트로 검증하는 것(유효성 평가)까지 마쳐야 비로소 하나의 CAPA가 완결됩니다.</p>
+      <hr class="article-divider">
+      <h2>4. 비유의 한계: 규격(Specification)이 없는 AI에는 OOS도 없다</h2>
+      <p>제약 공정의 OOS 체계를 AI에 적용할 때 반드시 짚고 넘어가야 할 전제 조건과 한계가 있습니다.</p>
+      <p>1. 사전 규격(Specification)의 부재: 의약품은 pH 6.8~7.2, 순도 99.0% 이상처럼 미리 정해진 정량적 규격이 존재하므로 규격 이탈(OOS) 여부를 즉시 판별할 수 있습니다. 반면 AI에게 &quot;잘 정리해서 써줘&quot;라고 지시한 경우, 결과물이 규격 이탈인지 아닌지를 판별할 기준 자체가 모호해집니다. 따라서 OOS와 CAPA 체계를 가동하려면, 앞서 14편에서 다룬 명확한 수락 기준(Acceptance Criteria) 정의가 반드시 선행되어야 합니다.</p>
+      <p>2. 모델 업데이트라는 외부 변수: 물리적 제조 장비는 부품을 교체하지 않는 한 성질이 유지되지만, 외부 클라우드 기반 LLM은 사용자의 동의 없이도 백엔드 업데이트나 가중치 조정이 일어날 수 있습니다. 따라서 AI의 유효성 평가는 1회성 검증으로 끝나지 않고, 주기적인 품질 모니터링(회귀 테스트 실행)과 결합되어야 합니다.</p>
+      <hr class="article-divider">
+      <h2>5. 실전 템플릿: 내 팀의 AI 오류를 자산으로 바꾸는 4줄 기록법</h2>
+      <p>거창한 품질관리 소프트웨어가 없더라도, 팀에서 AI 에이전트나 프롬프트를 쓰다 반복되는 오류를 발견했을 때 아래 4단계 양식으로 짧게 기록해 두면 프롬프트와 스킬이 눈에 띄게 단단해집니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>① 일탈 현상 (What happened): AI가 무엇을 기대치와 다르게 출력했는가? (예: 표 합계 금액이 원문 데이터 합과 불일치) ② 1·2단계 원인 (Root Cause): 모델의 연산 한계인가, 입력 문서 포맷 문제인가, 지침 누락인가? (예: 파이썬 코드 실행 도구를 쓰지 않고 언어 모델이 암산으로 더함) ③ 시정·예방 조치 (CAPA): 프롬프트나 스킬(SOP)을 어떻게 고쳤는가? (예: 스킬 파일에 &quot;모든 수치 연산은 반드시 Python 인터프리터 도구를 호출하여 계산할 것&quot;이라는 강제 규칙 추가) ④ 검증 결과 (Verification): 수정된 규칙으로 오류 사례와 유사 사례 3건을 다시 돌려 통과했는가?</th></tr></thead></table></div>
+      <hr class="article-divider">
+      <h2>결론: 완벽한 모델은 없지만, 결함을 학습하는 시스템은 존재한다</h2>
+      <p>어떠한 프론티어 AI 모델도 할루시네이션 확률이 완벽한 &#39;0%&#39;에 도달할 수는 없습니다. 확률론적 언어 생성의 본질이 그러하기 때문입니다.</p>
+      <p>하지만 이것이 우리가 AI의 오류를 숙명처럼 감수해야 한다는 뜻은 아닙니다. 제약·바이오 산업 역시 인간 작업자와 기계가 언제든 실수를 할 수 있다는 전제 위에서 출발했습니다. 차이를 만드는 것은 실수의 유무가 아니라, 실수가 발생했을 때 그것을 시스템의 구조적 진화로 연결하는 일탈 조사와 CAPA의 작동 여부입니다.</p>
+      <p>오늘 AI가 엉뚱한 대답을 내놓았다면, 조용히 &#39;재생성&#39; 버튼을 누르기 전에 딱 한 번만 스스로에게 물어보시기 바랍니다. &quot;이 오류는 왜 발생했고, 내 작업 지침서의 어느 빈틈을 메워야 두 번 다시 같은 실수가 통과하지 못할까?&quot; 그 질문이 쌓이는 순간, 여러분의 AI 시스템은 단순한 도구를 넘어 스스로 단단해지는 품질 체계를 갖추게 됩니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>💬 CleanRoom AI 인사이트 일회성 재생성은 문제를 가릴 뿐이지만, OOS 조사와 CAPA는 문제를 자산으로 바꿉니다. 오류가 발생한 지점을 시스템의 새로운 가드레일로 승화시키는 것, 그것이 지능형 에이전트를 실무에 안착시키는 품질경영(PQS)의 핵심입니다.</th></tr></thead></table></div>
+      </div>
+
+      <footer class="article-footer">
+        <div class="article-source-box">
+          <span class="system-token">SOURCE VERIFICATION / AUDIT TRAIL</span>
+          <p>이 문서는 네이버 블로그 <strong>CleanRoom Writer</strong>의 원문을 AI 검색(GEO) 및 정적 웹 아카이브용으로 규격화한 미러링 문서입니다.</p>
+          <div class="article-footer-actions">
+            <a href="https://blog.naver.com/humi09/224475643227" target="_blank" rel="noopener noreferrer" class="cta-primary">
+              <span>네이버 블로그 원문 보기</span>
+              <span class="cta-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="index.html" class="cta-secondary">
+              <span>전체 아카이브 목록</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="silence-footer">
+    <div class="footer-inner">
+      <span class="system-token footer-tag">AIR PURITY 99.9% • GEO ARCHIVE MIRROR</span>
+      <span class="system-token footer-copy">© 2026 CLEANROOM WRITER. ALL RIGHTS RESERVED.</span>
+    </div>
+  </footer>
+</body>
+</html>
