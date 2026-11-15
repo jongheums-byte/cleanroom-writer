@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI 브리핑.20 - &#39;우연한 대답&#39;에서 &#39;설계된 신뢰(Design Space)&#39;로 나아가는 공학적 접근 | CleanRoom Writer Archive</title>
   <meta name="description" content="프롬프트나 AI 에이전트를 처음 구축할 때 우리는 종종 기분 좋은 우연을 경험합니다. 지시문을 몇 줄 고치고 예시 두 개를 넣었더니, 마법처럼 완벽한 보고서가 출력되는 순간입니다. 실무자는 안심하며 그 프롬...">
-  <link rel="canonical" href="https://cleanroom-writer.netlify.app/archive/224475648641.html">
+  <link rel="canonical" href="https://jongheums-byte.github.io/cleanroom-writer/archive/224475648641.html">
   <link rel="alternate" type="text/plain" title="LLM Context" href="../llms.txt">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://cleanroom-writer.netlify.app/archive/224475648641.html">
+  <meta property="og:url" content="https://jongheums-byte.github.io/cleanroom-writer/archive/224475648641.html">
   <meta property="og:title" content="AI 브리핑.20 - &#39;우연한 대답&#39;에서 &#39;설계된 신뢰(Design Space)&#39;로 나아가는 공학적 접근">
   <meta property="og:description" content="프롬프트나 AI 에이전트를 처음 구축할 때 우리는 종종 기분 좋은 우연을 경험합니다. 지시문을 몇 줄 고치고 예시 두 개를 넣었더니, 마법처럼 완벽한 보고서가 출력되는 순간입니다. 실무자는 안심하며 그 프롬...">
   <meta property="article:published_time" content="2026-11-13">
@@ -27,22 +27,22 @@
   "dateModified": "2026-11-13",
   "inLanguage": "ko-KR",
   "articleSection": "CleanRoom AI",
-  "url": "https://cleanroom-writer.netlify.app/archive/224475648641.html",
+  "url": "https://jongheums-byte.github.io/cleanroom-writer/archive/224475648641.html",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://cleanroom-writer.netlify.app/archive/224475648641.html"
+    "@id": "https://jongheums-byte.github.io/cleanroom-writer/archive/224475648641.html"
   },
   "isBasedOn": "https://blog.naver.com/humi09/224475648641",
   "author": {
     "@type": "Person",
     "name": "CleanRoom Writer",
-    "url": "https://cleanroom-writer.netlify.app",
+    "url": "https://jongheums-byte.github.io/cleanroom-writer",
     "jobTitle": "Pharmaceutical & Bio QC Specialist (19 Years Experience)"
   },
   "publisher": {
     "@type": "Organization",
     "name": "CleanRoom Writer",
-    "url": "https://cleanroom-writer.netlify.app"
+    "url": "https://jongheums-byte.github.io/cleanroom-writer"
   }
 }
   </script>
@@ -91,7 +91,7 @@
       <h2>2. ICH Q8 QbD 프레임워크의 AI 에이전트 4단계 이식</h2>
       <p>의약품 QbD는 크게 QTPP → CQA → CPP → Design Space라는 4단계 인과 사슬로 구성됩니다. 이를 &#39;사내 계약서 검토 및 리스크 요약 AI 에이전트&#39;를 설계하는 상황에 대입해 보겠습니다.</p>
       <p>* 아래 표는 제약 QbD의 4대 핵심 개념을 AI 에이전트 설계 프레임워크로 매핑한 구조입니다.</p>
-      <div class="table-wrap"><table><thead><tr><th>QbD 단계</th><th>제약 공정에서의 의미</th><th>AI 에이전트 설계에서의 정의 (예시: 계약서 검토 에이전트)</th></tr></thead><tbody><tr><td>1. QTPP (목표 제품 품질 프로파일)</td><td>환자에게 투여될 의약품이 최종적으로  달성해야 할 목표 품질 요약</td><td>&quot;법무팀 초안 검토 시간을 단축하고, 누락 조항 없이 표준 리스크 표를 생성하는 일관된 검토 보고서&quot;</td></tr><tr><td>2. CQA (중대 품질 특성)</td><td>QTPP를 달성하기 위해 산출물이 반드시 충족해야 하는 물리적·화학적 특성</td><td>① 근거 일치성: 원문에 없는 조항을 지어내지 않을 것 (환각 0건) ② 누락 방지: 필수 체크리스트 10개 항목을 모두 판정할 것 ③ 서식 준수: 지정된 5열 표 구조를 깨뜨리지 않을 것</td></tr><tr><td>3. CPP (중대 공정 변수)</td><td>CQA 결과에 직접적인 변동을 일으키는  공정 입력 및 가동 변수</td><td>• 문서 분할 크기(Chunk Size) 및 검색 개수(Top-K) • Temperature (창의성/무작위성 제어 변수) • 컨텍스트 총 토큰 수 (스킬+예시+본문의 총량) • 강제 출력 스키마 (Structured Output / JSON 적용 여부)</td></tr><tr><td>4. Design Space (설계 공간)</td><td>CQA를 안정적으로 만족시키는 CPP 변수들의 다차원적 안전 조합 영역</td><td>&quot;Temperature 0.0~0.2 범위, 입력 본문 30페이지 이하(초과 시 자동 분할), 필수 체크리스트 프롬프트를 시스템 최상단 배치, 출력 스키마 강제 ON&quot; 조건의 교집합</td></tr></tbody></table></div>
+      <div class="table-wrap"><table><thead><tr><th>QbD 단계</th><th>제약 공정에서의 의미</th><th>AI 에이전트 설계에서의 정의 (예시: 계약서 검토 에이전트)</th></tr></thead><tbody><tr><td>1. QTPP (목표 제품 품질 프로파일)</td><td>환자에게 투여될 의약품이 최종적으로  달성해야 할 목표 품질 요약</td><td>&quot;법무팀 초안 검토 시간을 단축하고, 누락 조항 없이 표준 리스크 표를 생성하는 일관된 검토 보고서&quot;</td></tr><tr><td>2. CQA (중대 품질 특성)</td><td>QTPP를 달성하기 위해 산출물이 반드시 충족해야 하는 물리적·화학적 특성</td><td>① 근거 일치성: 원문에 없는 조항을 지어내지 않을 것 (환각 0건) ��� 누락 방지: 필수 체크리스트 10개 항목을 모두 판정할 것 ③ 서식 준수: 지정된 5열 표 구조를 깨뜨리지 않을 것</td></tr><tr><td>3. CPP (중대 공정 변수)</td><td>CQA 결과에 직접적인 변동을 일으키는  공정 입력 및 가동 변수</td><td>• 문서 분할 크기(Chunk Size) 및 검색 개수(Top-K) • Temperature (창의성/무작위성 제어 변수) • 컨텍스트 총 토큰 수 (스킬+예시+본문의 총량) • 강제 출력 스키마 (Structured Output / JSON 적용 여부)</td></tr><tr><td>4. Design Space (설계 공간)</td><td>CQA를 안정적으로 만족시키는 CPP 변수들의 다차원적 안전 조합 영역</td><td>&quot;Temperature 0.0~0.2 범위, 입력 본문 30페이지 이하(초과 시 자동 분할), 필수 체크리스트 프롬프트를 시스템 최상단 배치, 출력 스키마 강제 ON&quot; 조건의 교집합</td></tr></tbody></table></div>
       <p>대부분의 실무자는 1단계(막연한 기대)만 머릿속에 둔 채 곧바로 프롬프트를 쓰기 시작합니다. 반면 QbD 사고를 적용하면, 2단계에서 측정 가능한 품질 특성(CQA)을 먼저 확정하고, 3단계에서 그 품질을 흔드는 핵심 변수(CPP)가 무엇인지 가려내는 것부터 출발하게 됩니다.</p>
       <hr class="article-divider">
       <h2>3. &#39;설계 공간(Design Space)&#39;의 발견: 어디까지가 안전 영역인가?</h2>

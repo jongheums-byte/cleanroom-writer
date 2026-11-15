@@ -2,8 +2,8 @@
 
 > 제약·바이오 품질관리(QC) 현업 19년 전문가가 GMP 원칙, 데이터 완전성(Data Integrity), 시스템 적합성(SST), 조직 거버넌스, 그리고 생성형 AI 바이브코딩 실전 노하우를 기록하는 공식 기술 아카이브입니다.
 
-- Official Hub: https://cleanroom-writer.netlify.app/
-- Full Static Archive: https://cleanroom-writer.netlify.app/archive/
+- Official Hub: https://jongheums-byte.github.io/cleanroom-writer/
+- Full Static Archive: https://jongheums-byte.github.io/cleanroom-writer/archive/
 - Original Naver Blog: https://blog.naver.com/humi09
 - Author: CleanRoom Writer (19 Yrs Pharmaceutical & Bio QC Specialist)
 

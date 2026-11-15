@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI 브리핑.18 - AI 에이전트 시대의 데이터 무결성 | CleanRoom Writer Archive</title>
   <meta name="description" content="16편에서 우리는 AI 에이전트에게 작업 절차를 강제하는 &#39;공학적 하네스(Harness)&#39;와 의약품 품질시스템(PQS)의 연결고리를 살펴보았고, 17편에서는 스킬을 계층화하여 맥락 충돌을 막는 &#39;Skill ...">
-  <link rel="canonical" href="https://cleanroom-writer.netlify.app/archive/224475636080.html">
+  <link rel="canonical" href="https://jongheums-byte.github.io/cleanroom-writer/archive/224475636080.html">
   <link rel="alternate" type="text/plain" title="LLM Context" href="../llms.txt">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://cleanroom-writer.netlify.app/archive/224475636080.html">
+  <meta property="og:url" content="https://jongheums-byte.github.io/cleanroom-writer/archive/224475636080.html">
   <meta property="og:title" content="AI 브리핑.18 - AI 에이전트 시대의 데이터 무결성">
   <meta property="og:description" content="16편에서 우리는 AI 에이전트에게 작업 절차를 강제하는 &#39;공학적 하네스(Harness)&#39;와 의약품 품질시스템(PQS)의 연결고리를 살펴보았고, 17편에서는 스킬을 계층화하여 맥락 충돌을 막는 &#39;Skill ...">
   <meta property="article:published_time" content="2026-11-13">
@@ -27,22 +27,22 @@
   "dateModified": "2026-11-13",
   "inLanguage": "ko-KR",
   "articleSection": "CleanRoom AI",
-  "url": "https://cleanroom-writer.netlify.app/archive/224475636080.html",
+  "url": "https://jongheums-byte.github.io/cleanroom-writer/archive/224475636080.html",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://cleanroom-writer.netlify.app/archive/224475636080.html"
+    "@id": "https://jongheums-byte.github.io/cleanroom-writer/archive/224475636080.html"
   },
   "isBasedOn": "https://blog.naver.com/humi09/224475636080",
   "author": {
     "@type": "Person",
     "name": "CleanRoom Writer",
-    "url": "https://cleanroom-writer.netlify.app",
+    "url": "https://jongheums-byte.github.io/cleanroom-writer",
     "jobTitle": "Pharmaceutical & Bio QC Specialist (19 Years Experience)"
   },
   "publisher": {
     "@type": "Organization",
     "name": "CleanRoom Writer",
-    "url": "https://cleanroom-writer.netlify.app"
+    "url": "https://jongheums-byte.github.io/cleanroom-writer"
   }
 }
   </script>
@@ -96,7 +96,7 @@
       <p>* 아래 표는 제약 GMP의 ALCOA+ 원칙을 AI 에이전트 감사 추적(Audit Trail) 설계 관점에서 재구성한 매핑 테이블입니다.</p>
       <div class="table-wrap"><table><thead><tr><th>ALCOA+ 원칙</th><th>제약 GMP에서의 원래 의미</th><th>AI 에이전트 시스템에서의 재해석 및 적용</th></tr></thead><tbody><tr><td>Attributable (귀속성)</td><td>누가 데이터를 생성·수정했는지 식별 가능해야 함</td><td>해당 에이전트 실행을 어떤 사용자(User ID)가 지시했고, 어떤 모델 버전·스킬·에이전트 ID가 작업을 수행했는지 명확히 매핑</td></tr><tr><td>Legible (가독성)</td><td>기록은 사람이 읽고 이해할 수 있는 형태로 보존되어야 함</td><td>모델 내부의 불투명한 토큰 로그가 아니라, 입력 프롬프트·도구 호출(Tool Call)·최종 출력을 감사자가 판독 가능한 구조화된 텍스트로 저장</td></tr><tr><td>Contemporaneous (동시성)</td><td>활동이 일어나는 바로 그 시점에 실시간으로 기록되어야 함</td><td>에이전트 작업이 모두 끝난 뒤 사후 요약하는 것이 아니라, 각 추론 단계와 도구 실행 시점마다 타임스탬프(Timestamp)와 함께 즉시 기록</td></tr><tr><td>Original (원본성)</td><td>최초에 생성된 원시 데이터(Raw Data) 자체가 보존되어야 함</td><td>요약·가공된 최종 답변만 남기지 않고, 실제 전달된 시스템 프롬프트, RAG로 인출된 원문 청크, API 반환값(Raw Response)을 함께 보존</td></tr><tr><td>Accurate (정확성)</td><td>데이터는 오류 없이 실제 수행된 사실과 일치해야 함</td><td>에이전트가 실제로 호출한 도구의 성공/실패 여부, 파일 변경 내역(Diff)이 임의 생략이나 왜곡 없이 사실 그대로 기록됨</td></tr><tr><td>Complete (완전성)</td><td>재시험·재실행 이력을 포함해 누락된 데이터가 없어야 함</td><td>사용자가 마음에 드는 답이 나올 때까지 여러 번 다시 생성(Regenerate)했다면, 폐기된 이전 실행 이력까지 모두 보존</td></tr><tr><td>Consistent (일관성)</td><td>모든 기록이 시간 순서와 표준 규격에 맞게 일관되어야 함</td><td>여러 서브에이전트가 협업할 때도 통일된 스키마(Schema)와 동기화된 표준 시각(UTC) 기준으로 순서가 어긋나지 않게 기록</td></tr><tr><td>Enduring (지속성)</td><td>정해진 보존 기한 동안 손상 없이 유지되어야 함</td><td>채팅창을 닫거나 세션이 만료되어도 휘발되지 않고, 수정 불가능한(Append-only) 저장소에 영구 보관</td></tr><tr><td>Available (가용성)</td><td>감사나 검토가 필요할 때 즉시 조회·열람 가능해야 함</td><td>문제 발생 시 특정 세션 ID, 날짜, 문서명으로 즉시 검색하여 당시의 실행 맥락을 재현(Replay)할 수 있어야 함</td></tr></tbody></table></div>
       <p>특히 눈여겨볼 항목은 완전성(Complete)과 원본성(Original)입니다.</p>
-      <p>실험실에서 분석자가 원하는 수치가 나��� 때까지 시료를 몰래 다시 측정하고 불리한 첫 번째 결과를 지워버리는 행위를 &#39;적합 판정을 위한 반복 시험(Testing into compliance)&#39;이라 부르며, 이는 GMP에서 가장 엄격히 금지하는 위반 사항입니다.</p>
+      <p>실험실에서 분석자가 원하는 수치가 나올 때까지 시료를 몰래 다시 측정하고 불리한 첫 번째 결과를 지워버리는 행위를 &#39;적합 판정을 위한 반복 시험(Testing into compliance)&#39;이라 부르며, 이는 GMP에서 가장 엄격히 금지하는 위반 사항입니다.</p>
       <p>AI 실무에서도 마찬가지입니다. 에이전트에게 같은 작업을 다섯 번 시켜 그중 가장 그럴듯한 다섯 번째 결과물만 보고서에 채택하고 앞선 네 번의 실패·환각 로그를 지워버린다면, 조직은 에이전트가 왜 네 번이나 오작동했는지 영원히 파악할 수 없게 됩니다.</p>
       <hr class="article-divider">
       <h2>3. QC와 QA의 분리: 에이전트에게도 &#39;독립된 검토자&#39;가 필요하다</h2>

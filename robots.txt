@@ -30,4 +30,4 @@ Allow: /
 User-agent: Yeti
 Allow: /
 
-Sitemap: https://cleanroom-writer.netlify.app/sitemap.xml
+Sitemap: https://jongheums-byte.github.io/cleanroom-writer/sitemap.xml

@@ -14,7 +14,7 @@ const fs = require('fs');
 const path = require('path');
 
 const BLOG_ID = 'humi09';
-const SITE_URL = 'https://cleanroom-writer.netlify.app';
+const SITE_URL = 'https://jongheums-byte.github.io/cleanroom-writer';
 const ROOT_DIR = path.resolve(__dirname, '..');
 const INDEX_HTML = path.join(ROOT_DIR, 'index.html');
 const SCRIPT_JS = path.join(ROOT_DIR, 'script.js');
