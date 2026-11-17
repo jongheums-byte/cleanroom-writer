@@ -1,26 +1,47 @@
 {
-  "lastSynced": "2026-11-15T22:36:51.587Z",
-  "count": 64,
+  "lastSynced": "2026-11-17T01:43:44.617Z",
+  "count": 67,
   "posts": [
+    {
+      "logNo": 224479052890,
+      "title": "AI 브리핑.24 - \"MMLU 90점의 에이전트는 왜 내 엑셀 하나 못 고칠까?\"",
+      "category": "CleanRoom AI",
+      "sympathy": 3,
+      "date": "2026-11-16"
+    },
+    {
+      "logNo": 224479046318,
+      "title": "AI 브리핑.23 - \"더 큰 모델이 아니라 '더 깊은 생각'을 산다\"",
+      "category": "CleanRoom AI",
+      "sympathy": 3,
+      "date": "2026-11-16"
+    },
+    {
+      "logNo": 224479042147,
+      "title": "AI 브리핑.22 - \"에이전트 여럿이 모이면 과연 더 똑똑해질까?\"",
+      "category": "CleanRoom AI",
+      "sympathy": 4,
+      "date": "2026-11-16"
+    },
     {
       "logNo": 224478143232,
       "title": "AI 실전 09. 오픈소스 SEO 엔진(Claude-seo)으로 내 블로그 해부하기",
       "category": "CleanRoom AI",
-      "sympathy": 2,
+      "sympathy": 4,
       "date": "2026-11-15"
     },
     {
       "logNo": 224477169650,
       "title": "AI 브리핑.21 — \"프롬프트는 길어졌는데, 왜 결과물은 제자리일까?\" : 컨텍스트 엔지니어링(Context Engineering)",
       "category": "CleanRoom AI",
-      "sympathy": 4,
+      "sympathy": 5,
       "date": "2026-11-14"
     },
     {
       "logNo": 224477147354,
       "title": "AI 실전 08. 흩어진 항공·숙소·투어 검색을 지도 한 장에 — k-skill로 나만의 여행 웹페이지 만들기",
       "category": "CleanRoom AI",
-      "sympathy": 4,
+      "sympathy": 5,
       "date": "2026-11-14"
     },
     {
@@ -403,7 +424,7 @@
     },
     {
       "logNo": 224426114674,
-      "title": "「진짜 신호를 ��기 전에, 아무것도 없는 것을 먼저 본다」",
+      "title": "「진짜 신호를 보기 전에, 아무것도 없는 것을 먼저 본다」",
       "category": "GMP in Your Area",
       "sympathy": 9,
       "date": "2026-09-29"
