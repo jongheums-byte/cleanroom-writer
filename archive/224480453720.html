@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 실전 12 - &quot;쉬어가는 실전, 재미 삼아 만든 &#39;사주 OOS&#39; 웹앱&quot; | CleanRoom Writer Archive</title>
+  <meta name="description" content="그동안 [AI 실전] 시리즈에서는 코드 샌드박스 수치 검증(10편), 사내 맥락 문서 표준화 (11편) 처럼 당장 업무 현장에 투입하는 묵직한 방법론들을 주로 다루었습니다. 오늘은 잠시 쉬어가는 실전으로, ...">
+  <link rel="canonical" href="https://jongheums-byte.github.io/cleanroom-writer/archive/224480453720.html">
+  <link rel="alternate" type="text/plain" title="LLM Context" href="../llms.txt">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jongheums-byte.github.io/cleanroom-writer/archive/224480453720.html">
+  <meta property="og:title" content="AI 실전 12 - &quot;쉬어가는 실전, 재미 삼아 만든 &#39;사주 OOS&#39; 웹앱&quot;">
+  <meta property="og:description" content="그동안 [AI 실전] 시리즈에서는 코드 샌드박스 수치 검증(10편), 사내 맥락 문서 표준화 (11편) 처럼 당장 업무 현장에 투입하는 묵직한 방법론들을 주로 다루었습니다. 오늘은 잠시 쉬어가는 실전으로, ...">
+  <meta property="article:published_time" content="2026-11-17">
+  <meta property="article:section" content="CleanRoom AI">
+
+  <!-- Schema.org Structured Data (GEO) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "AI 실전 12 - \"쉬어가는 실전, 재미 삼아 만든 '사주 OOS' 웹앱\"",
+  "description": "그동안 [AI 실전] 시리즈에서는 코드 샌드박스 수치 검증(10편), 사내 맥락 문서 표준화 (11편) 처럼 당장 업무 현장에 투입하는 묵직한 방법론들을 주로 다루었습니다. 오늘은 잠시 쉬어가는 실전으로, ...",
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-17",
+  "inLanguage": "ko-KR",
+  "articleSection": "CleanRoom AI",
+  "url": "https://jongheums-byte.github.io/cleanroom-writer/archive/224480453720.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jongheums-byte.github.io/cleanroom-writer/archive/224480453720.html"
+  },
+  "isBasedOn": "https://blog.naver.com/humi09/224480453720",
+  "author": {
+    "@type": "Person",
+    "name": "CleanRoom Writer",
+    "url": "https://jongheums-byte.github.io/cleanroom-writer",
+    "jobTitle": "Pharmaceutical & Bio QC Specialist (19 Years Experience)"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CleanRoom Writer",
+    "url": "https://jongheums-byte.github.io/cleanroom-writer"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="https://ssl.pstatic.net/static/blog/icon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="silence-theme">
+  <header class="status-bar">
+    <div class="status-left">
+      <a href="../index.html" class="system-token brand-token" style="text-decoration:none;">CLEANROOM WRITER</a>
+    </div>
+    <div class="status-right">
+      <a href="index.html" class="system-token status-link">← ARCHIVE</a>
+      <a href="https://blog.naver.com/humi09/224480453720" target="_blank" rel="noopener noreferrer" class="system-token status-link">NAVER ORIGINAL ↗</a>
+    </div>
+  </header>
+
+  <main class="archive-article-container">
+    <article class="archive-article" itemscope itemtype="https://schema.org/TechArticle">
+      <header class="article-header">
+        <div class="article-meta-bar">
+          <span class="system-token record-tag">CleanRoom AI</span>
+          <span class="system-token record-id">DATE: 2026-11-17</span>
+          <span class="system-token record-id">SYMPATHY: 6</span>
+        </div>
+        <h1 class="article-title" itemprop="headline">AI 실전 12 - &quot;쉬어가는 실전, 재미 삼아 만든 &#39;사주 OOS&#39; 웹앱&quot;</h1>
+        <p class="article-lead" itemprop="description">그동안 [AI 실전] 시리즈에서는 코드 샌드박스 수치 검증(10편), 사내 맥락 문서 표준화 (11편) 처럼 당장 업무 현장에 투입하는 묵직한 방법론들을 주로 다루었습니다. 오늘은 잠시 쉬어가는 실전으로, ...</p>
+      </header>
+
+      <div class="article-body" itemprop="articleBody">
+      <div class="table-wrap"><table><thead><tr><th>CLEANROOM AI · AI PRACTICE (INTERLUDE) AI 실전 12. (쉬어가는 실전 프로젝트) &quot;쉬어가는 실전으로 재미 삼아 만들어 본 &#39;사주 OOS&#39; — 깃허브 스킬(k-skill) 해부부터 GitHub Pages 무료 배포까지&quot; GITHUB SKILL &amp; STATIC WEB 60% · DETERMINISTIC SEPARATION 40% Taking a light breather from heavy enterprise workflows: dissecting an open-source GitHub saju skill (&amp;#x60;k-skill&amp;#x60;), separating deterministic calculation from interpretation, and deploying a zero-backend static web app on GitHub Pages.</th></tr></thead></table></div>
+      <div class="table-wrap"><table><thead><tr><th>“무거운 업무용 자동화 이야기 사이에서 잠시 숨을 고르며, 공개 스킬 하나를 내 손에 맞는 작은 웹앱으로 재조립해 보았습니다.”</th></tr></thead></table></div>
+      <p>그동안 [AI 실전] 시리즈에서는 코드 샌드박스 수치 검증(10편), 사내 맥락 문서 표준화 (11편) 처럼 당장 업무 현장에 투입하는 묵직한 방법론들을 주로 다루었습니다.</p>
+      <p>오늘은 잠시 쉬어가는 실전으로, 순수하게 재미 삼아 직접 만들어 본 작은 사이드 프로젝트 이야기를 꺼내보려 합니다. 품질관리(QC) 업무를 하다 보면 매일 마주치는 단어가 바로 OOS(Out of Specification, 규격 이탈)입니다. 시험 결과가 기준 안에 들어오는지 확인하고 벗어났다면 조율하는 일이 일상의 기본값이다 보니, 어느 날 문득 이런 가벼운 호기심이 들었습니다.</p>
+      <p>&quot;오늘 내 운세와 컨디션도 규격 이내인지, 아니면 잠시 속도를 조절해야 하는 OOS 상태인지 가볍게 점검해 보는 웹앱을 만들어 보면 어떨까?&quot;</p>
+      <p>마침 GitHub에 공개된 한국형 에이전트 스킬 저장소(NomaDamas/k-skill)에서 saju-fortune 스킬을 발견했고, 이를 내려받아 누구나 브라우저에서 무료로 써볼 수 있는 정적 웹앱(사주 OOS)으로 구현해 GitHub Pages에 배포까지 마쳤습니다. 오늘은 그 과정에서 얻은 구조적 인사이트를 가볍게 정리해 봅니다.</p>
+      <hr class="article-divider">
+      <h2>1. 깃허브 스킬, &#39;설치&#39;보다 &#39;구조 읽기&#39;가 먼저입니다</h2>
+      <p>GitHub에서 saju-fortune 스킬을 내려받아 내부 파일을 열어보면 크게 두 축으로 역할이 나뉘어 있습니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>1. 인터뷰 및 해석 규칙 (SKILL.md, instruction.md): 생년월일시·성별·양력/음력 여부를 먼저 확인하고, 태어난 시간을 모르면 시주(時柱)를 확정하지 않으며, 단정적인 흉언이나 의료·투자·법률 판단을 대신하지 않는다는 원칙입니다. 2. 계산 엔진 (saju-fortune 패키지): 생년월일시를 입력받아 연·월·일·시주(사주팔자), 오행 분포(목·화·토·금·수), 일간 강약, 용신 조율점, 대운 흐름을 산출하는 순수 계산 로직입니다.</th></tr></thead></table></div>
+      <p>여기서 재미 삼아 만든 앱에서도 통하는 중요한 설계 원칙 하나가 보입니다. 바로 &#39;결정론적 계산&#39;과 &#39;언어적 해석&#39;의 분리입니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>구분</th><th>결정론적 계산 계층 (계산 엔진)</th><th>언어적 해석 계층 (규칙·표현)</th></tr></thead><tbody><tr><td>GMP 실험실 비유</td><td>시험 장비의 원시 데이터(Raw Data) 정밀 측정</td><td>담당자의 규격 적합성 검토 및 맥락 해석</td></tr><tr><td>사주 웹앱 구현</td><td>saju-fortune@0.2.0 만세력·간지·오행 산출 로직</td><td>산출된 JSON 기반 십신 요약·오행 균형 안내</td></tr><tr><td>왜 분리해야 할까?</td><td>만세력 간지 계산을 LLM 감에 맡기면 날짜·절기 계산 오류가 발생함</td><td>계산이 정확히 고정되어야 그 위에서 일관된 풀이가 가능함</td></tr></tbody></table></div>
+      <hr class="article-divider">
+      <h2>2. 실전 구현: 사용자 시선에서 다듬은 4가지 포인트</h2>
+      <p>스킬의 계산 로직을 웹 화면으로 옮기면서, 터미널이나 채팅창 안에서만 돌릴 때는 보이지 않던 사용자 경험(UX) 디테일을 몇 가지 손보았습니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>• 명식표의 &#39;띠&#39; 표기 혼선 바로잡기: 사주팔자 4기둥(시주·일주·월주·연주) 아래에 각각 십이지 동물을 모두 ~띠로 표시했더니, 본인의 생년 띠(연주)가 아닌 일주·시주의 동물을 보고 &quot;내 띠가 잘못 나왔다&quot;고 헷갈리는 문제가 있었습니다. 연주에만 (생년) ~띠를 명시하고 나머지 기둥은 십이지로 구분해 오해를 없앴습니다. • 오늘의 오행 부적 카드 (정적 SVG/Canvas 매핑): 오늘의 운세를 그림으로 보여줄 때 매번 AI 이미지 생성 API를 호출하면 대기 시간과 비용, 네트워크 깨짐 위험이 큽니다. 대신 오늘의 일진과 본인 일간(日干)의 십신(十神) 관계 10가지를 즉시 계산해, 사전에 설계된 오행 인장 부적 카드와 3줄 요약(업무운·대인운·행운 아이템)을 즉시 렌더링하도록 구성했습니다. • 접이식 레이아웃과 계층화: 풀이 전에는 생년월일 입력에 집중하고, 풀이 버튼을 누른 뒤에는 입력 폼을 상단 요약 바로 접어 결과 리포트가 한눈에 들어오도록 바꿨습니다. 명식표 하단의 핵심 요약(일간 강약·강한 오행·부족한 오행·용신)도 단순 텍스트 나열 대신 라벨과 오행 포인트 컬러를 구분해 가독성을 높였습니다. • 데이터 무결성과 프라이버시 원칙: 스킬 지침을 그대로 따라, 입력한 생년월일시는 사용자의 브라우저 메모리 안에서만 계산하고 외부 서버나 DB에는 일절 전송·저장하지 않도록 설계했습니다.</th></tr></thead></table></div>
+      <hr class="article-divider">
+      <h2>3. 서버 없이 index.html 하나로 — GitHub Pages 정적 배포</h2>
+      <p>외부에 무료로 공개하는 토이 프로젝트를 만들 때 가장 먼저 고민해야 할 부분은 보안(API 키 노출 방지)과 유지비입니다. 만약 백엔드에서 유료 LLM API를 호출하는 구조로 공개 배포하면, 트래픽이 갑자기 늘거나 키 관리에 실수가 생겼을 때 예상치 못한 과금 위험이 뒤따릅니다.</p>
+      <p>그래서 공개 배포용 사주 OOS는 백엔드 서버 없이 index.html 파일 하나 안에서 모든 만세력·오행·십신·월별 운세·부적 카드 생성이 완결되는 정적 웹(Static Site) 구조로 설계해 GitHub Pages에 올렸습니다. 서버 왕복 지연 없이 결과가 바로 출력되고, 개인정보가 외부 서버로 나가지 않으며, 별도의 빌드 크레딧 걱정 없이 무료로 안정적인 운영이 가능하다는 점이 가장 큰 장점이었습니다.</p>
+      <hr class="article-divider">
+      <h2>4. GitHub Pages로 무료 사주 보고 가세요</h2>
+      <p>직접 만든 사주 OOS (오늘의 운세 &amp; 사주팔자) 웹앱은 아래 링크에서 별도 회원가입이나 앱 설치 없이 바로 체험해 보실 수 있습니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>🔮 사주 OOS 무료 체험하기 • 체험 링크: https://jongheums-byte.github.io/saju-oos-/ 간단한 이용 안내 • 생년월일은 양력 기준으로 입력해 주세요(음력은 변환 후 입력 권장). • 태어난 시간을 모르실 경우 &#39;태어난 시간을 모름&#39;을 체크하시면 연·월·일 중심으로 보수적인 풀이를 보여드립니다. • 결과 화면의 &#39;부적 카드 이미지&#39; 버튼을 누르면 오늘의 오행 부적 카드를 PNG 이미지로 저장해 소장하실 수 있습니다.</th></tr></thead></table></div>
+      <hr class="article-divider">
+      <div class="table-wrap"><table><thead><tr><th>⚠️ 비유의 한계: 만세력 계산은 결정론적이지만, 운세 풀이는 GMP 규격이 아니다 이번 글에서는 설명의 재미를 위해 OOS(규격 이탈)라는 품질관리 용어를 빌려와 만세력 엔진과 해석 규칙의 분리를 살펴보았습니다. 다만 분명히 선을 그어둘 지점이 있습니다. 만세력 간지와 절기를 산출하는 과정은 천문·달력 규칙에 따른 결정론적 알고리즘이지만, 사주팔자와 오행의 길흉 해석 자체는 과학적 인과관계나 통계적 밸리데이션이 입증된 GMP 시험 규격이 아닙니다. 따라서 결과에 다소 아쉬운 해석이 나오더라도 이를 실제 삶의 절대적인 &#39;부적합 판정&#39;으로 받아들이기보다, 오늘 하루 컨디션을 돌아보는 가벼운 자기점검과 재미 요소로만 즐기시기를 권합니다.</th></tr></thead></table></div>
+      <hr class="article-divider">
+      <h2>결론: 묵직한 업무 도구 사이, 가벼운 실험 하나가 만드는 감각</h2>
+      <p>GitHub에 올라온 공개 스킬 하나를 그대로 실행해 보는 것도 좋은 출발이지만, 가벼운 호기심을 담아 실제 사용자 화면으로 옮겨보고 index.html 한 장으로 배포까지 마쳐보면 비로소 &quot;내 도구를 하나 만들었다&quot;는 생생한 감각이 생깁니다.</p>
+      <p>무거운 업무용 프롬프트와 데이터 정제 작업 사이에서 잠시 쉬어가는 기분으로, 오늘 내 흐름이 규격 안에 있는지 재미 삼아 한 번 확인해 보시기 바랍니다. 흥미로운 부적 카드나 개선 아이디어가 떠오르신다면 댓글로 편하게 공유해 주세요.</p>
+      </div>
+
+      <footer class="article-footer">
+        <div class="article-source-box">
+          <span class="system-token">SOURCE VERIFICATION / AUDIT TRAIL</span>
+          <p>이 문서는 네이버 블로그 <strong>CleanRoom Writer</strong>의 원문을 AI 검색(GEO) 및 정적 웹 아카이브용으로 규격화한 미러링 문서입니다.</p>
+          <div class="article-footer-actions">
+            <a href="https://blog.naver.com/humi09/224480453720" target="_blank" rel="noopener noreferrer" class="cta-primary">
+              <span>네이버 블로그 원문 보기</span>
+              <span class="cta-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="index.html" class="cta-secondary">
+              <span>전체 아카이브 목록</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="silence-footer">
+    <div class="footer-inner">
+      <span class="system-token footer-tag">AIR PURITY 99.9% • GEO ARCHIVE MIRROR</span>
+      <span class="system-token footer-copy">© 2026 CLEANROOM WRITER. ALL RIGHTS RESERVED.</span>
+    </div>
+  </footer>
+</body>
+</html>

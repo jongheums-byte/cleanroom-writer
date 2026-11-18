@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 실전 10 - &quot;복잡한 수식 계산을 AI에게 맡기지 마라&quot; | CleanRoom Writer Archive</title>
+  <meta name="description" content="실무에서 AI 채팅창에 매출 표나 품질 실적 데이터를 붙여넣고 &quot;조건에 맞는 합계와 평균을 구해줘&quot;라고 지시한 경험이 한 번쯤 있으실 겁니다. 겉보기에는 아주 논리적인 풀이 과정을 거쳐 깔끔한 숫자를 내놓지...">
+  <link rel="canonical" href="https://jongheums-byte.github.io/cleanroom-writer/archive/224480383676.html">
+  <link rel="alternate" type="text/plain" title="LLM Context" href="../llms.txt">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jongheums-byte.github.io/cleanroom-writer/archive/224480383676.html">
+  <meta property="og:title" content="AI 실전 10 - &quot;복잡한 수식 계산을 AI에게 맡기지 마라&quot;">
+  <meta property="og:description" content="실무에서 AI 채팅창에 매출 표나 품질 실적 데이터를 붙여넣고 &quot;조건에 맞는 합계와 평균을 구해줘&quot;라고 지시한 경험이 한 번쯤 있으실 겁니다. 겉보기에는 아주 논리적인 풀이 과정을 거쳐 깔끔한 숫자를 내놓지...">
+  <meta property="article:published_time" content="2026-11-17">
+  <meta property="article:section" content="CleanRoom AI">
+
+  <!-- Schema.org Structured Data (GEO) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "AI 실전 10 - \"복잡한 수식 계산을 AI에게 맡기지 마라\"",
+  "description": "실무에서 AI 채팅창에 매출 표나 품질 실적 데이터를 붙여넣고 \"조건에 맞는 합계와 평균을 구해줘\"라고 지시한 경험이 한 번쯤 있으실 겁니다. 겉보기에는 아주 논리적인 풀이 과정을 거쳐 깔끔한 숫자를 내놓지...",
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-17",
+  "inLanguage": "ko-KR",
+  "articleSection": "CleanRoom AI",
+  "url": "https://jongheums-byte.github.io/cleanroom-writer/archive/224480383676.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jongheums-byte.github.io/cleanroom-writer/archive/224480383676.html"
+  },
+  "isBasedOn": "https://blog.naver.com/humi09/224480383676",
+  "author": {
+    "@type": "Person",
+    "name": "CleanRoom Writer",
+    "url": "https://jongheums-byte.github.io/cleanroom-writer",
+    "jobTitle": "Pharmaceutical & Bio QC Specialist (19 Years Experience)"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CleanRoom Writer",
+    "url": "https://jongheums-byte.github.io/cleanroom-writer"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="https://ssl.pstatic.net/static/blog/icon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="silence-theme">
+  <header class="status-bar">
+    <div class="status-left">
+      <a href="../index.html" class="system-token brand-token" style="text-decoration:none;">CLEANROOM WRITER</a>
+    </div>
+    <div class="status-right">
+      <a href="index.html" class="system-token status-link">← ARCHIVE</a>
+      <a href="https://blog.naver.com/humi09/224480383676" target="_blank" rel="noopener noreferrer" class="system-token status-link">NAVER ORIGINAL ↗</a>
+    </div>
+  </header>
+
+  <main class="archive-article-container">
+    <article class="archive-article" itemscope itemtype="https://schema.org/TechArticle">
+      <header class="article-header">
+        <div class="article-meta-bar">
+          <span class="system-token record-tag">CleanRoom AI</span>
+          <span class="system-token record-id">DATE: 2026-11-17</span>
+          <span class="system-token record-id">SYMPATHY: 3</span>
+        </div>
+        <h1 class="article-title" itemprop="headline">AI 실전 10 - &quot;복잡한 수식 계산을 AI에게 맡기지 마라&quot;</h1>
+        <p class="article-lead" itemprop="description">실무에서 AI 채팅창에 매출 표나 품질 실적 데이터를 붙여넣고 &quot;조건에 맞는 합계와 평균을 구해줘&quot;라고 지시한 경험이 한 번쯤 있으실 겁니다. 겉보기에는 아주 논리적인 풀이 과정을 거쳐 깔끔한 숫자를 내놓지...</p>
+      </header>
+
+      <div class="article-body" itemprop="articleBody">
+      <div class="table-wrap"><table><thead><tr><th>CLEANROOM AI · AI PRACTICE AI 실전 10. (실전 워크플로우와 수치 검증) &quot;복잡한 수식 계산을 AI에게 맡기지 마라: &#39;코드 기반 교차 검증&#39; 샌드박스 실전 워크플로우&quot; CODE VERIFICATION 50% · CSV &amp; DATA AUDIT 50% Why LLMs silently fail at multi-step arithmetic and how non-developers can enforce deterministic Python sandbox verification for reliable spreadsheet auditing.</th></tr></thead></table></div>
+      <div class="table-wrap"><table><thead><tr><th>“AI에게 직접 암산시키면 그럴듯한 오답이 나오지만, AI에게 계산기(코드)를 조립하게 하면 결정론적 정답이 나온다.”</th></tr></thead></table></div>
+      <p>실무에서 AI 채팅창에 매출 표나 품질 실적 데이터를 붙여넣고 &quot;조건에 맞는 합계와 평균을 구해줘&quot;라고 지시한 경험이 한 번쯤 있으실 겁니다. 겉보기에는 아주 논리적인 풀이 과정을 거쳐 깔끔한 숫자를 내놓지만, 막상 엑셀로 다시 검산해 보면 끝자리가 틀리거나 특정 행이 누락된 경우가 적지 않습니다.</p>
+      <p>지난 [AI 브리핑.24]에서 정적 벤치마크보다 실제 실행 환경 기반의 검증이 중요하다는 점을 다루었다면, 오늘은 비개발자 실무자가 당장 내일 엑셀·통계 검토 업무에 적용할 수 있는 &#39;AI 암산 금지 및 코드 기반 교차 검증&#39; 실전 워크플로우를 정리합니다.</p>
+      <hr class="article-divider">
+      <h2>1. AI는 왜 덧셈과 조건부 필터링에서 &#39;침묵의 오차&#39;를 낼까?</h2>
+      <p>거대언어모델(LLM)은 본질적으로 수식을 계산하는 전자계산기가 아니라, 문맥상 다음에 올 확률이 가장 높은 토큰(단어 조각)을 예측하는 언어 모델입니다.</p>
+      <p>따라서 데이터 표가 수십 행을 넘어가거나 &quot;A 조건이면서 B 기간에 해당하고, 재작업(Rework) 건은 제외한 가중 평균&quot;처럼 조건이 2~3개만 겹쳐도 두 가지 문제가 발생합니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>1. 주의력 분산(Attention Drift): 표의 행이 길어질수록 중간 행의 숫자를 건너뛰거나 다른 열의 값과 섞어 읽는 현상이 일어납니다. 2. 토큰 단위 근사치 생성: 모델은 숫자를 연속된 값이 아니라 문자 조각으로 인식하기 때문에, 복잡한 나눗셈이나 소수점 반올림을 거치면서 실제 연산 결과와 미묘하게 다른 &#39;그럴듯한 숫자&#39;를 생성할 수 있습니다.</th></tr></thead></table></div>
+      <p>더 위험한 점은 모델이 계산을 틀렸을 때도 에러 메시지를 띄우지 않고 매우 확신에 찬 어조로 답을 내놓는다는 것입니다.</p>
+      <hr class="article-divider">
+      <h2>2. 핵심 실무 원칙: &quot;직접 계산하지 말고, 파일을 올려 검증 코드를 실행하라&quot;</h2>
+      <p>해결책은 의외로 단순합니다. AI에게 &quot;답을 구해줘&quot;라고 말하는 대신 &quot;이 계산을 수행하는 파이썬(Python) 코드를 작성해서 실행하고, 그 실행 결과를 보여줘&quot;라고 지시하는 것입니다.</p>
+      <p>요즘 주요 AI 도구(ChatGPT 데이터 분석, Claude 분석 도구, Gemini 코드 실행 기능 등)는 대부분 채팅창 내부에 격리된 코드 실행 환경(Sandbox)을 기본 내장하고 있습니다. 실무자가 파이썬 문법을 전혀 몰라도 상관없습니다.</p>
+      <p>여기서 한 가지 중요한 실무 수칙이 있습니다. 데이터를 채팅창에 텍스트로 복사-붙여넣기(복붙)하면, AI가 그 텍스트를 읽고 다시 코드 안으로 옮겨 적는(하드코딩) 토큰 생성 과정을 한 번 더 거치게 됩니다. 이 과정에서 숫자가 미세하게 바뀌거나 행이 누락되어 데이터 무결성이 깨질 수 있습니다. 따라서 가급적 원본 CSV 또는 엑셀 파일을 직접 업로드하여 코드가 파일을 곧바로 읽어 들이게(read_csv/read_excel) 하는 것이 가장 안전합니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>구분</th><th>기존 방식 (LLM 직접 암산 · 복붙)</th><th>권장 방식 (파일 업로드 · 코드 샌드박스 검증)</th></tr></thead><tbody><tr><td>데이터 입력</td><td>채팅창 텍스트 복붙 (토큰 재해석 중 변형 위험)</td><td>CSV/Excel 파일 직접 업로드 (원시 데이터 무결성 유지)</td></tr><tr><td>연산 주체</td><td>언어 모델의 확률적 예측</td><td>Python / Pandas 결정론적 연산</td></tr><tr><td>행 누락 위험</td><td>데이터 행이 늘수록 누락·혼동 발생</td><td>반복문으로 전체 행 100% 빠짐없이 처리</td></tr><tr><td>사후 검증</td><td>AI가 왜 그 숫자를 냈는지 추적 불가</td><td>작성된 코드의 조건식(if)만 읽으면 검증 완료</td></tr><tr><td>일관성</td><td>같은 질문을 다시 하면 숫자가 달라질 수 있음</td><td>코드가 같으면 언제 실행해도 100% 동일 결과</td></tr></tbody></table></div>
+      <hr class="article-divider">
+      <h2>3. 바로 써먹는 실전 프롬프트 2종 (데이터 검증 &amp; 엑셀 수식 감사)</h2>
+      <p>*(아래 예시의 수치는 이해를 돕기 위해 구성한 가상의 품질 데이터 예시입니다.)*</p>
+      <h2>[실습 A] 표 데이터를 넣고 코드로 교차 검증하기</h2>
+      <p>단순 합계나 비율 계산을 시킬 때 아래 지시문을 데이터 상단에 붙여넣습니다. 핵심은 암산 금지, 코드 작성 및 실행, 검증 로그 출력 세 가지를 못 박는 것입니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>📋 프롬프트 A (코드 실행 기반 교차 검증용) 당신은 데이터 무결성 감사관입니다. 아래 [데이터]를 바탕으로 요청된 지표를 계산하되, 절대 텍스트 추론으로 암산하지 마세요. [필수 실행 규칙] 1. 데이터를 코드 내부에 직접 타이핑(하드코딩)하지 말고, 첨부된 파일을 직접 로드(read_csv/read_excel)하거나 원본 텍스트 블록을 그대로 파싱하여 계산하세요. 2. 엑셀과 동일한 반올림 결과(사사오입)를 보장하기 위해 Python 기본 round() 대신 decimal 모듈(ROUND_HALF_UP)을 사용하세요. 3. 계산 전, 전체 행 수와 결측치/예외 항목이 몇 건 제외되었는지 먼저 출력하세요. 4. 최종 답변은 반드시 아래 순서로 제시하세요:    - ① 실행한 검증 코드 전문 (초보자도 조건을 확인할 수 있게 한글 주석 포함)    - ② 코드 실행 결과 로그 (원본 출력 그대로)    - ③ 최종 요약 표 [계산 요청] &#39;판정&#39;이 &#39;적합&#39;이면서 &#39;재작업 여부&#39;가 &#39;N&#39;인 배치만 대상으로 평균 수율(%)을 구하세요. [데이터] (CSV/엑셀 파일 첨부 권장 — 부득이한 경우에만 원본 표 텍스트 블록 붙여넣기)</th></tr></thead></table></div>
+      <p>이렇게 지시하면 AI가 작성한 코드 주석에 # 재작업 여부 &amp;#x3D;&amp;#x3D; &#39;N&#39; 필터링 (총 48건 중 3건 제외)처럼 기준이 투명하게 드러납니다. 실무자는 숫자를 다시 두드려 볼 필요 없이 필터 조건이 내 의도와 맞는지만 확인하면 됩니다.</p>
+      <h2>[실습 B] 내가 짠 복잡한 엑셀 수식의 논리 오류 역검증하기</h2>
+      <p>반대로 내가 이미 작성해 둔 엑셀 수식(SUMIFS, INDEX/MATCH, 중첩 IF 등)이 제대로 작동하는지 의심스러울 때도 코드 교차 검증이 위력을 발휘합니다.</p>
+      <div class="table-wrap"><table><thead><tr><th>📋 프롬프트 B (기존 엑셀 수식 논리 감사 및 테스트 케이스 검증용) 당신은 스프레드시트 품질 검증 엔지니어입니다. 아래 내가 작성한 [엑셀 수식]이 [의도한 비즈니스 규칙]과 일치하는지 검증하고, 함정이 숨어 있는 경계값(Edge Case) 테스트를 수행하세요. [검증 규칙] 1. 엑셀 수식의 논리를 Python 코드로 변환해 내장 샌드박스에서 실행하되, 엑셀 고유의 셀 평가 방식(빈 셀을 수식 비교 시 0으로 취급하는 현상 등)을 코드에 동일하게 구현하여 테스트하세요. 2. 정상 케이스 3건과 경계값/예외 케이스 3건(빈 셀, 0, 텍스트 혼입, 경계 수치 등)의 가상 테스트 데이터를 만들어 수식과 Python 코드의 예상 결과를 비교하세요. 3. 수식에 잠재적 오류(예: 괄호 위치, 절대참조 누락 위험, 0으로 나누기 오류)가 있다면 수정된 엑셀 수식을 함께 제시하세요. [의도한 비즈니스 규칙] {예: 수율이 95.0% 미만이면 &#39;조사 필요&#39;, 빈 칸이면 &#39;미입력&#39;으로 표시} [현재 사용 중인 엑셀 수식] {예: &amp;#x3D;IF(D2&lt;95, &quot;조사 필요&quot;, IF(D2&amp;#x3D;&quot;&quot;, &quot;미입력&quot;, &quot;정상&quot;))}</th></tr></thead></table></div>
+      <p>위 예시 수식을 자세히 보면, 빈 셀(&quot;&quot;)을 검사하는 조건보다 &lt;95 조건이 먼저 배치되어 엑셀에서 빈 셀을 0으로 취급해 &quot;조사 필요&quot;로 잘못 분류하는 함정이 숨어 있습니다. 실습 B 프롬프트를 돌리면 샌드박스가 이 경계값 오류를 즉시 잡아냅니다.</p>
+      <hr class="article-divider">
+      <div class="table-wrap"><table><thead><tr><th>⚠️ 비유의 한계: 코드 실행은 &#39;밸리데이션 완료&#39;가 아니다 제약·바이오 품질관리(GMP)의 컴퓨터화 시스템 밸리데이션(CSV, GAMP 5) 환경에서는 사전에 테스트와 승인을 거쳐 변경이 잠긴(Locked) 검증된 소프트웨어나 LIMS를 사용합니다. 반면, 채팅창에서 AI가 즉석으로 생성해 실행하는 파이썬 스크립트는 아직 검증되지 않은 임시 코드(Ad-hoc Script)입니다. 특히 파이썬의 기본 반올림(round)은 5에서 가장 가까운 짝수로 어림하는 &#39;오사오입(Banker&#39;s Rounding)&#39;을 따르기 때문에, 일반적인 &#39;사사오입&#39;을 쓰는 엑셀이나 시험성적서 계산법과 소수점 끝자리가 달라질 수 있습니다. 따라서 코드가 사칙연산을 정확히 수행한다는 뜻이지, AI가 문제의 전제 조건(반올림 규칙, 제외 기준, 날짜 경계)을 올바르게 코딩했다는 보장은 아닙니다. 따라서 &quot;파이썬으로 돌렸으니 무조건 맞다&quot;고 덮어놓고 승인해서는 안 되며, 출력된 코드의 한글 주석과 제외 건수 로그를 사람이 최종 확인하는 절차가 반드시 뒤따라야 합니다.</th></tr></thead></table></div>
+      <hr class="article-divider">
+      <h2>결론: AI에게 &#39;계산기&#39;를 쥐여주고, 사람은 &#39;감사관&#39;이 되자</h2>
+      <p>AI 시대의 실무 역량은 내가 수식을 얼마나 빨리 암산하느냐가 아니라, 도구가 실수할 수 있는 지점을 구조적으로 차단하는 설계력에서 나옵니다.</p>
+      <p>언어 모델에게 연산을 맡기는 것은 마치 훌륭한 문장가에게 주판을 튕기라고 시키는 것과 같습니다. 오늘부터 숫자와 조건이 얽힌 업무를 AI에게 넘길 때는 프롬프트 첫 줄에 &quot;암산하지 말고 코드로 실행해 검증하라&quot;는 원칙을 세워 보시기 바랍니다. AI의 계산 실수 때문에 야근하며 검산하던 시간이 눈에 띄게 줄어들 것입니다.</p>
+      </div>
+
+      <footer class="article-footer">
+        <div class="article-source-box">
+          <span class="system-token">SOURCE VERIFICATION / AUDIT TRAIL</span>
+          <p>이 문서는 네이버 블로그 <strong>CleanRoom Writer</strong>의 원문을 AI 검색(GEO) 및 정적 웹 아카이브용으로 규격화한 미러링 문서입니다.</p>
+          <div class="article-footer-actions">
+            <a href="https://blog.naver.com/humi09/224480383676" target="_blank" rel="noopener noreferrer" class="cta-primary">
+              <span>네이버 블로그 원문 보기</span>
+              <span class="cta-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="index.html" class="cta-secondary">
+              <span>전체 아카이브 목록</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="silence-footer">
+    <div class="footer-inner">
+      <span class="system-token footer-tag">AIR PURITY 99.9% • GEO ARCHIVE MIRROR</span>
+      <span class="system-token footer-copy">© 2026 CLEANROOM WRITER. ALL RIGHTS RESERVED.</span>
+    </div>
+  </footer>
+</body>
+</html>
