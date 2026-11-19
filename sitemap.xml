@@ -2,13 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jongheums-byte.github.io/cleanroom-writer/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jongheums-byte.github.io/cleanroom-writer/archive/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jongheums-byte.github.io/cleanroom-writer/archive/224482473095.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jongheums-byte.github.io/cleanroom-writer/archive/224481953902.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jongheums-byte.github.io/cleanroom-writer/archive/224480998277.html</loc>
