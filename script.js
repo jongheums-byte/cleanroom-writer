@@ -43,7 +43,7 @@ const qcArchive = {
     "title": "AI 브리핑 (쉬어가는 이야기) —\"GPT와 Claude는 왜 다른 길을 걷게 되었을까?",
     "abstract": "[CleanRoom AI] 공감 데이터 10건 입증 기록",
     "hypothesis": "“AI 브리핑 (쉬어가는 이야기) —\"GPT와 Claude는 왜 다른 길을 걷게 되었을까?”",
-    "observation": "지향점은 같지만, AI의 미래를 구현하는 방식은 달랐다 지난 몇 편의 글을 통해 우리는 업무 매뉴얼로서의 스킬(Skill), 시스템 연결 규격인 MCP, 그리고 앤트로픽 CEO 다리오 아모데이의 에세이까지 ... (현업 19년 QC 렌즈로 관측 및 입증)",
+    "observation": "지향점은 같지만, AI의 미래를 구현하는 방식은 달랐다 지난 몇 편의 글을 통해 우리는 ���무 매뉴얼로서의 스킬(Skill), 시스템 연결 규격인 MCP, 그리고 앤트로픽 CEO 다리오 아모데이의 에세이까... (현업 19년 QC 렌즈로 관측 및 입증)",
     "link": "https://blog.naver.com/humi09/224471551763",
     "archiveUrl": "archive/224471551763.html"
   },
