@@ -1,7 +1,14 @@
 {
-  "lastSynced": "2026-11-19T00:01:51.325Z",
-  "count": 75,
+  "lastSynced": "2026-11-20T00:24:38.641Z",
+  "count": 76,
   "posts": [
+    {
+      "logNo": 224483770063,
+      "title": "[AI 브리핑.26] 제미나이 4 네온(Neon) 출시: 기능 소개 및 모델 분석",
+      "category": "CleanRoom AI",
+      "sympathy": 4,
+      "date": "2026-11-19"
+    },
     {
       "logNo": 224482473095,
       "title": "AI 실전 14. 아이와 손그림 보드게임 6개를 웹으로 만들며 배운 'AI 대화법'",
@@ -20,7 +27,7 @@
       "logNo": 224480998277,
       "title": "AI 실전 13. 구글 안티그래비티(Antigravity) 실전 작업 루틴 3단계",
       "category": "CleanRoom AI",
-      "sympathy": 6,
+      "sympathy": 7,
       "date": "2026-11-17"
     },
     {
@@ -69,7 +76,7 @@
       "logNo": 224479046318,
       "title": "AI 브리핑.23 - \"더 큰 모델이 아니라 '더 깊은 생각'을 산다\"",
       "category": "CleanRoom AI",
-      "sympathy": 4,
+      "sympathy": 5,
       "date": "2026-11-16"
     },
     {
@@ -293,7 +300,7 @@
       "logNo": 224465887450,
       "title": "[CleanRoom AI] \"대체 깃허브가 뭔가요?\"",
       "category": "CleanRoom AI",
-      "sympathy": 8,
+      "sympathy": 9,
       "date": "2026-11-05"
     },
     {
