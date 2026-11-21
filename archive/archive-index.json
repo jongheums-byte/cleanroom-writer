@@ -1,47 +1,54 @@
 {
-  "lastSynced": "2026-11-20T23:46:38.383Z",
-  "count": 80,
+  "lastSynced": "2026-11-21T22:54:28.268Z",
+  "count": 81,
   "posts": [
+    {
+      "logNo": 224486288282,
+      "title": "AI 실전 16. 노트북LM '대화형 보고서', 텍스트 요약의 한계를 넘을 수 있을까",
+      "category": "CleanRoom AI",
+      "sympathy": 1,
+      "date": "2026-11-21"
+    },
     {
       "logNo": 224485083899,
       "title": "AI 실전 15. 아들이 손으로 쓴 50글자로 진짜 폰트(.ttf) 만들기",
       "category": "CleanRoom AI",
-      "sympathy": 1,
+      "sympathy": 2,
       "date": "2026-11-20"
     },
     {
       "logNo": 224484946888,
       "title": "AI 브리핑.29 - 규제는 왜 생성형 AI를 '핵심 GMP 공정' 밖에 세워두었는가",
       "category": "CleanRoom AI",
-      "sympathy": 0,
+      "sympathy": 1,
       "date": "2026-11-20"
     },
     {
       "logNo": 224484934527,
       "title": "AI 브리핑.28 - 어제까지 잘 되던 AI가 오늘 갑자기 달라졌다",
       "category": "CleanRoom AI",
-      "sympathy": 4,
+      "sympathy": 5,
       "date": "2026-11-20"
     },
     {
       "logNo": 224484915981,
       "title": "AI 브리핑.27 - 속도가 남긴 인지 부채를 어떻게 막는가",
       "category": "CleanRoom AI",
-      "sympathy": 3,
+      "sympathy": 4,
       "date": "2026-11-20"
     },
     {
       "logNo": 224483770063,
       "title": "[AI 브리핑.26] 제미나이 4 네온(Neon) 출시: 기능 소개 및 모델 분석",
       "category": "CleanRoom AI",
-      "sympathy": 6,
+      "sympathy": 7,
       "date": "2026-11-19"
     },
     {
       "logNo": 224482473095,
       "title": "AI 실전 14. 아이와 손그림 보드게임 6개를 웹으로 만들며 배운 'AI 대화법'",
       "category": "CleanRoom AI",
-      "sympathy": 2,
+      "sympathy": 3,
       "date": "2026-11-18"
     },
     {
