@@ -1,26 +1,33 @@
 {
-  "lastSynced": "2026-11-21T22:54:28.268Z",
-  "count": 81,
+  "lastSynced": "2026-11-22T23:24:27.492Z",
+  "count": 82,
   "posts": [
+    {
+      "logNo": 224487103753,
+      "title": "AI 실전 17. 구글 스프레드시트 '캔버스', 정적인 표를 앱으로 바꾸는 실전 검증",
+      "category": "CleanRoom AI",
+      "sympathy": 3,
+      "date": "2026-11-22"
+    },
     {
       "logNo": 224486288282,
       "title": "AI 실전 16. 노트북LM '대화형 보고서', 텍스트 요약의 한계를 넘을 수 있을까",
       "category": "CleanRoom AI",
-      "sympathy": 1,
+      "sympathy": 4,
       "date": "2026-11-21"
     },
     {
       "logNo": 224485083899,
       "title": "AI 실전 15. 아들이 손으로 쓴 50글자로 진짜 폰트(.ttf) 만들기",
       "category": "CleanRoom AI",
-      "sympathy": 2,
+      "sympathy": 3,
       "date": "2026-11-20"
     },
     {
       "logNo": 224484946888,
       "title": "AI 브리핑.29 - 규제는 왜 생성형 AI를 '핵심 GMP 공정' 밖에 세워두었는가",
       "category": "CleanRoom AI",
-      "sympathy": 1,
+      "sympathy": 2,
       "date": "2026-11-20"
     },
     {
@@ -41,7 +48,7 @@
       "logNo": 224483770063,
       "title": "[AI 브리핑.26] 제미나이 4 네온(Neon) 출시: 기능 소개 및 모델 분석",
       "category": "CleanRoom AI",
-      "sympathy": 7,
+      "sympathy": 8,
       "date": "2026-11-19"
     },
     {
