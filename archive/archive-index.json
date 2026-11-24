@@ -1,26 +1,47 @@
 {
-  "lastSynced": "2026-11-22T23:24:27.492Z",
-  "count": 82,
+  "lastSynced": "2026-11-24T03:53:21.813Z",
+  "count": 85,
   "posts": [
+    {
+      "logNo": 224489026604,
+      "title": "AI 브리핑.31 제미니 '작업(Tasks)' 탭, 한국 실무에 쓸모있을까",
+      "category": "CleanRoom AI",
+      "sympathy": 3,
+      "date": "2026-11-23"
+    },
+    {
+      "logNo": 224488566304,
+      "title": "AI 브리핑 (쉬어가는 이야기) 내가 넣은 회사 데이터, AI가 학습에 쓰지 않을까?",
+      "category": "CleanRoom AI",
+      "sympathy": 4,
+      "date": "2026-11-23"
+    },
+    {
+      "logNo": 224488287860,
+      "title": "AI 브리핑.30 - \"성능 1등 모델이 왜 현장에선 자꾸 멈출까\"",
+      "category": "CleanRoom AI",
+      "sympathy": 4,
+      "date": "2026-11-23"
+    },
     {
       "logNo": 224487103753,
       "title": "AI 실전 17. 구글 스프레드시트 '캔버스', 정적인 표를 앱으로 바꾸는 실전 검증",
       "category": "CleanRoom AI",
-      "sympathy": 3,
+      "sympathy": 5,
       "date": "2026-11-22"
     },
     {
       "logNo": 224486288282,
       "title": "AI 실전 16. 노트북LM '대화형 보고서', 텍스트 요약의 한계를 넘을 수 있을까",
       "category": "CleanRoom AI",
-      "sympathy": 4,
+      "sympathy": 6,
       "date": "2026-11-21"
     },
     {
       "logNo": 224485083899,
       "title": "AI 실전 15. 아들이 손으로 쓴 50글자로 진짜 폰트(.ttf) 만들기",
       "category": "CleanRoom AI",
-      "sympathy": 3,
+      "sympathy": 4,
       "date": "2026-11-20"
     },
     {
