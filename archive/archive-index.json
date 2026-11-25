@@ -1,7 +1,35 @@
 {
-  "lastSynced": "2026-11-24T03:53:21.813Z",
-  "count": 85,
+  "lastSynced": "2026-11-25T02:00:32.151Z",
+  "count": 89,
   "posts": [
+    {
+      "logNo": 224490052213,
+      "title": "LabTalk 05. 어는점(Freezing Point)을 왜 분석할까?",
+      "category": "LabTalk",
+      "sympathy": 2,
+      "date": "2026-11-24"
+    },
+    {
+      "logNo": 224490008648,
+      "title": "AI 실전 20 - Claude '화이트보드'와 무료 HTML 아티팩트 4M 원인분석 실전",
+      "category": "CleanRoom AI",
+      "sympathy": 1,
+      "date": "2026-11-24"
+    },
+    {
+      "logNo": 224489935463,
+      "title": "AI 실전 19 -  ChatGPT '실시간 받아쓰기'로 현장 관찰 메모 구조화하기",
+      "category": "CleanRoom AI",
+      "sympathy": 1,
+      "date": "2026-11-24"
+    },
+    {
+      "logNo": 224489775946,
+      "title": "AI 실전 18 - 제미나이 'Gems → Skills' 전환과 /·@ 인라인 업무 조립 실전",
+      "category": "CleanRoom AI",
+      "sympathy": 0,
+      "date": "2026-11-24"
+    },
     {
       "logNo": 224489026604,
       "title": "AI 브리핑.31 제미니 '작업(Tasks)' 탭, 한국 실무에 쓸모있을까",
@@ -104,7 +132,7 @@
       "logNo": 224480662711,
       "title": "[Lab Talk.04] 녹는점(Melting Point)을 왜 분석할까?",
       "category": "LabTalk",
-      "sympathy": 5,
+      "sympathy": 6,
       "date": "2026-11-17"
     },
     {
