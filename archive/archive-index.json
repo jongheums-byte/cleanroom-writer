@@ -1,7 +1,28 @@
 {
-  "lastSynced": "2026-11-25T02:00:32.151Z",
-  "count": 89,
+  "lastSynced": "2026-11-26T01:41:19.871Z",
+  "count": 92,
   "posts": [
+    {
+      "logNo": 224492063024,
+      "title": "AI 실전 21. 광고 싫어서 AI로 직접 만든 화살표 퍼즐 게임",
+      "category": "CleanRoom AI",
+      "sympathy": 3,
+      "date": "2026-11-25"
+    },
+    {
+      "logNo": 224491583075,
+      "title": "AI 브리핑.33 - \"AI는 잘못된 자물쇠를 여는 정교한 열쇠가 될 수 있다\"",
+      "category": "CleanRoom AI",
+      "sympathy": 3,
+      "date": "2026-11-25"
+    },
+    {
+      "logNo": 224491576562,
+      "title": "AI 브리핑.32 - \"수율이 높다고 합격은 아니다\"",
+      "category": "CleanRoom AI",
+      "sympathy": 2,
+      "date": "2026-11-25"
+    },
     {
       "logNo": 224490052213,
       "title": "LabTalk 05. 어는점(Freezing Point)을 왜 분석할까?",
@@ -466,7 +487,7 @@
     },
     {
       "logNo": 224454329032,
-      "title": "「같은 그물을 두 번 치는 것은 방어가 아니다」",
+      "title": "「같은 그물을 두 번 치는 것은 방��가 아니다」",
       "category": "GMP in Your Area",
       "sympathy": 8,
       "date": "2026-10-26"
