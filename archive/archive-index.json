@@ -1,19 +1,40 @@
 {
-  "lastSynced": "2026-11-26T01:41:19.871Z",
-  "count": 92,
+  "lastSynced": "2026-11-27T01:34:30.596Z",
+  "count": 95,
   "posts": [
+    {
+      "logNo": 224493632083,
+      "title": "AI 브리핑.35 안티그래비티 카본(Carbon) Pro 개방과 /swarm 정리",
+      "category": "CleanRoom AI",
+      "sympathy": 3,
+      "date": "2026-11-26"
+    },
+    {
+      "logNo": 224493277720,
+      "title": "AI 실전 22 - Mermaid 특유의 어색한 도형에서 벗어나기",
+      "category": "CleanRoom AI",
+      "sympathy": 3,
+      "date": "2026-11-26"
+    },
+    {
+      "logNo": 224492993493,
+      "title": "AI 브리핑 34 - 코드 몰라도 써먹는 오픈소스 AI가 떴다",
+      "category": "CleanRoom AI",
+      "sympathy": 5,
+      "date": "2026-11-26"
+    },
     {
       "logNo": 224492063024,
       "title": "AI 실전 21. 광고 싫어서 AI로 직접 만든 화살표 퍼즐 게임",
       "category": "CleanRoom AI",
-      "sympathy": 3,
+      "sympathy": 6,
       "date": "2026-11-25"
     },
     {
       "logNo": 224491583075,
       "title": "AI 브리핑.33 - \"AI는 잘못된 자물쇠를 여는 정교한 열쇠가 될 수 있다\"",
       "category": "CleanRoom AI",
-      "sympathy": 3,
+      "sympathy": 4,
       "date": "2026-11-25"
     },
     {
@@ -27,21 +48,21 @@
       "logNo": 224490052213,
       "title": "LabTalk 05. 어는점(Freezing Point)을 왜 분석할까?",
       "category": "LabTalk",
-      "sympathy": 2,
+      "sympathy": 3,
       "date": "2026-11-24"
     },
     {
       "logNo": 224490008648,
       "title": "AI 실전 20 - Claude '화이트보드'와 무료 HTML 아티팩트 4M 원인분석 실전",
       "category": "CleanRoom AI",
-      "sympathy": 1,
+      "sympathy": 2,
       "date": "2026-11-24"
     },
     {
       "logNo": 224489935463,
       "title": "AI 실전 19 -  ChatGPT '실시간 받아쓰기'로 현장 관찰 메모 구조화하기",
       "category": "CleanRoom AI",
-      "sympathy": 1,
+      "sympathy": 2,
       "date": "2026-11-24"
     },
     {
@@ -487,7 +508,7 @@
     },
     {
       "logNo": 224454329032,
-      "title": "「같은 그물을 두 번 치는 것은 방��가 아니다」",
+      "title": "「같은 그물을 두 번 치는 것은 방어가 아니다」",
       "category": "GMP in Your Area",
       "sympathy": 8,
       "date": "2026-10-26"
