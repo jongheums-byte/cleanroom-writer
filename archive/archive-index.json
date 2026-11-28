@@ -1,7 +1,35 @@
 {
-  "lastSynced": "2026-11-27T01:34:30.596Z",
-  "count": 95,
+  "lastSynced": "2026-11-28T01:14:55.808Z",
+  "count": 99,
   "posts": [
+    {
+      "logNo": 224495112484,
+      "title": "AI 브리핑 38 제미나이 Tasks로 네이버 블로그 자동발행, 정말 '완전 자동'일까",
+      "category": "CleanRoom AI",
+      "sympathy": 0,
+      "date": "2026-11-28"
+    },
+    {
+      "logNo": 224495049032,
+      "title": "AI 브리핑 37. 내 메일과 브라우저를 대신 누르는 AI 비서, 어디까지 믿고 어디서 멈춰야 할까",
+      "category": "CleanRoom AI",
+      "sympathy": 0,
+      "date": "2026-11-27"
+    },
+    {
+      "logNo": 224494586897,
+      "title": "AI 브리핑 36 - 안티그래비티 리모트 모드(Remote Control vs Remote Agents) 해부",
+      "category": "CleanRoom AI",
+      "sympathy": 2,
+      "date": "2026-11-27"
+    },
+    {
+      "logNo": 224494404087,
+      "title": "AI 실전 23. 서버·로그인 없이 HTML 한 장으로 끝내는 '내 AI·OTT 구독료 정리기' 만들기",
+      "category": "CleanRoom AI",
+      "sympathy": 4,
+      "date": "2026-11-27"
+    },
     {
       "logNo": 224493632083,
       "title": "AI 브리핑.35 안티그래비티 카본(Carbon) Pro 개방과 /swarm 정리",
